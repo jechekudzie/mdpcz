@@ -44,7 +44,7 @@
 
                                 As secretariat we will continue with the implementation of council resolutions with speed to ensure that members of the profession are served  efficiently.We will continue to protect the image of the council by following set down policies and processes by the council.</p>
                         </div>
-                        <div class="fact-counter">
+                        {{--<div class="fact-counter">
                             <ul>
                                 <li class="single-fact-counter">
                                     <span class="ficon"><i class="fa fa-trophy" aria-hidden="true"></i></span><span class="timer" data-from="1" data-to="12" data-speed="5000" data-refresh-interval="50">12</span>
@@ -62,10 +62,10 @@
                                     <h3>Practising Students</h3>
                                 </li>
                             </ul>
-                        </div>
-                        <div class="sign">
+                        </div>--}}
+                        {{--<div class="sign">
                             <img src="{{asset('images/sign.png')}}" alt="" />
-                        </div>
+                        </div>--}}
                     </div>
 
 

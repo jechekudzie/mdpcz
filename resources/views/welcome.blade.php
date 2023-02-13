@@ -203,7 +203,7 @@
                 <div class="col-md-6 col-sm-6 hidden-sm col-xs-12">
                     <div class="default-blog-news">
                         <figure class="img-holder">
-                            <a href="#"><img src="images/blog/1.jpg" alt="News"></a>
+                            {{--<a href="#"><img src="images/blog/1.jpg" alt="News"></a>--}}
                             <figcaption class="overlay">
                                 <div class="box">
                                     <div class="content">
@@ -215,9 +215,9 @@
                         <div class="lower-content">
                             <a href="{{url('/council-examination')}}"><h4>Upcoming Council Members Registration</h4></a>
                             <div class="post-meta">by admin  /  14 Comments / 26 Feb</div>
-                            <div class="text">
+                            {{--<div class="text">
                                 <p>Nunc magna, pharetra aliquet malesuada quistion.except to obtain some advantage from it? But who has any right to find to enjoy a pleasure.</p>
-                            </div>
+                            </div>--}}
                             <div class="link">
                                 <a href="#" class="default_link">Read More</a>
                             </div>
@@ -229,7 +229,7 @@
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="default-blog-news">
                         <figure class="img-holder">
-                            <a href="#"><img src="images/blog/2.jpg" alt="News"></a>
+                            {{--<a href="#"><img src="images/blog/2.jpg" alt="News"></a>--}}
                             <figcaption class="overlay">
                                 <div class="box">
                                     <div class="content">
@@ -241,9 +241,9 @@
                         <div class="lower-content">
                             <a href="{{url('/banking-details')}}"><h4>International Banking Details </h4></a>
                             <div class="post-meta">by admin  /  22 Comments / 17 Apr</div>
-                            <div class="text">
+                            {{--<div class="text">
                                 <p>Phasellus nunc magna, pharetra aliquet malesuada quistion.</p>
-                            </div>
+                            </div>--}}
                             <div class="link">
                                 <a href="#" class="default_link">Read More</a>
                             </div>
@@ -254,7 +254,7 @@
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="default-blog-news">
                         <figure class="img-holder">
-                            <a href="#"><img src="images/blog/3.jpg" alt="News"></a>
+                           {{-- <a href="#"><img src="images/blog/3.jpg" alt="News"></a>--}}
                             <figcaption class="overlay">
                                 <div class="box">
                                     <div class="content">
@@ -266,9 +266,9 @@
                         <div class="lower-content">
                             <a href="#"><h4>Phone Lines Notification</h4></a>
                             <div class="post-meta">by admin  /  10 Comments / 14 June</div>
-                            <div class="text">
+                            {{--<div class="text">
                                 <p>Phasellus nunc magna, pharetra aliquet malesuada quistion.</p>
-                            </div>
+                            </div>--}}
                             <div class="link">
                                 <a href="#" class="default_link">Read More</a>
                             </div>

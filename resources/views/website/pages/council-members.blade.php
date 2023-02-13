@@ -27,7 +27,7 @@
         <div class="container">
 
             <div class="row">
-                <article class="col-md-3 col-sm-6 col-xs-12 m-b">
+                <article style="padding-bottom: 10px" class="col-md-3 col-sm-6 col-xs-12 m-b">
                     <div class="item ">
                         <div class="team-member">
                             <figure class="img-box">
@@ -48,7 +48,7 @@
                     </div>
 
                 </article>
-                <article class="col-md-3 col-sm-6 col-xs-12 m-b">
+                <article style="padding-bottom: 10px" class="col-md-3 col-sm-6 col-xs-12 m-b">
                     <div class="item ">
                         <div class="team-member">
                             <figure class="img-box">
@@ -69,7 +69,7 @@
                     </div>
 
                 </article>
-                <article class="col-md-3 col-sm-6 col-xs-12 m-b">
+                <article style="padding-bottom: 10px" class="col-md-3 col-sm-6 col-xs-12 m-b">
                     <div class="item ">
                         <div class="team-member">
                             <figure class="img-box">
@@ -90,7 +90,7 @@
                     </div>
 
                 </article>
-                <article class="col-md-3 col-sm-6 col-xs-12 m-b">
+                <article style="padding-bottom: 10px" class="col-md-3 col-sm-6 col-xs-12 m-b">
                     <div class="item ">
                         <div class="team-member">
                             <figure class="img-box">
@@ -112,7 +112,7 @@
 
                 </article>
 
-                <article class="col-md-3 col-sm-6 col-xs-12 ">
+                <article style="padding-bottom: 10px" class="col-md-3 col-sm-6 col-xs-12 ">
                     <div class="item ">
                         <div class="team-member">
                             <figure class="img-box">
@@ -136,7 +136,7 @@
 
 
 
-                <article class="col-md-3 col-sm-6 col-xs-12 ">
+                <article style="padding-bottom: 10px" class="col-md-3 col-sm-6 col-xs-12 ">
                     <div class="item ">
                         <div class="team-member">
                             <figure class="img-box">
@@ -159,7 +159,7 @@
 
 
 
-                <article class="col-md-3 col-sm-6 col-xs-12">
+                <article style="padding-bottom: 10px" class="col-md-3 col-sm-6 col-xs-12">
                     <div class="item ">
                         <div class="team-member">
                             <figure class="img-box">
@@ -181,7 +181,7 @@
 
                 </article>
 
-                <article class="col-md-3 col-sm-6 col-xs-12">
+                <article style="padding-bottom: 10px" class="col-md-3 col-sm-6 col-xs-12">
                     <div class="item ">
                         <div class="team-member">
                             <figure class="img-box">
@@ -203,7 +203,7 @@
 
                 </article>
 
-                <article class="col-md-3 col-sm-6 col-xs-12">
+                <article style="padding-bottom: 10px" class="col-md-3 col-sm-6 col-xs-12">
                     <div class="item ">
                         <div class="team-member">
                             <figure class="img-box">
@@ -224,7 +224,7 @@
                     </div>
                 </article>
 
-                <article class="col-md-3 col-sm-6 col-xs-12">
+                <article style="padding-bottom: 10px" class="col-md-3 col-sm-6 col-xs-12">
                     <div class="item ">
                         <div class="team-member">
                             <figure class="img-box">
@@ -245,7 +245,7 @@
                     </div>
                 </article>
 
-                <article class="col-md-3 col-sm-6 col-xs-12">
+                <article style="padding-bottom: 10px" class="col-md-3 col-sm-6 col-xs-12">
                     <div class="item ">
                         <div class="team-member">
                             <figure class="img-box">
@@ -266,7 +266,7 @@
                     </div>
                 </article>
 
-                <article class="col-md-3 col-sm-6 col-xs-12">
+                <article style="padding-bottom: 10px" class="col-md-3 col-sm-6 col-xs-12">
                     <div class="item ">
                         <div class="team-member">
                             <figure class="img-box">
@@ -287,7 +287,7 @@
                     </div>
                 </article>
 
-                <article class="col-md-3 col-sm-6 col-xs-12">
+                <article style="padding-bottom: 10px" class="col-md-3 col-sm-6 col-xs-12">
                     <div class="item ">
                         <div class="team-member">
                             <figure class="img-box">
@@ -308,7 +308,7 @@
                     </div>
                 </article>
 
-                <article class="col-md-3 col-sm-6 col-xs-12">
+                <article style="padding-bottom: 10px" class="col-md-3 col-sm-6 col-xs-12">
                     <div class="item ">
                         <div class="team-member">
                             <figure class="img-box">
@@ -329,7 +329,7 @@
                     </div>
                 </article>
 
-                <article class="col-md-3 col-sm-6 col-xs-12">
+                <article style="padding-bottom: 10px" class="col-md-3 col-sm-6 col-xs-12">
                     <div class="item ">
                         <div class="team-member">
                             <figure class="img-box">
@@ -350,7 +350,7 @@
                     </div>
                 </article>
 
-                <article class="col-md-3 col-sm-6 col-xs-12">
+                <article style="padding-bottom: 20px" class="col-md-3 col-sm-6 col-xs-12">
                     <div class="item ">
                         <div class="team-member">
                             <figure class="img-box">
@@ -371,7 +371,7 @@
                     </div>
                 </article>
 
-                <article class="col-md-3 col-sm-6 col-xs-12">
+                <article style="padding-bottom: 10px" class="col-md-3 col-sm-6 col-xs-12">
                     <div class="item ">
                         <div class="team-member">
                             <figure class="img-box">
