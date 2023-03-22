@@ -10,4 +10,7 @@ class Form extends Model
     use HasFactory;
 
     protected $guarded = [];
+    public function form_category(){
+        return $this->belongsTo(FormCategory::class);
+    }
 }

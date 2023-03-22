@@ -11,14 +11,14 @@ class RegistrationPathWayController extends Controller
     public function index()
     {
         //
-        $registration_pathway = RegistrationPathWay::all();
-        return view('admin.registration_pathway.index', compact('registration_pathway'));
+        $registration_pathways = RegistrationPathWay::all();
+        return view('admin.registration_pathways.index', compact('registration_pathways'));
     }
 
     public function create()
     {
         //
-        return view('admin.registration_pathway.create');
+        return view('admin.registration_pathways.create');
     }
 
     public function store(Request $request)
@@ -53,14 +53,14 @@ class RegistrationPathWayController extends Controller
     public function show(RegistrationPathWay $registration_pathway)
     {
         //
-        return view('admin.registration_pathway.show', compact('registration_pathway'));
+        return view('admin.registration_pathways.show', compact('registration_pathway'));
     }
 
 
     public function edit(RegistrationPathWay $registration_pathway)
     {
         //
-        return view('admin.registration_pathway.edit', compact('registration_pathway'));
+        return view('admin.registration_pathways.edit', compact('registration_pathway'));
     }
 
     public function update(Request $request, RegistrationPathWay $registration_pathway)
@@ -89,9 +89,8 @@ class RegistrationPathWayController extends Controller
             if ($old_path != null) {
                 unlink($old_path);
             }
+            $update['file'] = $new_registration_pathway_file;
         }
-
-        $update['file'] = $new_registration_pathway_file;
 
         $registration_pathway->update($update);
 

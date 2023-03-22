@@ -23,9 +23,9 @@ class FaqCategoryController extends Controller
     public function store(Request $request)
     {
         //
-
         $faq_category = FaqCategory::create(request()->validate([
             'name' => 'required',
+            'description' => 'nullable',
         ]));
 
 
@@ -51,8 +51,8 @@ class FaqCategoryController extends Controller
         //
         $faq_category->update(request()->validate([
             'name' => 'required',
+            'description' => 'nullable',
         ]));
-
 
         return back()->with('message', 'faq category updated successfully');
     }

@@ -8,11 +8,11 @@ use Illuminate\Http\Request;
 
 class FormController extends Controller
 {
-    public function index()
+
+    public function index(FormCategory $formCategory)
     {
         //
-        $forms = Form::all();
-        return view('admin.forms.index', compact('forms'));
+        return view('admin.forms.index', compact('formCategory'));
     }
 
     public function create()
@@ -22,12 +22,12 @@ class FormController extends Controller
         return view('admin.forms.create', compact('form_categories'));
     }
 
-    public function store(Request $request)
+    public function store(FormCategory $formCategory)
     {
         //
+        $form_file = '';
 
         $form = request()->validate([
-            'form_category_id' => 'required',
             'title' => 'required',
         ]);
 
@@ -45,8 +45,8 @@ class FormController extends Controller
             $form_file = $file->move('forms', $file_name);
 
         }
-        Form::create($form);
-
+        $form['file'] = $form_file;
+        $formCategory->add_forms($form);
 
         return back()->with('message', 'form added successfully');
     }
@@ -62,8 +62,7 @@ class FormController extends Controller
     public function edit(Form $form)
     {
         //
-        $form_categories = FormCategory::all();
-        return view('admin.forms.edit', compact('form', 'form_categories'));
+        return view('admin.forms.edit', compact('form'));
     }
 
     public function update(Request $request, Form $form)
@@ -71,7 +70,6 @@ class FormController extends Controller
         //
         $new_form_file = '';
         $update = request()->validate([
-            'form_category_id' => 'required',
             'title' => 'required',
         ]);
 
@@ -92,9 +90,8 @@ class FormController extends Controller
             if ($old_path != null) {
                 unlink($old_path);
             }
+            $update['file'] = $new_form_file;
         }
-
-        $update['file'] = $new_form_file;
 
         $form->update($update);
 

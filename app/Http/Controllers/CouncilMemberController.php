@@ -75,7 +75,6 @@ class CouncilMemberController extends Controller
             'bio' => 'required',
         ]);
 
-        $member_file = $councilMember->file;
 
         if (request()->hasFile('file')) {
             //get the file field data and name field from form submission
@@ -90,13 +89,15 @@ class CouncilMemberController extends Controller
             //upload the file to a directory in Public folder
             $new_member_file = $file->move('council_members', $file_name);
 
-            $old_path = $member_file->file;
+            $old_path = $councilMember->file;
             if ($old_path != null) {
                 unlink($old_path);
             }
+
+            $update['file'] = $new_member_file;
         }
 
-        $update['file'] = $new_member_file;
+
 
         $councilMember->update($update);
 

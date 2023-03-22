@@ -26,6 +26,7 @@ class FormCategoryController extends Controller
 
         $form_category = FormCategory::create(request()->validate([
             'name' => 'required',
+            'description' => 'nullable',
         ]));
 
 
@@ -51,6 +52,7 @@ class FormCategoryController extends Controller
         //
         $form_category->update(request()->validate([
             'name' => 'required',
+            'description' => 'nullable',
         ]));
 
 

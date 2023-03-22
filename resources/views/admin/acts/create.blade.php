@@ -63,7 +63,7 @@
                 <div class="col-xxl-9">
                     <div class="card" id="companyList">
                         <div style="color: black;font-size: 18px;font-weight: bolder;" class="card-header">
-                            Add acts
+                            Add Act
                         </div>
 
                         <div class="card-body">
@@ -105,7 +105,7 @@
                                         <button type="button" class="btn btn-light"
                                                 data-bs-dismiss="modal">Close
                                         </button>
-                                        <button type="submit" class="btn btn-success" id="add-btn">Add act
+                                        <button type="submit" class="btn btn-success" id="add-btn">Add Act
                                         </button>
 
                                     </div>

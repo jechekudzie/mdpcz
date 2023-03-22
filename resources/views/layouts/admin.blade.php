@@ -624,11 +624,15 @@
                                        data-key="t-ecommerce"> WHAT WE DO</a>
                                 </li>
                                 <li class="nav-item">
+                                    <a href="{{url('/admin/strategic_goal')}}" style="text-transform: capitalize" class="nav-link {{(request()->is('admin/strategic_goal*')) ? 'active' : '' }}"
+                                       data-key="t-ecommerce"> STRATEGIC GOALS</a>
+                                </li>
+                                <li class="nav-item">
                                     <a href="{{url('/admin/our_history')}}" style="text-transform: capitalize" class="nav-link {{(request()->is('admin/registers*')) ? 'active' : '' }}" data-key="t-crypto">
                                         OUR HISTORY </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="{{url('/admin/council_structure')}}" style="text-transform: capitalize" class="nav-link {{(request()->is('admin/institutions*')) ? 'active' : '' }}" data-key="t-crypto">
+                                    <a href="{{url('/admin/council_structure')}}" style="text-transform: capitalize" class="nav-link {{(request()->is('admin/council_structure*')) ? 'active' : '' }}" data-key="t-crypto">
                                         COUNCIL STRUCTURE </a>
                                 </li>
 
@@ -660,7 +664,7 @@
                                 </li>
 
                                 <li class="nav-item">
-                                    <a href="{{url('/admin/registration_form')}}" style="text-transform: capitalize" class="nav-link {{(request()->is('admin/payment_channels*')) ? 'active' : '' }}" data-key="t-analytics">
+                                    <a href="{{url('/admin/form_category')}}" style="text-transform: capitalize" class="nav-link {{(request()->is('admin/form_category*')) ? 'active' : '' }}" data-key="t-analytics">
                                         REGISTRATION FORMS </a>
                                 </li>
 
@@ -688,22 +692,22 @@
                         <div class="collapse menu-dropdown" id="statuses_utilities">
                             <ul class="nav nav-sm flex-column">
                                 <li class="nav-item">
-                                    <a href="{{url('/admin/online_services')}}" style="text-transform: capitalize" class="nav-link {{(request()->is('admin/restorations*')) ? 'active' : '' }}"
+                                    <a href="{{--{{url('/admin/online_services')}}--}}#" style="text-transform: capitalize" class="nav-link {{(request()->is('admin/restorations*')) ? 'active' : '' }}"
                                        data-key="t-ecommerce"> ONLINE SERVICES</a>
                                 </li>
 
                                 <li class="nav-item">
-                                    <a href="{{url('/admin/registration')}}" style="text-transform: capitalize" class="nav-link {{(request()->is('admin/application_statuses*')) ? 'active' : '' }}" data-key="t-analytics">
+                                    <a href="{{--{{url('/admin/registration')}}--}}#" style="text-transform: capitalize" class="nav-link {{(request()->is('admin/application_statuses*')) ? 'active' : '' }}" data-key="t-analytics">
                                         REGISTRATION </a>
                                 </li>
 
                                 <li class="nav-item">
-                                    <a href="{{url('/admin/education_and_training')}}" style="text-transform: capitalize" class="nav-link {{(request()->is('admin/payment_statuses*')) ? 'active' : '' }}" data-key="t-analytics">
+                                    <a href="{{url('/admin/exam')}}" style="text-transform: capitalize" class="nav-link {{(request()->is('admin/exam*')) ? 'active' : '' }}" data-key="t-analytics">
                                         EDUCATION & TRAINING </a>
                                 </li>
 
                                 <li class="nav-item">
-                                    <a href="{{url('/admin/fitness_to_practice')}}" style="text-transform: capitalize" class="nav-link {{(request()->is('admin/employment_statuses*')) ? 'active' : '' }}" data-key="t-analytics">
+                                    <a href="{{url('/admin/fitness_practice')}}" style="text-transform: capitalize" class="nav-link {{(request()->is('admin/fitness_practice*')) ? 'active' : '' }}" data-key="t-analytics">
                                         FITNESS TO PRACTICE </a>
                                 </li>
 
@@ -750,19 +754,32 @@
                                     <a href="{{url('/admin/resources')}}" style="text-transform: capitalize" class="nav-link {{(request()->is('admin/payment_categories*')) ? 'active' : '' }}" data-key="t-analytics">
                                         RESOURCES </a>
                                 </li>
+                                <li class="nav-item">
+                                    <a href="{{url('/admin/newsletter')}}" style="text-transform: capitalize" class="nav-link {{(request()->is('admin/newsletter*')) ? 'active' : '' }}" data-key="t-analytics">
+                                        NEWSLETTER </a>
+                                </li>
                             </ul>
                         </div>
                     </li>
 
-                    <!-- faq -->
                     <li class="nav-item">
-                        <a style="text-transform: capitalize" class="nav-link menu-link collapsed" href="#reports_utilities" data-bs-toggle="collapse"
+                        <a style="text-transform: capitalize" class="nav-link menu-link collapsed" href="#faqs" data-bs-toggle="collapse"
                            role="button"
-                           aria-expanded="false" aria-controls="reports_utilities">
-                             <span data-key="t-dashboards">FAQs</span>
+                           aria-expanded="false" aria-controls="faqs">
+                            <span data-key="t-dashboards">FAQs</span>
                         </a>
+                        <div class="collapse menu-dropdown" id="faqs">
+                            <ul class="nav nav-sm flex-column">
+                                <li class="nav-item">
+                                    <a href="{{url('/admin/faq_category')}}" style="text-transform: capitalize" class="nav-link {{(request()->is('admin/faq_category*')) ? 'active' : '' }}"
+                                       data-key="t-ecommerce"> FAQs CATEGORIES</a>
+                                </li>
 
+                            </ul>
+                        </div>
                     </li>
+
+
 
                     <!-- contact us -->
                     <li class="nav-item">

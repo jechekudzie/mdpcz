@@ -31,7 +31,7 @@
                             <div class="d-flex align-items-center flex-wrap gap-2">
                                 <div class="flex-grow-1">
                                     <a href="{{url('/admin/act/create')}}" class="btn btn-info add-btn"><i
-                                            class="ri-add-fill me-1 align-bottom"></i> Add act
+                                            class="ri-add-fill me-1 align-bottom"></i> Add Act
                                     </a>
                                 </div>
                             </div>

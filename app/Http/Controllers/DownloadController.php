@@ -71,7 +71,6 @@ class DownloadController extends Controller
             'title' => 'required',
         ]);
 
-
         if (request()->hasfile('file')) {
             //get the file field data and name field from form submission
             $file = request()->file('file');
@@ -89,9 +88,9 @@ class DownloadController extends Controller
             if ($old_path != null) {
                 unlink($old_path);
             }
-        }
 
-        $update['file'] = $new_download_file;
+            $update['file'] = $new_download_file;
+        }
 
         $download->update($update);
 

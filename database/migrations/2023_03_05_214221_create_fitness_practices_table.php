@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('fitness_practices', function (Blueprint $table) {
             $table->id();
             $table->string('title')->nullable();
-            $table->string('image')->nullable();
+            $table->string('file')->nullable();
             $table->longText('description')->nullable();
             $table->timestamps();
         });

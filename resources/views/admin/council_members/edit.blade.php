@@ -10,12 +10,12 @@
             <div class="row">
                 <div class="col-12">
                     <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                        <h4 class="mb-sm-0">Committee</h4>
+                        <h4 class="mb-sm-0">Council member</h4>
 
                         <div class="page-title-right">
                             <ol class="breadcrumb m-0">
                                 <li class="breadcrumb-item"><a href="javascript: void(0);">CRM</a></li>
-                                <li class="breadcrumb-item committeeive">Committee</li>
+                                <li class="breadcrumb-item council_memberive">Council member</li>
                             </ol>
                         </div>
 
@@ -30,7 +30,7 @@
                         <div class="card-header">
                             <div class="d-flex align-items-center flex-wrap gap-2">
                                 <div class="flex-grow-1">
-                                    <a href="{{url('/admin/committee')}}" class="btn btn-info add-btn"><i
+                                    <a href="{{url('/admin/council_member')}}" class="btn btn-info add-btn"><i
                                             class="ri-arrow-left-line align-bottom"></i> Back
                                     </a>
                                 </div>
@@ -63,7 +63,7 @@
                 <div class="col-xxl-9">
                     <div class="card" id="companyList">
                         <div style="color: black;font-size: 18px;font-weight: bolder;" class="card-header">
-                            Edit: {{$committee->name}}
+                            Edit: {{$councilMember->name}}
                         </div>
 
 
@@ -75,7 +75,7 @@
 
                                     <div class="card-body">
 
-                                        <form method="post" action="{{url('/admin/committee/'.$committee->id)}}"
+                                        <form method="post" action="{{url('/admin/council_member/'.$councilMember->id)}}"
                                               enctype="multipart/form-data">
                                             @method('PATCH')
                                             @csrf
@@ -85,27 +85,37 @@
                                                     <div class="col-lg-12">
                                                         <div>
                                                             <label for="companyname-field"
-                                                                   class="form-label">Committee</label>
+                                                                   class="form-label">Council member</label>
                                                             <input type="text" name="name" class="form-control"
-                                                                   value="{{$committee->name}}" required/>
+                                                                   value="{{$councilMember->name}}" required/>
                                                         </div>
                                                     </div>
 
                                                     <div class="col-lg-12">
                                                         <div>
                                                             <label for="companyname-field"
-                                                                   class="form-label">Section</label>
-                                                            <input type="text" name="section" class="form-control"
-                                                                   value="{{$committee->section}}" required/>
+                                                                   class="form-label">Council member title</label>
+                                                            <input type="text" name="title" class="form-control"
+                                                                   value="{{$councilMember->title}}" required/>
+                                                        </div>
+                                                    </div>
+
+                                                    <img style="width: 300px;" src="{{asset($councilMember->file)}}"/>
+
+                                                    <div class="col-lg-12">
+                                                        <div>
+                                                            <label for="companyname-field"
+                                                                   class="form-label">Profile image</label>
+                                                            <input type="file" name="file" class="form-control" required/>
                                                         </div>
                                                     </div>
 
                                                     <div class="col-lg-12">
                                                         <div>
                                                             <label for="companyname-field"
-                                                                   class="form-label">Description</label>
-                                                            <textarea name="description" class="form-control" id="editor1"
-                                                                      required>{!! $committee->description !!}</textarea>
+                                                                   class="form-label">Bio</label>
+                                                            <textarea name="bio" class="form-control" id="editor"
+                                                                      required>{!! $councilMember->bio !!}</textarea>
                                                         </div>
                                                     </div>
 
@@ -116,7 +126,7 @@
                                                     <button type="button" class="btn btn-light"
                                                             data-bs-dismiss="modal">Close
                                                     </button>
-                                                    <button type="submit" class="btn btn-success" id="add-btn">Update committee
+                                                    <button type="submit" class="btn btn-success" id="add-btn">Update council_member
                                                     </button>
 
                                                 </div>

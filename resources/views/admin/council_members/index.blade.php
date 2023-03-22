@@ -102,7 +102,7 @@
 
                                                     <div class="col-lg-2 col">
                                                         <div class="text-end">
-                                                            <a href="{{url('/admin/council_member/'.$council_member->id)}}" class="btn btn-light view-btn">View
+                                                            <a href="{{url('/admin/council_member/'.$council_member->id.'/edit')}}" class="btn btn-light view-btn">View
                                                                 Profile</a>
                                                         </div>
                                                     </div>
@@ -166,7 +166,7 @@
                                                             <label for="companyname-field"
                                                                    class="form-label">Member Bio</label>
                                                             <textarea name="bio" class="form-control"
-                                                                      id="editor1"></textarea>
+                                                                      id="editor"></textarea>
                                                         </div>
                                                     </div>
 

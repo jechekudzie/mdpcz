@@ -93,9 +93,8 @@ class RegistrarController extends Controller
             if ($old_path != null) {
                 unlink($old_path);
             }
+            $update['file'] = $new_registrar_file;
         }
-
-        $update['file'] = $new_registrar_file;
 
         $registrar->update($update);
 

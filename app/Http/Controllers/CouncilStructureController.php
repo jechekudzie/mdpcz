@@ -41,7 +41,7 @@ class CouncilStructureController extends Controller
             //upload the file to a directory in Public folder
             $structure_file = $file->move('council_structures', $file_name);
         }
-        $councilStructure['image'] = $structure_file;
+        $councilStructure['file'] = $structure_file;
 
         CouncilStructure::create($councilStructure);
 
@@ -52,14 +52,14 @@ class CouncilStructureController extends Controller
     public function show(CouncilStructure $councilStructure)
     {
         //
-        return view('admin.council_structures.show', compact('councilMember'));
+        return view('admin.council_structures.show', compact('councilStructure'));
     }
 
 
     public function edit(CouncilStructure $councilStructure)
     {
         //
-        return view('admin.council_structures.edit', compact('councilMember'));
+        return view('admin.council_structures.edit', compact('councilStructure'));
     }
 
     public function update(Request $request, CouncilStructure $councilStructure)
@@ -71,7 +71,6 @@ class CouncilStructureController extends Controller
             'description' => 'required',
         ]);
 
-        $structure_file = $councilStructure->file;
 
         if (request()->hasfile('file')) {
             //get the file field data and name field from form submission
@@ -86,13 +85,13 @@ class CouncilStructureController extends Controller
             //upload the file to a directory in Public folder
             $new_structure_file = $file->move('council_structures', $file_name);
 
-            $old_path = $structure_file->file;
+            $old_path = $councilStructure->file;
             if ($old_path != null) {
                 unlink($old_path);
             }
-        }
 
-        $update['file'] = $new_structure_file;
+            $update['file'] = $new_structure_file;
+        }
 
         $councilStructure->update($update);
 
@@ -104,6 +103,6 @@ class CouncilStructureController extends Controller
         //
         $councilStructure->delete();
 
-        return redirect('/admin/council_structure')->with('message', 'structure deleted successfully');
+        return redirect('/admin/council_structures')->with('message', 'structure deleted successfully');
     }
 }

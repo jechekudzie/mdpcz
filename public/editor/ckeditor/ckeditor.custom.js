@@ -1,5 +1,5 @@
 // Default ckeditor
-CKEDITOR.replace( 'editor1', {
+CKEDITOR.replace( 'editor', {
     on: {
         contentDom: function( evt ) {
             // Allow custom context menu only with table elemnts.
@@ -14,6 +14,20 @@ CKEDITOR.replace( 'editor1', {
     }
 } );
 
+CKEDITOR.replace( 'editor1', {
+    on: {
+        contentDom: function( evt ) {
+            // Allow custom context menu only with table elemnts.
+            evt.editor.editable().on( 'contextmenu', function( contextEvent ) {
+                var path = evt.editor.elementPath();
+
+                if ( !path.contains( 'table' ) ) {
+                    contextEvent.cancel();
+                }
+            }, null, null, 5 );
+        }
+    }
+} );
 // Inline ckeditor
 CKEDITOR.disableAutoInline = true;
 //init the area to be done

@@ -104,7 +104,7 @@
                                                         <div>
                                                             <label for="companyname-field"
                                                                    class="form-label">Description</label>
-                                                            <textarea name="description" class="form-control" id="editor1"
+                                                            <textarea name="description" class="form-control" id="editor"
                                                                       required>{!! $committee->description !!}</textarea>
                                                         </div>
                                                     </div>

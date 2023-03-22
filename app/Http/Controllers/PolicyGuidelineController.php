@@ -90,9 +90,9 @@ class PolicyGuidelineController extends Controller
             if ($old_path != null) {
                 unlink($old_path);
             }
-        }
+            $update['file'] = $new_policy_guideline_file;
 
-        $update['file'] = $new_policy_guideline_file;
+        }
 
         $policy_guideline->update($update);
 

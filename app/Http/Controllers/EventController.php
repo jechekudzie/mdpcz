@@ -96,9 +96,9 @@ class EventController extends Controller
             if ($old_path != null) {
                 unlink($old_path);
             }
-        }
 
-        $update['file'] = $new_event_file;
+            $update['file'] = $new_event_file;
+        }
 
         $event->update($update);
 

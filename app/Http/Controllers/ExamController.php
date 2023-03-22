@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Exam;
 
+use App\Models\ExamGuideline;
 use Illuminate\Http\Request;
 
 class ExamController extends Controller
@@ -13,7 +14,8 @@ class ExamController extends Controller
     {
         //
         $exams = Exam::all();
-        return view('admin.exams.index', compact('exams'));
+        $exam_guidelines = ExamGuideline::all();
+        return view('admin.exams.index', compact('exams','exam_guidelines'));
     }
 
     public function create()
@@ -27,6 +29,7 @@ class ExamController extends Controller
         //
 
         $exam = Exam::create(request()->validate([
+            'title' => 'required',
             'description' => 'required',
         ]));
 
@@ -52,6 +55,7 @@ class ExamController extends Controller
     {
         //
         $exam->update(request()->validate([
+            'title' => 'required',
             'description' => 'required',
         ]));
 

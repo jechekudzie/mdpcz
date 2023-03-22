@@ -10,4 +10,15 @@ class FormCategory extends Model
     use HasFactory;
 
     protected $guarded = [];
+
+    public function forms()
+    {
+        return $this->hasMany(Form::class);
+    }
+
+    public function add_forms($form)
+    {
+        return $this->forms()->create($form);
+    }
+
 }
