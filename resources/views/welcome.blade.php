@@ -10,8 +10,8 @@
     <div id="hero-area" class="hero-area section">
         <!-- Hero Slider -->
         <div id="hero-slider" class="nivoSlider">
-            <img src="img/hero/1.jpg" alt="" title="#herocaption-1" />
-            <img src="img/hero/2.jpg" alt="" title="#herocaption-2" />
+            <img src="{{asset('img/hero/1.jpg')}}" alt="" title="#herocaption-1"/>
+            <img src="{{asset('img/hero/2.jpg')}}" alt="" title="#herocaption-2"/>
         </div>
         <!-- Hero Slider Caption -->
         <div id="herocaption-1" class="nivo-html-caption">
@@ -19,9 +19,11 @@
                 <div class="row">
                     <!-- Hero Content -->
                     <div class="hero-content col-xs-12">
-                        <h1 class="wow cusFadeInRight" data-wow-duration=".5s" data-wow-delay="0.5s">Medical & <br> Dental Practitioners Council </h1>
-                        <p class="wow cusFadeInRight" data-wow-duration=".5s" data-wow-delay="1s"> </p>
-                        <a href="#" class="learn-more wow cusFadeInRight" data-wow-duration=".5s" data-wow-delay="1.5s">Learn More</a>
+                        <h1 style="color: white;" class="wow cusFadeInRight" data-wow-duration=".5s" data-wow-delay="0.5s">Medical & <br>
+                            Dental Practitioners Council </h1>
+                        <p class="wow cusFadeInRight" data-wow-duration=".5s" data-wow-delay="1s"></p>
+                        <a href="#" class="learn-more wow cusFadeInRight" data-wow-duration=".5s" data-wow-delay="1.5s">Learn
+                            More</a>
                     </div>
                 </div>
             </div>
@@ -34,7 +36,8 @@
                     <div class="hero-content col-xs-12">
                         <h1 class="wow cusFadeInRight" data-wow-duration=".5s" data-wow-delay="0.5s"></h1>
                         <p class="wow cusFadeInRight" data-wow-duration=".5s" data-wow-delay="1s"></p>
-                        <a href="#" class="learn-more wow cusFadeInRight" data-wow-duration=".5s" data-wow-delay="1.5s"></a>
+                        <a href="#" class="learn-more wow cusFadeInRight" data-wow-duration=".5s"
+                           data-wow-delay="1.5s"></a>
                     </div>
                 </div>
             </div>
@@ -49,7 +52,8 @@
                     <h4>Looking for registered doctors ?</h4>
                     <br>
                     <div class="text-center center">
-                        <a href="#" class="btn btn-sm btn-primary text-center">
+                        <a href="http://www.mdpcz.co.zw/mdpcz_find/_f/_find_practitioner.php" target="_blank"
+                           class="btn btn-sm btn-primary text-center">
                             Find
                         </a>
                     </div>
@@ -59,7 +63,8 @@
                     <h4>Check Student Results Online</h4>
                     <br>
                     <div class="text-center center">
-                        <a href="#" class="btn btn-sm btn-primary text-center">
+                        <a href="http://www.mdpcz.co.zw/mdpcz_results/" target="_blank"
+                           class="btn btn-sm btn-primary text-center">
                             Check
                         </a>
                     </div>
@@ -86,9 +91,11 @@
                                 <div class="caption">
                                     <div class="icon-big"><span class="icon icon-people"></span></div>
                                     <h5 class="title" style="height: 28px;">Acts</h5>
-                                    <div class="text" style="height: 48px;">Regulating all Acts related to the Medical field to assure best practice.</div>
+                                    <div class="text" style="height: 48px;">Regulating all Acts related to the Medical
+                                        field to assure best practice.
+                                    </div>
                                     <br>
-                                    <a href="#" class="btn btn-sm btn-primary">
+                                    <a href="{{url('/act')}}" class="btn btn-sm btn-primary">
                                         Read More
                                     </a>
                                 </div>
@@ -98,9 +105,11 @@
                                 <div class="caption">
                                     <div class="icon-big"><span class="icon icon-technology"></span></div>
                                     <h5 class="title" style="height: 28px;">Fitness to Practice</h5>
-                                    <div class="text" style="height: 48px;">keeping with our mandate of safeguarding the health of the public</div>
+                                    <div class="text" style="height: 48px;">keeping with our mandate of safeguarding the
+                                        health of the public
+                                    </div>
                                     <br>
-                                    <a href="#" class="btn btn-sm btn-primary">
+                                    <a href="{{url('/fitness-to-practice')}}" class="btn btn-sm btn-primary">
                                         Read More
                                     </a>
                                 </div>
@@ -108,11 +117,14 @@
                             <div class="text-icon-squared animation animated fadeInUp">
                                 <div class="hover"></div>
                                 <div class="caption">
-                                    <div class="icon-big"><span class="icon icon-email-filled-closed-envelope"></span></div>
+                                    <div class="icon-big"><span class="icon icon-email-filled-closed-envelope"></span>
+                                    </div>
                                     <h5 class="title" style="height: 28px;">Registrations</h5>
-                                    <div class="text" style="height: 48px;">Managing all health registrations in the country</div>
+                                    <div class="text" style="height: 48px;">Managing all health registrations in the
+                                        country
+                                    </div>
                                     <br>
-                                    <a href="#" class="btn btn-sm btn-primary">
+                                    <a href="{{url('/registration-forms')}}" class="btn btn-sm btn-primary">
                                         Read More
                                     </a>
                                 </div>
@@ -142,10 +154,12 @@
                 <div class="col-md-3 col-sm-6">
                     <div class="single-our-service" style="background-color: #106995;">
                         <br>
-                        <a href="http://www.mdpcz.co.zw/?page_id=1076"><h4 style="color: #ffffff !important;">Renew Annual Fees</h4></a>
-                        <p style="color: #ffffff !important;">Settle your annual fees using different payment methods</p>
+                        <a href="{{url('/banking-details')}}"><h4 style="color: #ffffff !important;">Renew
+                                Annual Fees</h4></a>
+                        <p style="color: #ffffff !important;">Settle your annual fees using different payment
+                            methods</p>
                         <br>
-                        <a href="http://www.mdpcz.co.zw/?page_id=1076" class="btn btn-sm btn-primary">
+                        <a href="{{url('/banking-details')}}" class="btn btn-sm btn-primary">
                             Pay Now
                         </a>
                     </div>
@@ -153,10 +167,10 @@
                 <div class="col-md-3 col-sm-6">
                     <div class="single-our-service" style="background-color: #106995;">
                         <br>
-                        <a href="#"><h4 style="color: #ffffff !important;">Doctor's Register</h4></a>
+                        <a href="http://www.mdpcz.co.zw/mdpcz_find/_f/_find_practitioner.php" target="_blank"><h4 style="color: #ffffff !important;">Doctor's Register</h4></a>
                         <p style="color: #ffffff !important;"> Provides a list of doctors recognized as operational.</p>
                         <br>
-                        <a href="#" class="btn btn-sm btn-primary">
+                        <a href="http://www.mdpcz.co.zw/mdpcz_find/_f/_find_practitioner.php" target="_blank" class="btn btn-sm btn-primary">
                             Find
                         </a>
                     </div>
@@ -164,11 +178,12 @@
                 <div class="col-md-3 col-sm-6">
                     <div class="single-our-service" style="background-color: #106995;">
                         <br>
-                        <a href="http://www.mdpcz.co.zw/?page_id=1100"><h4 style="color: #ffffff !important;">Complaints</h4></a>
+                        <a href="{{url('/complaint')}}"><h4 style="color: #ffffff !important;">
+                                Complaints</h4></a>
                         <p style="color: #ffffff !important;">Log your complaints with us. </p>
                         <br>
                         <br>
-                        <a href="http://www.mdpcz.co.zw/?page_id=1100" class="btn btn-sm btn-primary">
+                        <a href="{{url('/complaint')}}" class="btn btn-sm btn-primary">
                             Find
                         </a>
                     </div>
@@ -207,14 +222,15 @@
                             <figcaption class="overlay">
                                 <div class="box">
                                     <div class="content">
-                                        <a href="{{url('/council-examination')}}"><i class="fa fa-link" aria-hidden="true"></i></a>
+                                        <a href="{{url('/council-examination')}}"><i class="fa fa-link"
+                                                                                     aria-hidden="true"></i></a>
                                     </div>
                                 </div>
                             </figcaption>
                         </figure>
                         <div class="lower-content">
                             <a href="{{url('/council-examination')}}"><h4>Upcoming Council Members Registration</h4></a>
-                            <div class="post-meta">by admin  /  14 Comments / 26 Feb</div>
+                            <div class="post-meta">by admin / 14 Comments / 26 Feb</div>
                             {{--<div class="text">
                                 <p>Nunc magna, pharetra aliquet malesuada quistion.except to obtain some advantage from it? But who has any right to find to enjoy a pleasure.</p>
                             </div>--}}
@@ -233,14 +249,15 @@
                             <figcaption class="overlay">
                                 <div class="box">
                                     <div class="content">
-                                        <a href="{{url('/banking-details')}}"><i class="fa fa-link" aria-hidden="true"></i></a>
+                                        <a href="{{url('/banking-details')}}"><i class="fa fa-link"
+                                                                                 aria-hidden="true"></i></a>
                                     </div>
                                 </div>
                             </figcaption>
                         </figure>
                         <div class="lower-content">
                             <a href="{{url('/banking-details')}}"><h4>International Banking Details </h4></a>
-                            <div class="post-meta">by admin  /  22 Comments / 17 Apr</div>
+                            <div class="post-meta">by admin / 22 Comments / 17 Apr</div>
                             {{--<div class="text">
                                 <p>Phasellus nunc magna, pharetra aliquet malesuada quistion.</p>
                             </div>--}}
@@ -254,7 +271,7 @@
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="default-blog-news">
                         <figure class="img-holder">
-                           {{-- <a href="#"><img src="images/blog/3.jpg" alt="News"></a>--}}
+                            {{-- <a href="#"><img src="images/blog/3.jpg" alt="News"></a>--}}
                             <figcaption class="overlay">
                                 <div class="box">
                                     <div class="content">
@@ -265,7 +282,7 @@
                         </figure>
                         <div class="lower-content">
                             <a href="#"><h4>Phone Lines Notification</h4></a>
-                            <div class="post-meta">by admin  /  10 Comments / 14 June</div>
+                            <div class="post-meta">by admin / 10 Comments / 14 June</div>
                             {{--<div class="text">
                                 <p>Phasellus nunc magna, pharetra aliquet malesuada quistion.</p>
                             </div>--}}
@@ -295,16 +312,16 @@
         </div>
     </div>
 
-{{--    <div class="brand-logo sec-padd">--}}
-{{--        <div class="container">--}}
-{{--            <ul class="brand-carousel">--}}
-{{--                <li><a href="#"><img src="images/brand/1.png" alt=""></a></li>--}}
-{{--                <li><a href="#"><img src="images/brand/2.png" alt=""></a></li>--}}
-{{--                <li><a href="#"><img src="images/brand/3.png" alt=""></a></li>--}}
-{{--                <li><a href="#"><img src="images/brand/4.png" alt=""></a></li>--}}
-{{--                <li><a href="#"><img src="images/brand/5.png" alt=""></a></li>--}}
-{{--                <li><a href="#"><img src="images/brand/6.png" alt=""></a></li>--}}
-{{--            </ul>--}}
-{{--        </div>--}}
-{{--    </div>--}}
+    {{--    <div class="brand-logo sec-padd">--}}
+    {{--        <div class="container">--}}
+    {{--            <ul class="brand-carousel">--}}
+    {{--                <li><a href="#"><img src="images/brand/1.png" alt=""></a></li>--}}
+    {{--                <li><a href="#"><img src="images/brand/2.png" alt=""></a></li>--}}
+    {{--                <li><a href="#"><img src="images/brand/3.png" alt=""></a></li>--}}
+    {{--                <li><a href="#"><img src="images/brand/4.png" alt=""></a></li>--}}
+    {{--                <li><a href="#"><img src="images/brand/5.png" alt=""></a></li>--}}
+    {{--                <li><a href="#"><img src="images/brand/6.png" alt=""></a></li>--}}
+    {{--            </ul>--}}
+    {{--        </div>--}}
+    {{--    </div>--}}
 @endsection

@@ -36,7 +36,13 @@ Route::get('/registration-forms', [WebsiteController::class, 'regForms'])->name(
 Route::get('/banking-details', [WebsiteController::class, 'bankingDetails'])->name('bank.dets');
 Route::get('/online-services', [WebsiteController::class, 'onlineServices'])->name('online.services');
 Route::get('/council-examination', [WebsiteController::class, 'councilExamination'])->name('council.examination');
-Route::get('/fitness-to-practice', [WebsiteController::class, 'fitnessToPractice'])->name('council.examination');
+Route::get('/fitness-to-practice', [WebsiteController::class, 'fitnessToPractice']);
+Route::get('/policy_guideline', [WebsiteController::class, 'policy_guideline']);
+Route::get('/complaint', [WebsiteController::class, 'complaint']);
+Route::get('/our_resource', [WebsiteController::class, 'our_resource']);
+
+
+Route::get('/act', [WebsiteController::class, 'acts'])->name('acts');
 
 
 //admin

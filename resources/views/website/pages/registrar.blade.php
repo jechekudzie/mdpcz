@@ -30,19 +30,16 @@
                 <div class="col-md-6 col-sm-12">
 
                     <figure class="about-img">
-                        <img src="{{asset('images/registrar.jpg')}}" alt="about photo">
+                        <img src="{{asset($registrar->file)}}" alt="about photo">
                     </figure>
                 </div>
                 <div class="col-md-6 col-sm-12">
                     <div class="about-text">
                         <h2>
-                            B.Management  <span class="thm-color">(HR),MBA,DIP Law </span>
+                            {{$registrar->name}} <span class="thm-color"> {{$registrar->qualifications}} </span>
                         </h2>
                         <div class="text">
-                            <p>It goes without saying that we are living in a new era of expectation by both the public whom we serve as well as the profession whom we guide in the delivery of heath care.Our council as a regulator must reflect this reality.
-                                <br><br>
-
-                                As secretariat we will continue with the implementation of council resolutions with speed to ensure that members of the profession are served  efficiently.We will continue to protect the image of the council by following set down policies and processes by the council.</p>
+                            {!! $registrar->bio !!}
                         </div>
                         {{--<div class="fact-counter">
                             <ul>

@@ -29,18 +29,14 @@
             <div class="row">
                 <div class="col-md-6 col-sm-12">
 
-                    <h4>DESIGNATED HEALTH INSTITUTION</h4>
+                    <h4>Designated Health Institutions(DHIs)</h4>
+                    <p style="color: black;"> Government Health Institutions, Mission Hospitals, City Heath Centres and any approved  DHI by  the Council.</p>
                     <br>
-                    <h4>Parirenyatwa Group of Hospitals</h4>
-                    <br>
-                    <h4>Harare Group of Hospitals</h4>
-                    <br>
-                    <h4>Chitungwiza Group of Hospitals</h4>
                 </div>
                 <div class="col-md-6 col-sm-12">
                     <div class="about-text">
                         <h4>
-                            Registration Pathway: <a href="#" target="_blank"><span class="thm-color">DOWNLOAD </span></a>
+                            {{$registration_pathway->title}}: <a href="{{asset($registration_pathway->file)}}" target="_blank"><span class="thm-color">View/Download </span></a>
                         </h4>
                         <br>
 

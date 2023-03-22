@@ -111,7 +111,7 @@
     </div>
     <!--End contact form area-->
 
-    <div class="home-google-map">
+   {{-- <div class="home-google-map">
         <div
             class="google-map"
             id="contact-google-map"
@@ -136,5 +136,5 @@
                 <li><a href="#"><img src="images/brand/6.png" alt=""></a></li>
             </ul>
         </div>
-    </div>
+    </div>--}}
 @endsection

@@ -10,7 +10,20 @@
 @section('template_title')
     FAQs
 @endsection
+<style>
+    .my-code-block {
+        padding: 20px;
+        background-color: white;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
 
+    .my-code-block h3 {
+        margin-top: 20px;
+        font-weight: bold;
+    }
+
+</style>
 
 @section('site_content')
     <div class="breadcrumb-area" style="background-color: #0195DB;">
@@ -26,60 +39,44 @@
     <!--Start faq content area-->
     <div class="faq-content-area">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="accordion-box">
-                        <!--Start single accordion box-->
-                        <div class="accordion accordion-block">
-                            <div class="accord-btn"><h4>Do you do the design and the execution yourselves?</h4></div>
-                            <div class="accord-content">
-                                <p>We give a Guarantee for a Period of 5 years and promise to rectify any fault arising out of faulty workmanship at our cost. However the guarantee does not hold good for mishandling and breakable items.</p>
-                            </div>
+
+            <div sty class="my-code-block">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <ul id="nav-tabs-wrapper" class="nav nav-tabs nav-pills nav-stacked well">
+                            @foreach($faq_categories as $faq_category)
+                                <li class="@if($faq_category->id == 1){{'active'}}@endif">
+                                    <a href="#vtab{{$faq_category->id}}" data-toggle="tab">{{$faq_category->name}}</a>
+                                </li>
+                            @endforeach
+                        </ul>
+                    </div>
+                    <div class="col-sm-9">
+                        <div class="tab-content">
+                            @foreach($faq_categories as $faq_category)
+                                <div role="tabpanel"
+                                     class="tab-pane fade in @if($faq_category->id == 1){{'active'}}@endif"
+                                     id="vtab{{$faq_category->id}}">
+                                    <h3>{{$faq_category->name}}</h3>
+                                    <div style="padding-top: 5px;" class="accordion-box">
+                                    @foreach($faq_category->faqs as $faq)
+                                        <!--Start single accordion box-->
+                                            <div class="accordion accordion-block">
+                                                <div class="accord-btn" style="background-color: grey;"><h5 style="color: white;">{{$faq->question}}</h5></div>
+                                                <div style="color: black;" class="accord-content">
+                                                    {!! $faq->answer !!}
+                                                </div>
+                                            </div>
+                                            <!--End single accordion box-->
+                                        @endforeach
+                                    </div>
+                                </div>
+                            @endforeach
                         </div>
-                        <!--End single accordion box-->
-                        <!--Start single accordion box-->
-                        <div class="accordion accordion-block">
-                            <div class="accord-btn active"><h4>Do you give Guarantee and After sales service?</h4></div>
-                            <div class="accord-content collapsed">
-                                <p>We give a Guarantee for a Period of 5 years and promise to rectify any fault arising out of faulty workmanship at our cost. However the guarantee does not hold good for mishandling and breakable items.</p>
-                            </div>
-                        </div>
-                        <!--End single accordion box-->
-                        <!--Start single accordion box-->
-                        <div class="accordion accordion-block">
-                            <div class="accord-btn"><h4>What are the factors affecting the cost?</h4></div>
-                            <div class="accord-content">
-                                <p>We give a Guarantee for a Period of 5 years and promise to rectify any fault arising out of faulty workmanship at our cost. However the guarantee does not hold good for mishandling and breakable items.</p>
-                            </div>
-                        </div>
-                        <!--End single accordion box-->
-                        <!--Start single accordion box-->
-                        <div class="accordion accordion-block">
-                            <div class="accord-btn"><h4>Will you be able to give a quote, if given the floor plan?</h4></div>
-                            <div class="accord-content">
-                                <p>We give a Guarantee for a Period of 5 years and promise to rectify any fault arising out of faulty workmanship at our cost. However the guarantee does not hold good for mishandling and breakable items.</p>
-                            </div>
-                        </div>
-                        <!--End single accordion box-->
-                        <!--Start single accordion box-->
-                        <div class="accordion accordion-block">
-                            <div class="accord-btn"><h4>At what stage an interior designing work could be started?</h4></div>
-                            <div class="accord-content">
-                                <p>We give a Guarantee for a Period of 5 years and promise to rectify any fault arising out of faulty workmanship at our cost. However the guarantee does not hold good for mishandling and breakable items.</p>
-                            </div>
-                        </div>
-                        <!--End single accordion box-->
-                        <!--Start single accordion box-->
-                        <div class="accordion accordion-block">
-                            <div class="accord-btn"><h4>Do you charge for giving a Proposal?</h4></div>
-                            <div class="accord-content">
-                                <p>We give a Guarantee for a Period of 5 years and promise to rectify any fault arising out of faulty workmanship at our cost. However the guarantee does not hold good for mishandling and breakable items.</p>
-                            </div>
-                        </div>
-                        <!--End single accordion box-->
                     </div>
                 </div>
             </div>
+
         </div>
     </div>
     <!--End faq content area-->

@@ -87,6 +87,53 @@
                     <nav class="main-menu">
                         <div class="navbar-collapse collapse clearfix">
                             <ul class="navigation clearfix">
+                                <li class=""><a href="{{url('/')}}">
+                                        Home</a></li>
+                                <li><a href="#">About us</a>
+                                    <ul>
+                                        <li><a href="{{url('/registrar')}}">Registrar</a></li>
+                                        <li><a href="{{url('/what-we-do')}}">What We Do</a></li>
+                                        <li><a href="{{url('/our-history')}}">Our History</a></li>
+                                        <li><a href="{{url('/council-structure')}}">Council Structure</a></li>
+                                        <li><a href="{{url('/council-members')}}">Council Members</a></li>
+                                        <li><a href="{{url('/committees')}}">Committees</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Registration</a>
+                                    <ul>
+                                        <li><a href="{{url('/registration-pathway')}}">Registration Pathway</a></li>
+                                        <li><a href="{{url('/registration-forms')}}">Registration Forms</a></li>
+                                        <li><a href="{{url('/banking-details')}}">Banking Details</a></li>
+                                        <li><a href="http://www.mdpcz.co.zw/mdpcz_find/_f/_find_practitioner.php" target="_blank">Registered Doctors</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">The Profession</a>
+                                    <ul>
+                                        <li><a href="{{url('/online-services')}}">Online Services</a></li>
+                                        <li><a href="#">Registration</a></li>
+                                        <li><a href="{{url('/council-examination')}}">Education & training</a></li>
+                                        <li><a href="{{url('/fitness-to-practice')}}">Fitness to Practice</a></li>
+                                        <li><a href="{{url('/policy_guideline')}}">Policies & Guidelines</a></li>
+                                        <li><a href="{{url('/act')}}">Acts</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">The Public</a>
+                                    <ul>
+                                        <li><a href="{{url('/complaint')}}">Complaints</a></li>
+                                        <li><a href="{{url('/our_resource')}}">Resources</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="{{url('/faqs')}}">FAQ's</a></li>
+                                <li><a href="{{url('/contact-us')}}">Contact Us</a></li>
+
+                            </ul>
+                        </div>
+                    </nav>
+                    <!--End mainmenu-->
+                    <!-- mobile-menu -->
+                    <div class="services-mobile-menu visible-xs">
+                        <nav id="mobile-nav">
+                            <ul>
                                 <li class="active"><a href="{{url('/')}}">
                                         Home</a></li>
                                 <li><a href="#">About us</a>
@@ -104,76 +151,27 @@
                                         <li><a href="{{url('/registration-pathway')}}">Registration Pathway</a></li>
                                         <li><a href="{{url('/registration-forms')}}">Registration Forms</a></li>
                                         <li><a href="{{url('/banking-details')}}">Banking Details</a></li>
-                                        <li><a href="#">Registered Doctors</a></li>
+                                        <li><a href="http://www.mdpcz.co.zw/mdpcz_find/_f/_find_practitioner.php">Registered Doctors</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="#">The Profession</a>
                                     <ul>
                                         <li><a href="{{url('/online-services')}}">Online Services</a></li>
                                         <li><a href="#">Registration</a></li>
-                                        <li><a href="{{url('/council-examination')}}">Council Examination</a></li>
+                                        <li><a href="{{url('/council-examination')}}">Education & training</a></li>
                                         <li><a href="{{url('/fitness-to-practice')}}">Fitness to Practice</a></li>
-                                        <li><a href="#">Policies & Guidelines</a></li>
-                                        <li><a href="#">Acts</a></li>
+                                        <li><a href="{{url('/policy_guideline')}}">Policies & Guidelines</a></li>
+                                        <li><a href="{{url('/act')}}">Acts</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="#">The Public</a>
                                     <ul>
-                                        <li><a href="#">Complaints</a></li>
-                                        <li><a href="#">Resources</a></li>
+                                        <li><a href="{{url('/complaint')}}">Complaints</a></li>
+                                        <li><a href="{{url('/our_resource')}}">Resources</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="{{url('/faqs')}}">FAQ's</a></li>
                                 <li><a href="{{url('/contact-us')}}">Contact Us</a></li>
-
-                            </ul>
-                        </div>
-                    </nav>
-                    <!--End mainmenu-->
-                    <!-- mobile-menu -->
-                    <div class="services-mobile-menu visible-xs">
-                        <nav id="mobile-nav">
-                            <ul>
-                                <li class="active"><a href="index.html">
-                                        Home</a></li>
-                                <li><a href="#">About us</a>
-                                    <ul>
-                                        <li><a href="#">Registrar</a></li>
-                                        <li><a href="#">What We Do</a></li>
-                                        <li><a href="#">Our History</a></li>
-                                        <li><a href="#">Council Structure</a></li>
-                                        <li><a href="#">Council Members</a></li>
-                                        <li><a href="#">Committees</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="#">Registration</a>
-                                    <ul>
-                                        <li><a href="#">Registration Pathway</a></li>
-                                        <li><a href="#">Registration Forms</a></li>
-                                        <li><a href="#">Banking Details</a></li>
-                                        <li><a href="#">Registered Doctors</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="#">The Profession</a>
-                                    <ul>
-                                        <li><a href="#">Online Services</a></li>
-                                        <li><a href="#">Registration</a></li>
-                                        <li><a href="#">Education & training</a></li>
-                                        <li><a href="#">Fitness to Practice</a></li>
-                                        <li><a href="#">Policies & Guidelines</a></li>
-                                        <li><a href="#">Acts</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="#">The Public</a>
-                                    <ul>
-                                        <li><a href="#">Complaints</a></li>
-                                        <li><a href="#">Online Services</a></li>
-                                        <li><a href="#">Registered Doctors</a></li>
-                                        <li><a href="#">Resources</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="faq.html">FAQ's</a></li>
-                                <li><a href="contact.html">Contact Us</a></li>
 
                             </ul>
                         </nav>
