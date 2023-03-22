@@ -19,10 +19,12 @@
                 <div class="row">
                     <!-- Hero Content -->
                     <div class="hero-content col-xs-12">
-                        <h1 style="color: white;" class="wow cusFadeInRight" data-wow-duration=".5s" data-wow-delay="0.5s">Medical & <br>
+                        <h1 style="color: white;" class="wow cusFadeInRight" data-wow-duration=".5s"
+                            data-wow-delay="0.5s">Medical & <br>
                             Dental Practitioners Council </h1>
                         <p class="wow cusFadeInRight" data-wow-duration=".5s" data-wow-delay="1s"></p>
-                        <a href="#" class="learn-more wow cusFadeInRight" data-wow-duration=".5s" data-wow-delay="1.5s">Learn
+                        <a href="{{url('/what-we-do')}}" class="learn-more wow cusFadeInRight" data-wow-duration=".5s"
+                           data-wow-delay="1.5s">Learn
                             More</a>
                     </div>
                 </div>
@@ -34,8 +36,10 @@
                 <div class="row">
                     <!-- Hero Content -->
                     <div class="hero-content col-xs-12">
-                        <h1 class="wow cusFadeInRight" data-wow-duration=".5s" data-wow-delay="0.5s"></h1>
-                        <p class="wow cusFadeInRight" data-wow-duration=".5s" data-wow-delay="1s"></p>
+                        <h1 style="color: blue;" class="wow cusFadeInRight" data-wow-duration=".5s" data-wow-delay="0.5s">For
+                            Professions</h1>
+                        <p style="color: red;font-weight: bold" class="wow cusFadeInRight" data-wow-duration=".5s" data-wow-delay="1s">Regulate, control and
+                            supervise all matters affecting the training of Medical and Dental Professions.</p>
                         <a href="#" class="learn-more wow cusFadeInRight" data-wow-duration=".5s"
                            data-wow-delay="1.5s"></a>
                     </div>
@@ -167,10 +171,12 @@
                 <div class="col-md-3 col-sm-6">
                     <div class="single-our-service" style="background-color: #106995;">
                         <br>
-                        <a href="http://www.mdpcz.co.zw/mdpcz_find/_f/_find_practitioner.php" target="_blank"><h4 style="color: #ffffff !important;">Doctor's Register</h4></a>
+                        <a href="http://www.mdpcz.co.zw/mdpcz_find/_f/_find_practitioner.php" target="_blank"><h4
+                                style="color: #ffffff !important;">Doctor's Register</h4></a>
                         <p style="color: #ffffff !important;"> Provides a list of doctors recognized as operational.</p>
                         <br>
-                        <a href="http://www.mdpcz.co.zw/mdpcz_find/_f/_find_practitioner.php" target="_blank" class="btn btn-sm btn-primary">
+                        <a href="http://www.mdpcz.co.zw/mdpcz_find/_f/_find_practitioner.php" target="_blank"
+                           class="btn btn-sm btn-primary">
                             Find
                         </a>
                     </div>
