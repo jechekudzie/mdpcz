@@ -30,7 +30,7 @@
                         <div class="card-header">
                             <div class="d-flex align-items-center flex-wrap gap-2">
                                 <div class="flex-grow-1">
-                                    <a href="{{url('/admin/faq/'.$faq->form_category->id.'/index')}}" class="btn btn-info add-btn"><i
+                                    <a href="{{url('/admin/faq/'.$faq->faq_category->id.'/index')}}" class="btn btn-info add-btn"><i
                                             class="ri-arrow-left-line align-bottom"></i> Back
                                     </a>
                                 </div>
@@ -99,7 +99,7 @@
                                                 <div class="col-lg-12">
                                                     <div class="mb-3">
                                                         <label for="teammembersName" class="form-label">Answer</label>
-                                                        <textarea type="text" class="form-control" name="answer">{!! $faq->answer !!}</textarea>
+                                                        <textarea type="text" id="editor" class="form-control" name="answer">{!! $faq->answer !!}</textarea>
                                                     </div>
                                                 </div>
 

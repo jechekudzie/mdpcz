@@ -91,14 +91,14 @@
                                                     </div>
                                                 </td>
                                                 <td class="owner">{{$act->title}}</td>
-                                                <td class="owner"><a href="{{url($act->file)}}" target="_blank">Act file</a>
+                                                <td class="owner"><a href="{{asset($act->file)}}" target="_blank">Act file</a>
                                                 </td>
                                                 <td>
                                                     <ul class="list-inline hstack gap-2 mb-0">
                                                         <li class="list-inline-item" data-bs-toggle="tooltip"
                                                             data-bs-trigger="hover" data-bs-placement="top"
                                                             title="View">
-                                                            <a href="{{url($act->file)}}" target="_blank"
+                                                            <a href="{{asset($act->file)}}" target="_blank"
                                                                class="view-item-btn">View</a>
                                                         </li>
                                                         <li class="list-inline-item" data-bs-toggle="tooltip"

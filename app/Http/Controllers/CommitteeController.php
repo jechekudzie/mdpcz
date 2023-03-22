@@ -28,7 +28,7 @@ class CommitteeController extends Controller
 
         $committee = Committee::create(request()->validate([
             'name' => 'required',
-            'section' => 'required',
+            'section' => 'nullable',
             'description' => 'required',
         ]));
 
@@ -55,7 +55,7 @@ class CommitteeController extends Controller
         //
         $committee->update(request()->validate([
             'name' => 'required',
-            'section' => 'required',
+            'section' => 'nullable',
             'description' => 'required',
         ]));
 

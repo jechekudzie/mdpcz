@@ -25,7 +25,7 @@ class CouncilStructureController extends Controller
         //
         $structure_file = '';
         $councilStructure = request()->validate([
-            'description' => 'required',
+            'description' => 'nullable',
         ]);
 
         if (request()->hasfile('file')) {
@@ -68,7 +68,7 @@ class CouncilStructureController extends Controller
 
         $new_structure_file = '';
         $update = request()->validate([
-            'description' => 'required',
+            'description' => 'nullable',
         ]);
 
 

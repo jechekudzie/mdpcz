@@ -85,18 +85,9 @@
                                             <div>
                                                 <label for="companyname-field"
                                                        class="form-label">file</label>
-                                                <input type="file" name="file" class="form-control" required/>
+                                                <input type="file" name="file" class="form-control"/>
                                             </div>
                                         </div>
-
-                                        {{--<div class="col-lg-12">
-                                            <div>
-                                                <label for="companyname-field"
-                                                       class="form-label">Description</label>
-                                                <textarea name="description" class="form-control" id="editor1"
-                                                          required></textarea>
-                                            </div>
-                                        </div>--}}
 
                                     </div>
                                 </div>

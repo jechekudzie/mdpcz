@@ -32,7 +32,7 @@
                 @if (session('message'))
                     <div class="col-lg-6">
                         <!-- Primary Alert -->
-                        <div class="alert alert-primary alert-dismissible fade show" role="alert">
+                        <div class="alert alert-primary alert-dismissible fade {{--show--}}" role="alert">
                             <strong> Hi! </strong> <b>{{session('message')}} </b> !
                             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                         </div>
@@ -70,13 +70,13 @@
                                         <h2 class="accordion-header" id="headingOne">
                                             <button class="accordion-button" type="button" data-bs-toggle="collapse"
                                                     data-bs-target="#collapse{{$faq->id}}"
-                                                    aria-expanded="{{$x === 1 ? 'true':'false'}}"
+                                                    aria-expanded="true"
                                                     aria-controls="collapse{{$faq->id}}">
                                                 {{$faq->question}}
                                             </button>
                                         </h2>
                                         <div id="collapse{{$faq->id}}"
-                                             class="accordion-collapse collapse {{$x === 1 ? 'show':''}}"
+                                             class="accordion-collapse collapse {{--show--}}"
                                              aria-labelledby="headingOne"
                                              data-bs-parent="#default-accordion-example">
                                             <div class="accordion-body">
@@ -89,11 +89,10 @@
 
                                         </div>
                                     </div>
-                                    <div class="modal-footer">
-                                        <div class="hstack gap-2 justify-content-end">
-
+                                    <div style="padding: 10px;">
+                                        <div class="">
                                             <a href="{{url('/admin/faq/'.$faq->id.'/edit')}}"
-                                               class="btn btn-success" id="add-btn">Edit Faq</a>
+                                               class="btn btn-success" id="add-btn">Edit FAQ</a>
 
                                         </div>
                                     </div>

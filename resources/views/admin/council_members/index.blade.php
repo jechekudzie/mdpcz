@@ -43,7 +43,7 @@
                     <div class="card-body">
                         <div class="row g-2">
                             <!--end col-->
-                            <div class="col-sm-auto ms-auto">
+                            <div class="col-sm-auto {{--ms-auto--}}">
                                 <div class="list-grid-nav hstack gap-1">
 
                                     <button class="btn btn-info" data-bs-toggle="modal" data-bs-target="#addmembers">
@@ -172,7 +172,7 @@
 
 
                                                     <div class="col-lg-12">
-                                                        <div class="hstack gap-2 justify-content-end">
+                                                        <div class="hstack gap-2 {{--justify-content-end--}}">
                                                             <button type="button" class="btn btn-light"
                                                                     data-bs-dismiss="modal">Close
                                                             </button>

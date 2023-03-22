@@ -72,7 +72,7 @@
                                                     data-bs-target="#collapse{{$exam->id}}"
                                                     aria-expanded="true"
                                                     aria-controls="collapse{{$exam->id}}">
-                                                What we do
+                                                {{$exam->title}}
                                             </button>
                                         </h2>
                                         <div id="collapse{{$exam->id}}"

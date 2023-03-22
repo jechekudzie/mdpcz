@@ -85,7 +85,7 @@
                                             <div>
                                                 <label for="companyname-field"
                                                        class="form-label">section</label>
-                                                <input type="text" name="section" class="form-control" required/>
+                                                <input type="text" name="section" class="form-control"/>
                                             </div>
                                         </div>
 
@@ -102,8 +102,8 @@
 
                                     </div>
                                 </div>
-                                <div class="modal-footer">
-                                    <div class="hstack gap-2 justify-content-end">
+                                <div style="padding: 10px;">
+                                    <div class="hstack gap-2">
                                         <button type="button" class="btn btn-light"
                                                 data-bs-dismiss="modal">Close
                                         </button>

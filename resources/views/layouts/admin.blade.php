@@ -659,7 +659,7 @@
                         <div class="collapse menu-dropdown" id="payment_utilities">
                             <ul class="nav nav-sm flex-column">
                                 <li class="nav-item">
-                                    <a href="{{url('/admin/registration_path_way')}}" style="text-transform: capitalize" class="nav-link {{(request()->is('admin/payment_categories*')) ? 'active' : '' }}" data-key="t-analytics">
+                                    <a href="{{url('/admin/registration_pathway')}}" style="text-transform: capitalize" class="nav-link {{(request()->is('admin/registration_pathway*')) ? 'active' : '' }}" data-key="t-analytics">
                                         REGISTRATION PATHWAYS </a>
                                 </li>
 
@@ -669,7 +669,7 @@
                                 </li>
 
                                 <li class="nav-item">
-                                    <a href="{{url('/admin/banking_details')}}" style="text-transform: capitalize" class="nav-link {{(request()->is('admin/payment_methods*')) ? 'active' : '' }}" data-key="t-analytics">
+                                    <a href="{{url('/admin/banking_detail')}}" style="text-transform: capitalize" class="nav-link {{(request()->is('admin/banking_detail*')) ? 'active' : '' }}" data-key="t-analytics">
                                         BANKING DETAILS </a>
                                 </li>
 
@@ -691,15 +691,15 @@
                         </a>
                         <div class="collapse menu-dropdown" id="statuses_utilities">
                             <ul class="nav nav-sm flex-column">
-                                <li class="nav-item">
-                                    <a href="{{--{{url('/admin/online_services')}}--}}#" style="text-transform: capitalize" class="nav-link {{(request()->is('admin/restorations*')) ? 'active' : '' }}"
+                               {{-- <li class="nav-item">
+                                    <a href="--}}{{--{{url('/admin/online_services')}}--}}{{--#" style="text-transform: capitalize" class="nav-link {{(request()->is('admin/restorations*')) ? 'active' : '' }}"
                                        data-key="t-ecommerce"> ONLINE SERVICES</a>
-                                </li>
+                                </li>--}}
 
-                                <li class="nav-item">
-                                    <a href="{{--{{url('/admin/registration')}}--}}#" style="text-transform: capitalize" class="nav-link {{(request()->is('admin/application_statuses*')) ? 'active' : '' }}" data-key="t-analytics">
+                               {{-- <li class="nav-item">
+                                    <a href="--}}{{--{{url('/admin/registration')}}--}}{{--#" style="text-transform: capitalize" class="nav-link {{(request()->is('admin/application_statuses*')) ? 'active' : '' }}" data-key="t-analytics">
                                         REGISTRATION </a>
-                                </li>
+                                </li>--}}
 
                                 <li class="nav-item">
                                     <a href="{{url('/admin/exam')}}" style="text-transform: capitalize" class="nav-link {{(request()->is('admin/exam*')) ? 'active' : '' }}" data-key="t-analytics">
@@ -740,7 +740,7 @@
                                        data-key="t-ecommerce"> COMPLAINTS</a>
                                 </li>
 
-                                <li class="nav-item">
+                               {{-- <li class="nav-item">
                                     <a href="{{url('/admin/online_services')}}" style="text-transform: capitalize" class="nav-link {{(request()->is('admin/payment_categories*')) ? 'active' : '' }}" data-key="t-analytics">
                                         ONLINE SERVICES </a>
                                 </li>
@@ -748,10 +748,10 @@
                                 <li class="nav-item">
                                     <a href="{{url('/admin/registered_doctors')}}" style="text-transform: capitalize" class="nav-link {{(request()->is('admin/payment_categories*')) ? 'active' : '' }}" data-key="t-analytics">
                                         REGISTERED DOCTORS </a>
-                                </li>
+                                </li>--}}
 
                                 <li class="nav-item">
-                                    <a href="{{url('/admin/resources')}}" style="text-transform: capitalize" class="nav-link {{(request()->is('admin/payment_categories*')) ? 'active' : '' }}" data-key="t-analytics">
+                                    <a href="{{url('/admin/our_resource')}}" style="text-transform: capitalize" class="nav-link {{(request()->is('admin/our_resource*')) ? 'active' : '' }}" data-key="t-analytics">
                                         RESOURCES </a>
                                 </li>
                                 <li class="nav-item">

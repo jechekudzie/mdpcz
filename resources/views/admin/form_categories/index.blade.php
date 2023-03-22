@@ -59,8 +59,8 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div>
-                            <div class="table-responsive table-card mb-3">
-                                <table class="table align-middle table-nowrap mb-0">
+                            <div style="background-color: white;" class="table-responsive mb-3">
+                                <table class="table table-bordered dt-responsive nowrap table-striped align-middle">
                                     <thead class="table-light">
                                     <tr>
                                         <th scope="col" style="width: 50px;">

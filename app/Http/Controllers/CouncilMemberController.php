@@ -27,8 +27,8 @@ class CouncilMemberController extends Controller
         $member_file = '';
         $councilMember = request()->validate([
             'name' => 'required',
-            'title' => 'required',
-            'bio' => 'required',
+            'title' => 'nullable',
+            'bio' => 'nullable',
         ]);
 
         if (request()->hasfile('file')) {
@@ -71,8 +71,8 @@ class CouncilMemberController extends Controller
         $new_member_file = '';
         $update = request()->validate([
             'name' => 'required',
-            'title' => 'required',
-            'bio' => 'required',
+            'title' => 'nullable',
+            'bio' => 'nullable',
         ]);
 
 

@@ -100,8 +100,8 @@
 
                                     </div>
                                 </div>
-                                <div class="modal-footer">
-                                    <div class="hstack gap-2 justify-content-end">
+                                <div class="">
+                                    <div class="hstack gap-2 {{--justify-content-end--}}">
                                         <button type="button" class="btn btn-light"
                                                 data-bs-dismiss="modal">Close
                                         </button>
