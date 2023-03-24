@@ -61,12 +61,12 @@
                                                            value="option">
                                                 </div>
                                             </th>
-                                            <th class="sort" data-sort="name" scope="col">Company Name</th>
-                                            <th class="sort" data-sort="owner" scope="col">Owner</th>
-                                            <th class="sort" data-sort="industry_type" scope="col">Industry Type
+                                            <th class="sort" data-sort="name" scope="col">Company</th>
+                                            <th class="sort" data-sort="owner" scope="col">Address</th>
+                                            <th class="sort" data-sort="industry_type" scope="col">Contact email
                                             </th>
-                                            <th class="sort" data-sort="star_value" scope="col">Rating</th>
-                                            <th class="sort" data-sort="location" scope="col">Location</th>
+                                            <th class="sort" data-sort="star_value" scope="col">Contact number</th>
+
                                         </tr>
                                         </thead>
                                         <tbody class="list form-check-all">
@@ -78,23 +78,21 @@
                                                 </div>
                                             </th>
                                             <td class="id" style="display:none;"><a href="javascript:void(0);"
-                                                                                    class="fw-medium link-primary">#VZ001</a>
+                                                                                    class="fw-medium link-primary">#001</a>
                                             </td>
                                             <td>
                                                 <div class="d-flex align-items-center">
-                                                    <div class="flex-shrink-0">
-                                                        <img src="admin/assets/images/brands/dribbble.png" alt=""
-                                                             class="avatar-xxs rounded-circle image_src object-cover">
-                                                    </div>
-                                                    <div class="flex-grow-1 ms-2 name">Jeche Nesta Technologies
+                                                    <div class="flex-grow-1 ms-2 name">Medical and Dental Practitioners
+                                                        Council of Zimbabwe
                                                     </div>
                                                 </div>
                                             </td>
-                                            <td class="owner">Tonya Noble</td>
-                                            <td class="industry_type">Computer Industry</td>
-                                            <td><span class="star_value">4.5</span> <i
-                                                    class="ri-star-fill text-warning align-bottom"></i></td>
-                                            <td class="location">Los Angeles, USA</td>
+                                            <td class="owner">No 8 Harvey Brown
+                                                Milton Park
+                                                Harare, Zimbabwe
+                                            </td>
+                                            <td class="industry_type">mdpcz@mdpcz.co.zw</td>
+                                            <td class="location">263 4 792195 , 2933177/8</td>
 
                                         </tr>
 
