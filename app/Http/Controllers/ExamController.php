@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Exam;
 
+use App\Models\ExamDate;
 use App\Models\ExamGuideline;
 use Illuminate\Http\Request;
 
@@ -13,9 +14,10 @@ class ExamController extends Controller
     public function index()
     {
         //
+        $exam_dates = ExamDate::all();
         $exams = Exam::all();
         $exam_guidelines = ExamGuideline::all();
-        return view('admin.exams.index', compact('exams','exam_guidelines'));
+        return view('admin.exams.index', compact('exams','exam_guidelines','exam_dates'));
     }
 
     public function create()

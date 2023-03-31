@@ -27,8 +27,42 @@
     <div class="about-us sec-padd-top">
         <div class="container">
             <div class="row">
-                <div class="wpb_wrapper">
-                    {!! $fitness_to_practice->description !!}
+                <div style="margin-top: 10px;" class="col-md-3 col-sm-12">
+                    <div class="panel panel-primary">
+                        <!-- Default panel contents -->
+                        <div class="panel-heading">THE PROFESSION</div>
+                        <!-- List group -->
+                        <ul class="list-group">
+                            <li class="list-group-item"><a href="{{url('/online-services')}}">Online Services</a></li>
+                            <li class="list-group-item"><a href="{{url('/registers')}}">Registers</a></li>
+                            <li class="list-group-item"><a href="{{url('/council-examination')}}">Council
+                                    Examination</a></li>
+                            <li class="list-group-item"><a href="{{url('/fitness-to-practice')}}">Fitness to
+                                    Practice</a></li>
+                            <li class="list-group-item"><a href="{{url('/policy_guideline')}}">Policies & Guidelines</a>
+                            </li>
+                            <li class="list-group-item"><a href="{{url('/act')}}">Acts</a></li>
+                        </ul>
+                    </div>
+                    <div class="panel panel-primary">
+                        <!-- Default panel contents -->
+                        <div class="panel-heading">QUICK LINKS</div>
+                        <!-- List group -->
+                        <ul class="list-group">
+                            @foreach($quick_links as $quick_link)
+                                <li class="list-group-item">
+                                    <a href="{{$quick_link->url}}" target="_blank">{{$quick_link->title}}</a>
+                                </li>
+                            @endforeach
+
+                        </ul>
+                    </div>
+
+                </div>
+                <div style="margin-top: 10px;" class="col-md-9 col-sm-12">
+                    <div class="wpb_wrapper">
+                        {!! $fitness_to_practice->description !!}
+                    </div>
                 </div>
             </div>
         </div>

@@ -27,19 +27,37 @@
     <div class="about-us sec-padd-top">
         <div class="container">
             <div class="row">
-                <div class="col-md-12 col-sm-12">
+                <div class="col-md-3 col-sm-12">
+                    <div class="panel panel-primary">
+                        <!-- Default panel contents -->
+                        <div class="panel-heading">THE PUBLIC</div>
+                        <!-- List group -->
+                        <ul class="list-group">
+                            <li class="list-group-item"><a href="{{url('/complaint')}}">Complaints</a></li>
+                            <li class="list-group-item"><a href="{{url('/our_resource')}}">Resources</a></li>
+                        </ul>
+                    </div>
+                    <div class="panel panel-primary">
+                        <!-- Default panel contents -->
+                        <div class="panel-heading">QUICK LINKS</div>
+                        <!-- List group -->
+                        <ul class="list-group">
+                            @foreach($quick_links as $quick_link)
+                                <li class="list-group-item">
+                                    <a href="{{$quick_link->url}}" target="_blank">{{$quick_link->title}}</a>
+                                </li>
+                            @endforeach
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-9 col-sm-12">
                     @foreach($our_resources as $our_resource)
                         <div class="about-text">
-                            <h2>
+                            <h4 style="font-weight: bold;">
                                 {{$our_resource->title}}
-                            </h2>
-                            <div class="project-single col-md-12 col-sm-12">
-                                <div class="single-project-info">
-                                    <ul class="list-item">
-                                        <li><a href="{{asset($our_resource->file)}}" target="_blank">Download / View {{$our_resource->title}}</a></li>
-                                    </ul>
-                                </div>
-                            </div>
+                            </h4>
+                            <iframe src="{{asset($our_resource->file)}}" width="300px" height="300px"></iframe>
                         </div>
                         <br>
                     @endforeach

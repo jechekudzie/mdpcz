@@ -68,11 +68,40 @@
 
                         <div class="card-body">
 
-                            <form method="post" action="{{url('/admin/policy_guideline')}}" enctype="multipart/form-data">
+                            <form method="post" action="{{url('/admin/policy_guideline')}}"
+                                  enctype="multipart/form-data">
                                 @csrf
                                 <div class="modal-body">
                                     <input type="hidden" id="id-field"/>
                                     <div class="row g-3">
+
+                                        <div class="col-lg-6">
+                                            <div>
+                                                <label for="companyname-field"
+                                                       class="form-label">Select Document Category</label>
+                                                <select name="policy_category_id" class="form-select mb-3" aria-label="Default select example">
+                                                    <option selected>Select Document Category</option>
+                                                    @foreach($policy_categories as $policy_category)
+                                                        <option value="{{$policy_category->id}}">{{$policy_category->name}}</option>
+                                                    @endforeach
+
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-6">
+                                            <div>
+                                                <label for="companyname-field"
+                                                       class="form-label">Select Document Type</label>
+                                                <select name="policy_type_id" class="form-select mb-3" aria-label="Default select example">
+                                                    <option selected>Select Document Type</option>
+                                                    @foreach($policy_types as $policy_type)
+                                                        <option value="{{$policy_type->id}}">{{$policy_type->name}}</option>
+                                                    @endforeach
+                                                </select>
+                                            </div>
+                                        </div>
+
                                         <div class="col-lg-12">
                                             <div>
                                                 <label for="companyname-field"

@@ -1,0 +1,340 @@
+
+a:hover {
+    text-decoration: none;
+}
+
+.my-flip-inner-wrapper {
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+    position: relative;
+}
+
+.my-flip-side {
+    display: block;
+    height: 300px;
+    top: 0;
+    right: 0;
+    left: 0;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+    transition: all .8s ease;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    background-color: #256b9a;
+    color: white;
+}
+
+.my-flip-back {
+    transform: rotateY(180deg);
+    color: #fff;
+    position: absolute;
+    z-index: -1;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+    padding: 46px;
+}
+
+.my-flip-back-1 {
+    background: linear-gradient(to right bottom, #256b9a, #256b9a);
+}
+
+.my-flip-back-2 {
+    background: linear-gradient(to right bottom, #256b9a,#256b9a);
+}
+
+
+
+.my-flip-back-3 {
+    background: linear-gradient(to right bottom, #256b9a, #256b9a);
+}
+
+.my-flip-back-4 {
+    background: linear-gradient(to right bottom, #256b9a, #256b9a);
+}
+
+.my-flip-inner-wrapper:hover .my-flip-front {
+    transform: rotateY(-180deg);
+}
+
+.my-flip-inner-wrapper:hover .my-flip-back {
+    transform: rotateY(0);
+}
+
+.my-flip-image {
+    height: 15rem;
+    background-blend-mode: screen;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+
+.my-flip-image img {
+    width: 100%;
+    height: 100%;
+    background-blend-mode: screen;
+    object-fit: cover;
+}
+
+.my-flip-heading {
+    margin: 0 0 15px;
+}
+
+.my-flip-details {
+    padding: 2rem;
+}
+
+.my-flip-details p {
+    font-size: 18px;
+    margin: 0;
+    line-height: 2;
+    color: white;
+}
+
+.my-flip-back-inner ul {
+    list-style: none;
+    margin: 0 0 1.5rem;
+    padding: 0;
+    font-size: 18px;
+}
+
+.my-flip-back-text ul li {
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+    padding: 0.8rem 0;
+}
+
+.my-flip-back-inner ul li:not(:last-child) {
+    border-bottom: 1px solid #ffffff;
+}
+
+.my-flip-price {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.my-flip-price h3 {
+    font-size: 3rem;
+    font-weight: 300;
+}
+
+.my-flip-btn-box {
+    text-align: center;
+}
+
+.my-flip-btn {
+    text-transform: uppercase;
+    padding: 1rem 1.8rem;
+    font-size: 1rem;
+    background-color: #fff;
+    color: #000;
+    border-radius: 10rem;
+    display: inline-block;
+    transition: all .2s;
+    color: initial;
+    position: relative;
+}
+
+.my-flip-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+    color: #000;
+}
+
+
+
+
+
+/**Classic Tabs Wrap**/
+
+.classic-tab-wrap .tab-wrap {
+    padding: 20px;
+    background: #f5f5f5;
+}
+
+.classic-tab-wrap .tab-wrap .nav-tabs li {
+    margin: 0;
+}
+
+.classic-tab-wrap .tab-wrap .nav-tabs li a {
+    font-weight: 500;
+    font-size: 18px;
+    color: #8a8a8a;
+    border: none;
+    border-bottom: 2px solid transparent;
+    padding-left: 35px;
+    padding-right: 35px;
+}
+
+.classic-tab-wrap .tab-wrap .nav-tabs li a.active {
+    color: #495057;
+    background: transparent;
+    border-color: #495ab7;
+}
+
+.classic-tab-wrap .tab-wrap .nav-tabs li a i {
+    margin-right: 6px;
+}
+
+.classic-tab-wrap .tab-wrap .tab-pane {
+    padding: 20px;
+}
+
+.viewBtn {
+    padding-left: 20px;
+    padding-right: 20px;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/**Floating**/
+
+.floating .tab-wrap .nav-tabs {
+    padding: 18px;
+    border: none;
+    background: #5e8acf;
+    border-radius: 7px;
+}
+
+.floating .tab-wrap .nav-tabs .nav-item {
+    margin: 0;
+    width: 33.33%;
+    text-align: center;
+}
+
+.floating .tab-wrap .nav-tabs .nav-item a {
+    color: #fff;
+    font-weight: 400;
+    font-size: 18px;
+    border: none;
+    padding-left: 35px;
+    padding-right: 35px;
+    opacity: 1;
+}
+
+.floating .tab-wrap .nav-tabs .nav-item a.active {
+    background: #324295;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #32429591;
+}
+
+.floating .tab-wrap .nav-tabs .nav-item a i {
+    margin: 0 5px 0 0;
+}
+
+/*Floating H*/
+
+.floatingH-tab-wrap .tab-content {
+    padding: 70px 20px 30px 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: -40px;
+}
+
+.floatingH-tab-wrap .tab-head {
+    padding: 0 20px;
+    position: relative;
+    z-index: 1;
+}
+
+/**Pills Tabs - Horizontal**/
+
+.pillsH-tab-wrap .tab-head {
+    padding: 10px;
+}
+
+.pillsH-tab-wrap .tab-head .nav-tabs {
+    border: none;
+}
+
+.pillsH-tab-wrap .tab-head .nav-tabs .nav-item {
+    margin: 0;
+    width: 33.33%;
+    text-align: center;
+}
+
+.pillsH-tab-wrap .tab-head .nav-tabs .nav-item a {
+    color: #666666;
+    font-weight: 400;
+    font-size: 18px;
+    border: none;
+    padding-left: 35px;
+    padding-right: 35px;
+    opacity: 1;
+    border-radius: 5px;
+}
+
+.pillsH-tab-wrap .tab-head .nav-tabs .nav-item a.active {
+    background: #2bbbad;
+    color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.pillsH-tab-wrap .tab-head .nav-tabs .nav-item a i {
+    margin-right: 5px;
+}
+
+.pillsH-tab-wrap .tab-content {
+    padding: 30px 20px 30px 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/**Pills Tabs - Horizontal Ends**/
+
+/**Floating Tabs - Vertical **/
+
+.floatingV-tab-wrap .nav {
+    padding: 18px;
+    border: none;
+    background: #4051b6;
+    border-radius: 7px;
+}
+
+.floatingV-tab-wrap .nav .nav-link.active {
+    background: #324295;
+    box-shadow: 0 0 10px #32429591;
+}
+
+.floatingV-tab-wrap .nav .nav-link {
+    color: #fff;
+    font-weight: 400;
+    font-size: 18px;
+    border: none;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.floatingV-tab-wrap .tab-content {
+    padding: 30px 20px 30px 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/**Floating Tabs - Vertical Ends **/
+
+/**Pills Tabs - Vertical Section**/
+.pillsV-tab-wrap .tab-content {
+    padding: 30px 20px 30px 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.pillsV-tab-wrap .nav {
+    padding: 18px;
+    border: none;
+}
+
+.pillsV-tab-wrap .nav .nav-link {
+    margin: 0 0 10px 0;
+    font-weight: 400;
+    font-size: 18px;
+    border: none;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #666666;
+}
+.pillsV-tab-wrap .nav .nav-link:hover {
+    background: #e2e2e2;
+}
+.pillsV-tab-wrap .nav .nav-link.active {
+    background: #2bbbad;
+    color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+

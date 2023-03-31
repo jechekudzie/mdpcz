@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 
+use App\Models\PolicyCategory;
 use App\Models\PolicyGuideline;
+use App\Models\PolicyType;
 use Illuminate\Http\Request;
 
 class PolicyGuidelineController extends Controller
@@ -19,7 +21,9 @@ class PolicyGuidelineController extends Controller
     public function create()
     {
         //
-        return view('admin.policy_guidelines.create');
+        $policy_categories = PolicyCategory::all();
+        $policy_types = PolicyType::all();
+        return view('admin.policy_guidelines.create', compact('policy_categories', 'policy_types'));
     }
 
     public function store(Request $request)
@@ -27,6 +31,8 @@ class PolicyGuidelineController extends Controller
         //
         $policy_guideline_file = '';
         $policy_guideline = request()->validate([
+            'policy_category_id' => 'required',
+            'policy_type_id' => 'required',
             'title' => 'required',
         ]);
 
@@ -61,7 +67,9 @@ class PolicyGuidelineController extends Controller
     public function edit(PolicyGuideline $policy_guideline)
     {
         //
-        return view('admin.policy_guidelines.edit', compact('policy_guideline'));
+        $policy_categories = PolicyCategory::all();
+        $policy_types = PolicyType::all();
+        return view('admin.policy_guidelines.edit', compact('policy_guideline', 'policy_categories', 'policy_types'));
     }
 
     public function update(Request $request, PolicyGuideline $policy_guideline)
@@ -70,6 +78,8 @@ class PolicyGuidelineController extends Controller
 
         $new_policy_guideline_file = '';
         $update = request()->validate([
+            'policy_category_id' => 'required',
+            'policy_type_id' => 'required',
             'title' => 'required',
         ]);
 

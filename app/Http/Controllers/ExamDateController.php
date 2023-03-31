@@ -27,9 +27,9 @@ class ExamDateController extends Controller
         //
 
         $exam_date = ExamDate::create(request()->validate([
-            'first_exam' => 'required',
-            'second_exam' => 'required',
-            'third_exam' => 'required',
+            'date' => 'required',
+            'time' => 'required',
+            'venue' => 'required',
 
         ]));
 
@@ -55,9 +55,9 @@ class ExamDateController extends Controller
     {
         //
         $exam_date->update(request()->validate([
-            'first_exam' => 'required',
-            'second_exam' => 'required',
-            'third_exam' => 'required',
+            'date' => 'required',
+            'time' => 'required',
+            'venue' => 'required',
         ]));
 
 

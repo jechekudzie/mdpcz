@@ -77,6 +77,8 @@
                                                 </div>
                                             </th>
                                             <th class="sort" data-sort="name" scope="col">Title</th>
+                                            <th class="sort" data-sort="name" scope="col">Document Category</th>
+                                            <th class="sort" data-sort="name" scope="col">Document Type</th>
                                             <th class="sort" data-sort="owner" scope="col">File</th>
                                             <th scope="col">Action</th>
                                         </tr>
@@ -91,6 +93,8 @@
                                                     </div>
                                                 </td>
                                                 <td class="owner">{{$policy_guideline->title}}</td>
+                                                <td class="owner">{{$policy_guideline->policy_category->name}}</td>
+                                                <td class="owner">{{$policy_guideline->policy_type->name}}</td>
                                                 <td class="owner"><a href="{{url($policy_guideline->file)}}" target="_blank">Policy</a>
                                                 </td>
                                                 <td>

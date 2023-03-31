@@ -15,6 +15,8 @@ return new class extends Migration
     {
         Schema::create('policy_guidelines', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('policy_category_id');
+            $table->unsignedBigInteger('policy_type_id');
             $table->string('title');
             $table->string('file')->nullable();
             $table->boolean('is_published')->default(1);

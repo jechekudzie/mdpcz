@@ -6,6 +6,8 @@
 
 
 @section('site_content')
+
+    <link rel="stylesheet" href="{{asset('home.css')}}">
     <!-- Hero Area Start -->
     <div id="hero-area" class="hero-area section">
         <!-- Hero Slider -->
@@ -24,8 +26,8 @@
                             Dental Practitioners Council </h1>
                         <p class="wow cusFadeInRight" data-wow-duration=".5s" data-wow-delay="1s"></p>
                         <a href="{{url('/what-we-do')}}" class="learn-more wow cusFadeInRight" data-wow-duration=".5s"
-                           data-wow-delay="1.5s">Learn
-                            More</a>
+                           data-wow-delay="1.5s">What we do
+                        </a>
                     </div>
                 </div>
             </div>
@@ -36,9 +38,11 @@
                 <div class="row">
                     <!-- Hero Content -->
                     <div class="hero-content col-xs-12">
-                        <h1 style="color: blue;" class="wow cusFadeInRight" data-wow-duration=".5s" data-wow-delay="0.5s">For
+                        <h1 style="color: blue;" class="wow cusFadeInRight" data-wow-duration=".5s"
+                            data-wow-delay="0.5s">For
                             Professions</h1>
-                        <p style="color: red;font-weight: bold" class="wow cusFadeInRight" data-wow-duration=".5s" data-wow-delay="1s">Regulate, control and
+                        <p style="color: red;font-weight: bold" class="wow cusFadeInRight" data-wow-duration=".5s"
+                           data-wow-delay="1s">Regulate, control and
                             supervise all matters affecting the training of Medical and Dental Professions.</p>
                         <a href="#" class="learn-more wow cusFadeInRight" data-wow-duration=".5s"
                            data-wow-delay="1.5s"></a>
@@ -56,9 +60,9 @@
                     <h4>Looking for registered doctors ?</h4>
                     <br>
                     <div class="text-center center">
-                        <a href="http://www.mdpcz.co.zw/mdpcz_find/_f/_find_practitioner.php" target="_blank"
-                           class="btn btn-sm btn-primary text-center">
-                            Find
+                        <a class="btn btn-primary btn-lg"
+                           href="http://www.mdpcz.co.zw/mdpcz_find/_f/_find_practitioner.php" target="_blank">
+                            Find Registered Practitioners
                         </a>
                     </div>
                 </div>
@@ -67,9 +71,8 @@
                     <h4>Check Student Results Online</h4>
                     <br>
                     <div class="text-center center">
-                        <a href="http://www.mdpcz.co.zw/mdpcz_results/" target="_blank"
-                           class="btn btn-sm btn-primary text-center">
-                            Check
+                        <a class="btn btn-primary btn-lg" href="http://www.mdpcz.co.zw/mdpcz_results/" target="_blank">
+                            Check Results
                         </a>
                     </div>
                 </div>
@@ -77,6 +80,216 @@
 
         </div>
     </div>
+
+    <div class="our-services">
+        <div class="container-fluid">
+            <div class="col-lg-7 col-sm-12">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">ONLINE SERVICES</h3>
+                    </div>
+                    <div class="panel-body">
+                        <p style="color: black;font-size: 18px;font-weight: bold;">Search Register, Registration Forms, Complaints, Renewal</p>
+                        <section style="padding-top: 20px;" class="section-tours">
+                            <div class="row">
+                                <div style="padding-bottom: 15px" class="col-lg-6 mb-4">
+                                    <div class="my-flip-container">
+                                        <div class="my-flip-inner my-flip-right">
+                                            <div class="my-flip-inner-wrapper">
+
+                                                <div class="my-flip-side my-flip-front">
+                                                    <div class="my-flip-details">
+                                                        <div align="center">
+                                                            <span style="text-align: center;"><i
+                                                                    class="fa fa-credit-card"></i></span>
+                                                            <h4 style="margin-top: 10px; font-weight: bold;" class="my-flip-heading">
+                                                                Renewal Annual Fees
+                                                            </h4>
+                                                            <div style="margin-top: 10px;" class="my-flip-text">
+                                                                <p style="text-align: center">Settle your annual fees using different payment
+                                                                    methods.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="my-flip-side my-flip-back my-flip-back-1">
+                                                    <div class="my-flip-back-inner">
+                                                        <div class="my-flip-price">
+                                                            <h4 style="font-weight: bold;">Pay Your Fees</h4>
+                                                        </div>
+                                                        <div class="my-flip-back-text">
+                                                            <ul>
+                                                                <li>Bank Deposits</li>
+                                                                <li>Ecocash</li>
+                                                                <li>Paynow</li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="my-flip-btn-box"><a
+                                                                href="{{url('/banking-details')}}" class="btn btn-default btn-lg">Pay
+                                                                Now
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div style="padding-bottom: 15px" class="col-lg-6 mb-4">
+                                    <div class="my-flip-container">
+                                        <div class="my-flip-inner my-flip-right">
+                                            <div class="my-flip-inner-wrapper">
+                                                <div class="my-flip-side my-flip-front">
+                                                    <div class="my-flip-details">
+                                                        <div align="center">
+                                                            <span style="text-align: center;"><i
+                                                                    class="fa fa-registered"></i></span>
+                                                            <h4 style="margin-top: 10px; font-weight: bold;" class="my-flip-heading">
+                                                                Doctors' Register
+                                                            </h4>
+                                                            <div style="margin-top: 10px;" class="my-flip-text">
+                                                                <p style="text-align: center">Provides a list of doctors recognized as operational.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="my-flip-side my-flip-back my-flip-back-2">
+                                                    <div class="my-flip-back-inner">
+                                                        <div class="my-flip-price">
+                                                            <h4 style="font-weight: bold;">Doctors' Register</h4>
+                                                        </div>
+
+                                                        <p  style="color: white;margin-top: 10px;margin-bottom:15px;font-size: 18px;">Provides a list of doctors recognized as operational.</p>
+                                                        <div class="my-flip-btn-box"><a
+                                                                href="http://www.mdpcz.co.zw/mdpcz_find/_f/_find_practitioner.php" target="_blank" class="btn btn-default btn-lg">
+                                                                View Doctors's Register
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div style="padding-bottom: 15px" class="col-lg-6 mb-4">
+                                    <div class="my-flip-container">
+                                        <div class="my-flip-inner my-flip-right">
+                                            <div class="my-flip-inner-wrapper">
+                                                <div class="my-flip-side my-flip-front">
+                                                    <div class="my-flip-details">
+                                                        <div align="center">
+                                                            <span style="text-align: center;"><i
+                                                                    class="fa fa-book"></i></span>
+                                                            <h4 style="margin-top: 10px; font-weight: bold;" class="my-flip-heading">
+                                                                Complaints
+                                                            </h4>
+                                                            <div style="margin-top: 10px;" class="my-flip-text">
+                                                                <p style="text-align: center">Log your complaints with us.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="my-flip-side my-flip-back my-flip-back-3">
+                                                    <div class="my-flip-back-inner">
+                                                        <div class="my-flip-price">
+                                                            <h4 style="font-weight: bold;">Complaints</h4>
+                                                        </div>
+                                                        <p  style="color: white;margin-top: 10px;margin-bottom:15px;font-size: 18px;">Log your complaints with us.</p>
+                                                        <div class="my-flip-btn-box"><a
+                                                                href="{{url('/complaint')}}" target="_blank" class="btn btn-default btn-lg">
+                                                                Send your complaint
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div style="padding-bottom: 15px" class="col-lg-6 mb-4">
+                                    <div class="my-flip-container">
+                                        <div class="my-flip-inner my-flip-right">
+                                            <div class="my-flip-inner-wrapper">
+                                                <div class="my-flip-side my-flip-front">
+                                                    <div class="my-flip-details">
+                                                        <div align="center">
+                                                            <span style="text-align: center;"><i
+                                                                    class="fa fa-users"></i></span>
+                                                            <h4 style="margin-top: 10px; font-weight: bold;" class="my-flip-heading">
+                                                                Portal
+                                                            </h4>
+                                                            <div style="margin-top: 10px;" class="my-flip-text">
+                                                                <p style="text-align: center">Visit MDPCZ Portal.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="my-flip-side my-flip-back my-flip-back-4">
+                                                    <div class="my-flip-back-inner">
+                                                        <div class="my-flip-price">
+                                                            <h4 style="font-weight: bold;">Portal</h4>
+                                                        </div>
+                                                        <p  style="color: white;margin-top: 10px;margin-bottom:15px;font-size: 18px;">Coming Soon.</p>
+                                                        <div class="my-flip-btn-box"><a
+                                                                href="{{url('#')}}" target="_blank" class="btn btn-default btn-lg">
+                                                                Visit Portal
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5 col-sm-12">
+                <div class="classic-tab-wrap py-3">
+                    <div class="heading-tab">
+                        <h3>COUNCIL UPDATES</h3>
+                    </div>
+                    <div class="tab-wrap">
+                        <ul class="nav nav-tabs" id="classicTab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="classic-1-tab" data-toggle="tab" href="#classic-1" role="tab"
+                                   aria-controls="classic-1" aria-selected="true">NEWS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="classic-2-tab" data-toggle="tab" href="#classic-2" role="tab"
+                                   aria-controls="classic-2" aria-selected="false">EVENTS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="classic-3-tab" data-toggle="tab" href="#classic-3" role="tab"
+                                   aria-controls="classic-3" aria-selected="false">IMPORTANT LINKS</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="classicTabContent">
+                            <div class="tab-pane fade active" id="classic-1" role="tabpanel" aria-labelledby="classic-1-tab">
+                                classic Tab 1
+                            </div>
+                            <div class="tab-pane fade" id="classic-2" role="tabpanel" aria-labelledby="classic-2-tab">
+                                classic Tab 2
+                            </div>
+                            <div class="tab-pane fade" id="classic-3" role="tabpanel" aria-labelledby="classic-3-tab">
+                                classic Tab 3
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <div class="why-us sec-padd-top">
         <div class="container">
@@ -140,170 +353,6 @@
         </div>
     </div>
 
-    <div class="our-services">
-        <div class="container">
-
-            <div class="row">
-                <div class="col-md-12 col-sm-12 col-xs-12">
-                    <div class="section-title">
-                        <h2> ONLINE SERVICES</h2>
-                        <div class="text">
-                            <p>Search Register, Registration Forms, Complains, Renewal</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-md-3 col-sm-6">
-                    <div class="single-our-service" style="background-color: #106995;">
-                        <br>
-                        <a href="{{url('/banking-details')}}"><h4 style="color: #ffffff !important;">Renew
-                                Annual Fees</h4></a>
-                        <p style="color: #ffffff !important;">Settle your annual fees using different payment
-                            methods</p>
-                        <br>
-                        <a href="{{url('/banking-details')}}" class="btn btn-sm btn-primary">
-                            Pay Now
-                        </a>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="single-our-service" style="background-color: #106995;">
-                        <br>
-                        <a href="http://www.mdpcz.co.zw/mdpcz_find/_f/_find_practitioner.php" target="_blank"><h4
-                                style="color: #ffffff !important;">Doctor's Register</h4></a>
-                        <p style="color: #ffffff !important;"> Provides a list of doctors recognized as operational.</p>
-                        <br>
-                        <a href="http://www.mdpcz.co.zw/mdpcz_find/_f/_find_practitioner.php" target="_blank"
-                           class="btn btn-sm btn-primary">
-                            Find
-                        </a>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="single-our-service" style="background-color: #106995;">
-                        <br>
-                        <a href="{{url('/complaint')}}"><h4 style="color: #ffffff !important;">
-                                Complaints</h4></a>
-                        <p style="color: #ffffff !important;">Log your complaints with us. </p>
-                        <br>
-                        <br>
-                        <a href="{{url('/complaint')}}" class="btn btn-sm btn-primary">
-                            Find
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-md-3 col-sm-6">
-                    <div class="single-our-service" style="background-color: #106995;">
-                        <br>
-                        <a href="#"><h4 style="color: #ffffff !important;">Portal</h4></a>
-                        <p style="color: #ffffff !important;">Visit the MDPCZ Portal.</p>
-                        <br>
-                        <br>
-                        <a href="https://portal.mdpcz.co.zw/" class="btn btn-sm btn-primary">
-                            Visit Home Portal
-                        </a>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    <div class="blog-section sec-padd2">
-        <div class="container">
-            <div class="section-title">
-                <h2>Our Latest News</h2>
-                <div class="text">
-                    <p>There are many valid reasons why you should choose us to take care of your valuable device</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6 col-sm-6 hidden-sm col-xs-12">
-                    <div class="default-blog-news">
-                        <figure class="img-holder">
-                            {{--<a href="#"><img src="images/blog/1.jpg" alt="News"></a>--}}
-                            <figcaption class="overlay">
-                                <div class="box">
-                                    <div class="content">
-                                        <a href="{{url('/council-examination')}}"><i class="fa fa-link"
-                                                                                     aria-hidden="true"></i></a>
-                                    </div>
-                                </div>
-                            </figcaption>
-                        </figure>
-                        <div class="lower-content">
-                            <a href="{{url('/council-examination')}}"><h4>Upcoming Council Members Registration</h4></a>
-                            <div class="post-meta">by admin / 14 Comments / 26 Feb</div>
-                            {{--<div class="text">
-                                <p>Nunc magna, pharetra aliquet malesuada quistion.except to obtain some advantage from it? But who has any right to find to enjoy a pleasure.</p>
-                            </div>--}}
-                            <div class="link">
-                                <a href="#" class="default_link">Read More</a>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="default-blog-news">
-                        <figure class="img-holder">
-                            {{--<a href="#"><img src="images/blog/2.jpg" alt="News"></a>--}}
-                            <figcaption class="overlay">
-                                <div class="box">
-                                    <div class="content">
-                                        <a href="{{url('/banking-details')}}"><i class="fa fa-link"
-                                                                                 aria-hidden="true"></i></a>
-                                    </div>
-                                </div>
-                            </figcaption>
-                        </figure>
-                        <div class="lower-content">
-                            <a href="{{url('/banking-details')}}"><h4>International Banking Details </h4></a>
-                            <div class="post-meta">by admin / 22 Comments / 17 Apr</div>
-                            {{--<div class="text">
-                                <p>Phasellus nunc magna, pharetra aliquet malesuada quistion.</p>
-                            </div>--}}
-                            <div class="link">
-                                <a href="#" class="default_link">Read More</a>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="default-blog-news">
-                        <figure class="img-holder">
-                            {{-- <a href="#"><img src="images/blog/3.jpg" alt="News"></a>--}}
-                            <figcaption class="overlay">
-                                <div class="box">
-                                    <div class="content">
-                                        <a href="#"><i class="fa fa-link" aria-hidden="true"></i></a>
-                                    </div>
-                                </div>
-                            </figcaption>
-                        </figure>
-                        <div class="lower-content">
-                            <a href="#"><h4>Phone Lines Notification</h4></a>
-                            <div class="post-meta">by admin / 10 Comments / 14 June</div>
-                            {{--<div class="text">
-                                <p>Phasellus nunc magna, pharetra aliquet malesuada quistion.</p>
-                            </div>--}}
-                            <div class="link">
-                                <a href="#" class="default_link">Read More</a>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
     <div class="call-out2">
         <div class="container">
             <div class="clearfix">
@@ -317,17 +366,6 @@
 
         </div>
     </div>
-
-    {{--    <div class="brand-logo sec-padd">--}}
-    {{--        <div class="container">--}}
-    {{--            <ul class="brand-carousel">--}}
-    {{--                <li><a href="#"><img src="images/brand/1.png" alt=""></a></li>--}}
-    {{--                <li><a href="#"><img src="images/brand/2.png" alt=""></a></li>--}}
-    {{--                <li><a href="#"><img src="images/brand/3.png" alt=""></a></li>--}}
-    {{--                <li><a href="#"><img src="images/brand/4.png" alt=""></a></li>--}}
-    {{--                <li><a href="#"><img src="images/brand/5.png" alt=""></a></li>--}}
-    {{--                <li><a href="#"><img src="images/brand/6.png" alt=""></a></li>--}}
-    {{--            </ul>--}}
-    {{--        </div>--}}
-    {{--    </div>--}}
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 @endsection

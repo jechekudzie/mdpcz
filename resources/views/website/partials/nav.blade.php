@@ -7,12 +7,14 @@
  */ ?>
 
 <!--Start Top bar area -->
-<div class="top-bar-area">
+<div style="background-color: #eff8fd;" class="top-bar-area">
     <div class="container">
         <div class="clearfix">
-            <div class="pull-left"><p>Promoting the health of the population of Zimbabwe through guiding the Medical and Dental Professions...</p></div>
+            <div class="pull-left"><p style="color: #3A25AC;font-weight: bold;">Promoting the health of the population
+                    of Zimbabwe through guiding the Medical and Dental Professions...</p></div>
             <div class="pull-right">
-                <p><i class="fa fa-clock-o"></i>Mon - Fri 8.00 - 17.00; Weekends and Public holidays CLOSED</p>
+                <p style="color: #3A25AC;font-weight: bold;"><i class="fa fa-clock-o"></i>Mon - Fri 8.00 - 16.00;
+                    Weekends and Public holidays CLOSED</p>
             </div>
         </div>
 
@@ -43,6 +45,19 @@
                                 <p>Milton Park <br>
                                     Harare, Zimbabwe <br>
                                 </p>
+                                <p>Land: 263 (0)4-792195, </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="iocn-holder">
+                                <span class="icon-technology-1"></span>
+                            </div>
+                            <div class="text-holder">
+                                <h6>No 2 Robertson Street</h6>
+                                <p>Parkview <br>
+                                    Bulawayo, Zimbabwe <br>
+                                </p>
+                                <p>Land: 263 9 72237/38</p>
                             </div>
                         </li>
                         <li>
@@ -55,10 +70,10 @@
                                 </p>
                             </div>
                         </li>
-                        <li>
+                        {{--<li>
                             <div class="link_btn float_right">
                                 @if (Route::has('login'))
-                                    <div >
+                                    <div>
                                         @auth
                                             <a href="{{ url('/home') }}" class="thm-btn bg-clr1">Home</a>
                                         @else
@@ -67,7 +82,7 @@
                                     </div>
                                 @endif
                             </div>
-                        </li>
+                        </li>--}}
                     </ul>
                 </div>
             </div>
@@ -82,7 +97,7 @@
         <div class="mainmenu-bg">
 
             <div class="row">
-                <div class="col-md-9 col-sm-12 col-xs-12">
+                <div class="col-md-12 col-sm-12 col-xs-12">
                     <!--Start mainmenu-->
                     <nav class="main-menu">
                         <div class="navbar-collapse collapse clearfix">
@@ -104,14 +119,15 @@
                                         <li><a href="{{url('/registration-pathway')}}">Registration Pathway</a></li>
                                         <li><a href="{{url('/registration-forms')}}">Registration Forms</a></li>
                                         <li><a href="{{url('/banking-details')}}">Banking Details</a></li>
-                                        <li><a href="http://www.mdpcz.co.zw/mdpcz_find/_f/_find_practitioner.php" target="_blank">Registered Doctors</a></li>
+                                        <li><a href="http://www.mdpcz.co.zw/mdpcz_find/_f/_find_practitioner.php"
+                                               target="_blank">Registered Doctors</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="#">The Profession</a>
                                     <ul>
                                         <li><a href="{{url('/online-services')}}">Online Services</a></li>
-                                        <li><a href="#">Registration</a></li>
-                                        <li><a href="{{url('/council-examination')}}">Education & training</a></li>
+                                        <li><a href="{{url('/registers')}}">Registers</a></li>
+                                        <li><a href="{{url('/council-examination')}}">Council Examination</a></li>
                                         <li><a href="{{url('/fitness-to-practice')}}">Fitness to Practice</a></li>
                                         <li><a href="{{url('/policy_guideline')}}">Policies & Guidelines</a></li>
                                         <li><a href="{{url('/act')}}">Acts</a></li>
@@ -123,6 +139,7 @@
                                         <li><a href="{{url('/our_resource')}}">Resources</a></li>
                                     </ul>
                                 </li>
+                                <li><a href="{{url('/policy_guideline')}}">Policies & Guidelines</a></li>
                                 <li><a href="{{url('/faqs')}}">FAQ's</a></li>
                                 <li><a href="{{url('/contact-us')}}">Contact Us</a></li>
 
@@ -151,14 +168,15 @@
                                         <li><a href="{{url('/registration-pathway')}}">Registration Pathway</a></li>
                                         <li><a href="{{url('/registration-forms')}}">Registration Forms</a></li>
                                         <li><a href="{{url('/banking-details')}}">Banking Details</a></li>
-                                        <li><a href="http://www.mdpcz.co.zw/mdpcz_find/_f/_find_practitioner.php">Registered Doctors</a></li>
+                                        <li><a href="http://www.mdpcz.co.zw/mdpcz_find/_f/_find_practitioner.php">Registered
+                                                Doctors</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="#">The Profession</a>
                                     <ul>
                                         <li><a href="{{url('/online-services')}}">Online Services</a></li>
-                                        <li><a href="#">Registration</a></li>
-                                        <li><a href="{{url('/council-examination')}}">Education & training</a></li>
+                                        <li><a href="{{url('/registers')}}">Registers</a></li>
+                                        <li><a href="{{url('/council-examination')}}">Council Examination</a></li>
                                         <li><a href="{{url('/fitness-to-practice')}}">Fitness to Practice</a></li>
                                         <li><a href="{{url('/policy_guideline')}}">Policies & Guidelines</a></li>
                                         <li><a href="{{url('/act')}}">Acts</a></li>
@@ -170,6 +188,7 @@
                                         <li><a href="{{url('/our_resource')}}">Resources</a></li>
                                     </ul>
                                 </li>
+                                <li><a href="{{url('/policy_guideline')}}">Policies & Guidelines</a></li>
                                 <li><a href="{{url('/faqs')}}">FAQ's</a></li>
                                 <li><a href="{{url('/contact-us')}}">Contact Us</a></li>
 
@@ -182,7 +201,9 @@
                 <div class="right-area">
                     <div class="nav_side_content">
                         <div class="search_option">
-                            <button class="search tran3s dropdown-toggle color1_bg" id="searchDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-search" aria-hidden="true"></i></button>
+                            <button class="search tran3s dropdown-toggle color1_bg" id="searchDropdown"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i
+                                    class="fa fa-search" aria-hidden="true"></i></button>
                             <form action="#" class="dropdown-menu" aria-labelledby="searchDropdown">
                                 <input type="text" placeholder="Search...">
                                 <button><i class="fa fa-search" aria-hidden="true"></i></button>

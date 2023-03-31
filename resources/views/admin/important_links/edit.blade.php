@@ -10,12 +10,12 @@
             <div class="row">
                 <div class="col-12">
                     <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                        <h4 class="mb-sm-0">Exam</h4>
+                        <h4 class="mb-sm-0">Quick Links</h4>
 
                         <div class="page-title-right">
                             <ol class="breadcrumb m-0">
                                 <li class="breadcrumb-item"><a href="javascript: void(0);">CRM</a></li>
-                                <li class="breadcrumb-item examive">Exam</li>
+                                <li class="breadcrumb-item important_linkive">Quick Links</li>
                             </ol>
                         </div>
 
@@ -30,7 +30,7 @@
                         <div class="card-header">
                             <div class="d-flex align-items-center flex-wrap gap-2">
                                 <div class="flex-grow-1">
-                                    <a href="{{url('/admin/exam')}}" class="btn btn-info add-btn"><i
+                                    <a href="{{url('/admin/important_link')}}" class="btn btn-info add-btn"><i
                                             class="ri-arrow-left-line align-bottom"></i> Back
                                     </a>
                                 </div>
@@ -63,7 +63,7 @@
                 <div class="col-xxl-9">
                     <div class="card" id="companyList">
                         <div style="color: black;font-size: 18px;font-weight: bolder;" class="card-header">
-                            Edit: {{$exam->title}}
+                            Edit: {{$important_link->title}}
                         </div>
 
 
@@ -75,34 +75,33 @@
 
                                     <div class="card-body">
 
-                                        <form method="post" action="{{url('/admin/exam/'.$exam->id)}}"
+                                        <form method="post" action="{{url('/admin/important_link/'.$important_link->id)}}"
                                               enctype="multipart/form-data">
                                             @method('PATCH')
                                             @csrf
                                             <div class="row">
                                                 <div class="col-lg-12">
                                                     <div class="mb-3">
-                                                        <label for="teammembersName" class="form-label">Exam paper</label>
+                                                        <label for="teammembersName" class="form-label">Name</label>
                                                         <input type="text" class="form-control" name="title"
-                                                               value="{{$exam->title}}">
+                                                               value="{{$important_link->title}}">
                                                     </div>
                                                 </div>
 
                                                 <div class="col-lg-12">
-                                                    <div>
-                                                        <label for="companyname-field"
-                                                               class="form-label">Description</label>
-                                                        <textarea name="description" class="form-control" id="editor">{!! $exam->description !!}</textarea>
+                                                    <div class="mb-3">
+                                                        <label for="teammembersName" class="form-label">URL / link</label>
+                                                        <input type="url" class="form-control" name="url"
+                                                               value="{{$important_link->url}}">
                                                     </div>
                                                 </div>
-
 
                                                 <div class="col-lg-12">
                                                     <div class="hstack gap-2 justify-content-end">
                                                         <button type="button" class="btn btn-light"
                                                                 data-bs-dismiss="modal">Close
                                                         </button>
-                                                        <button type="submit" class="btn btn-success">Update Exam
+                                                        <button type="submit" class="btn btn-success">Update Quick Link
                                                         </button>
                                                     </div>
                                                 </div>

@@ -27,7 +27,59 @@
     <div class="about-us sec-padd-top">
         <div class="container">
             <div class="row">
-                <div class="col-md-12 col-sm-12">
+                <div class="col-md-3 col-sm-12">
+                    <div class="panel panel-primary">
+                        <!-- Default panel contents -->
+                        <div class="panel-heading">ABOUT US</div>
+                        <!-- List group -->
+                        <ul class="list-group">
+                            <li class="list-group-item"><a href="{{url('/registrar')}}">Registrar</a></li>
+                            <li class="list-group-item"><a href="{{url('/what-we-do')}}">What We Do</a></li>
+                            <li class="list-group-item"><a href="{{url('/our-history')}}">Our History</a></li>
+                            <li class="list-group-item"><a href="{{url('/council-structure')}}">Council Structure</a>
+                            </li>
+                            <li class="list-group-item"><a href="{{url('/council-members')}}">Council Members</a></li>
+                            <li class="list-group-item"><a href="{{url('/committees')}}">Committees</a></li>
+
+                        </ul>
+                    </div>
+                    <div class="panel panel-primary">
+                        <!-- Default panel contents -->
+                        <div class="panel-heading">Quick Links</div>
+                        <!-- List group -->
+                        <ul class="list-group">
+                            @foreach($quick_links as $quick_link)
+                                <li class="list-group-item">
+                                    <a href="{{$quick_link->url}}" target="_blank">{{$quick_link->title}}</a>
+                                </li>
+                            @endforeach
+
+                        </ul>
+                    </div>
+                </div>
+
+                <div style="margin-top: -80px;" class="col-md-9 col-sm-12">
+                    <div class="about-text">
+                        <div class="accordion-box">
+                        @foreach($committees as $committee)
+                            <!--Start single accordion box-->
+                                <div class="accordion accordion-block">
+                                    <div style="background-color:white/*#3A25AC*/;" class="accord-btn">
+                                        <h3 style="color: black;">{{$committee->name}} <span> {{$committee->section}}</span></h3>
+                                    </div>
+                                    <div class="accord-content {{--collapsed--}}">
+                                        {!! $committee->description !!}
+                                    </div>
+                                </div>
+                                <!--End single accordion box-->
+                            @endforeach
+                        </div>
+                    </div>
+
+
+                </div>
+
+               {{-- <div class="col-md-9 col-sm-12">
                     @foreach($committees as $committee)
                         <div class="about-text">
                             <h2>
@@ -45,7 +97,7 @@
                     @endforeach
 
 
-                </div>
+                </div>--}}
             </div>
         </div>
     </div>

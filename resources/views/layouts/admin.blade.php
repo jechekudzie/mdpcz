@@ -24,7 +24,6 @@
     <link href="{{asset('administration/assets/css/app.min.css')}}" rel="stylesheet" type="text/css"/>
     <!-- custom Css-->
     <link href="{{asset('administration/assets/css/custom.min.css')}}" rel="stylesheet" type="text/css"/>
-    @notifyCss
     @stack('head')
 </head>
 
@@ -377,7 +376,7 @@
 
                                 <li class="nav-item">
                                     <a href="{{url('/admin/exam')}}" style="text-transform: capitalize" class="nav-link {{(request()->is('admin/exam*')) ? 'active' : '' }}" data-key="t-analytics">
-                                        EDUCATION & TRAINING </a>
+                                        COUNCIL EXAMINATION </a>
                                 </li>
 
                                 <li class="nav-item">
@@ -431,6 +430,10 @@
                                 <li class="nav-item">
                                     <a href="{{url('/admin/newsletter')}}" style="text-transform: capitalize" class="nav-link {{(request()->is('admin/newsletter*')) ? 'active' : '' }}" data-key="t-analytics">
                                         NEWSLETTER </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="{{url('/admin/important_link')}}" style="text-transform: capitalize" class="nav-link {{(request()->is('admin/important_link*')) ? 'active' : '' }}" data-key="t-analytics">
+                                        QUICK LINKS </a>
                                 </li>
                             </ul>
                         </div>
@@ -537,7 +540,6 @@
 <script src="{{asset('administration/assets/js/app.js')}}"></script>
 @stack('scripts')
 
-@notifyJs
 </body>
 
 </html>

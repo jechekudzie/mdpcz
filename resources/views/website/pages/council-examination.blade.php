@@ -26,52 +26,105 @@
     <div class="about-us">
         <div class="container">
             <div class="row">
-                <div class="col-md-7 col-sm-12">
-                    <div class="about-text">
-                        <h2>
-                            Council <span class="thm-color"> Examinations </span>
-                        </h2>
-                        <div style="padding-top: 1px;" class="accordion-box">
-                        @foreach($exams as $exam)
-                            <!--Start single accordion box-->
-                                <div class="accordion accordion-block">
-                                    <div class="accord-btn active"><h1
-                                            style="color: white;">{{$exam->title}}</h1></div>
-                                    <div class="accord-content collapsed">
-                                        {!! $exam->description !!}
-                                    </div>
-                                </div>
-                                <!--End single accordion box-->
-                            @endforeach
-                        </div>
+                <div style="margin-top: 30px;" class="col-md-3 col-sm-12">
+                    <div class="panel panel-primary">
+                        <!-- Default panel contents -->
+                        <div class="panel-heading">THE PROFESSION</div>
+                        <!-- List group -->
+                        <ul class="list-group">
+                            <li class="list-group-item"><a href="{{url('/online-services')}}">Online Services</a></li>
+                            <li class="list-group-item"><a href="{{url('/registers')}}">Registers</a></li>
+                            <li class="list-group-item"><a href="{{url('/council-examination')}}">Council
+                                    Examination</a></li>
+                            <li class="list-group-item"><a href="{{url('/fitness-to-practice')}}">Fitness to
+                                    Practice</a></li>
+                            <li class="list-group-item"><a href="{{url('/policy_guideline')}}">Policies & Guidelines</a>
+                            </li>
+                            <li class="list-group-item"><a href="{{url('/act')}}">Acts</a></li>
+                        </ul>
                     </div>
-                </div>
-                <div class="col-md-5 col-sm-12">
-                    <div class="about-text">
-                        <h2>
-                            Examination <span class="thm-color"> Guidelines </span>
-                        </h2>
-                        <div class="text">
-                            <p style="color: black;">Please refer to:</p>
-                            <ul>
-                                @foreach($exam_guidelines as $exam_guideline)
-                                    <li style="padding: 10px;"><a href="{{asset($exam_guideline->file)}}"
-                                                                  target="_blank">{{$exam_guideline->title}}</a></li>
-                                @endforeach
-                            </ul>
-                        </div>
+                    <div class="panel panel-primary">
+                        <!-- Default panel contents -->
+                        <div class="panel-heading">QUICK LINKS</div>
+                        <!-- List group -->
+                        <ul class="list-group">
+                            @foreach($quick_links as $quick_link)
+                                <li class="list-group-item">
+                                    <a href="{{$quick_link->url}}" target="_blank">{{$quick_link->title}}</a>
+                                </li>
+                            @endforeach
+
+                        </ul>
                     </div>
 
                 </div>
-                <p style="color: black;">
-                    For any further clarification, please contact Council:
-                    <br/>
-                    Julian Mashingaidze
-                    <br/>
-                    Cell: 263 712 879 646
-                    <br/>
-                    Email: julian@mdpcz.co.zw
-                </p>
+
+                <div style="margin-top: 30px;" class="col-md-9 col-sm-12">
+
+                    <div class="row">
+                        <div class="col-md-6 col-sm-12">
+                            <img src="{{asset('exam-pic-blended.jpeg')}}">
+                        </div>
+
+                        <div class="col-md-6 col-sm-12">
+                            <p>Please be advised that Council will be conducting registration examinations for foreign
+                                trained medical and dental applicants on the following date and time:</p>
+                        </div>
+                    </div>
+                    <div style="padding-top: 30px">
+                        <table class="table table-bordered">
+                            <tr>
+                                <th>Date</th>
+                                <th>Time</th>
+                                <th>Venue</th>
+                                <th>Action</th>
+                            </tr>
+                            @foreach($exam_dates as $exam_date)
+                                <tr>
+                                    <td>{{$exam_date->date}}</td>
+                                    <td>{{$exam_date->time}}</td>
+                                    <td>{{$exam_date->venue}}</td>
+                                    <td><a href="{{url('/admin/exam_date/'.$exam_date->id.'/edit')}}">Edit</a></td>
+                                </tr>
+                            @endforeach
+
+                        </table>
+                    </div>
+                    <div style="padding-top: 30px">
+                        @foreach($exams as $exam)
+                            <div style="padding-top: 20px">
+                                {!! $exam->description !!}
+                            </div>
+                        @endforeach
+                    </div>
+
+                    <div style="padding-top: 30px">
+                        <h4>Please refer to: </h4>
+                        <hr/>
+                        <ul>
+                            @foreach($exam_guidelines as $exam_guideline)
+                                <li><a href="{{asset($exam_guideline->file)}}"
+                                       target="_blank">{{$exam_guideline->title}}</a></li>
+                            @endforeach
+                        </ul>
+                        <hr/>
+                    </div>
+                    <div style="padding-top: 30px">
+                        <h4>For any further clarification, please contact Council:</h4>
+                        <p style="color: black;">
+                            <br/>
+                            Julian Mashingaidze
+                            <br/>
+                            <br/>
+                            Cell: 263 712 879 646
+                            <br/>
+                            <br/>
+                            Email: julian@mdpcz.co.zw
+                        </p>
+                    </div>
+
+                </div>
+
 
             </div>
         </div>

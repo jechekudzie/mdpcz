@@ -62,7 +62,6 @@
                                     <table class="table">
                                         <thead>
                                         <tr>
-                                            <th scope="col">#</th>
                                             <th scope="col">Form</th>
                                             <th scope="col">Option</th>
                                         </tr>
@@ -70,7 +69,6 @@
                                         <tbody>
                                         @foreach($forms_category->forms as $form)
                                             <tr>
-                                                <th scope="row">{{$form->id}}</th>
                                                 <td>{{$form->title}}</td>
                                                 <td><a href="{{asset($form->file)}}" target="_blank">View/Download</a></td>
                                             </tr>

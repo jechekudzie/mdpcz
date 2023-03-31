@@ -62,7 +62,9 @@
                                     @foreach($faq_category->faqs as $faq)
                                         <!--Start single accordion box-->
                                             <div class="accordion accordion-block">
-                                                <div class="accord-btn" style="background-color: lightgrey;"><h5 style="color: black;font-weight: bold;">{{$faq->question}}</h5></div>
+                                                <div class="accord-btn" style="background-color: lightgrey;">
+                                                    <h5 style="color: black;font-weight: bold;text-transform: uppercase">{{$faq->question}}</h5>
+                                                </div>
                                                 <div style="color: black;" class="accord-content">
                                                     {!! $faq->answer !!}
                                                 </div>

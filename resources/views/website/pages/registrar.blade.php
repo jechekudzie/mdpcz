@@ -27,16 +27,44 @@
     <div class="about-us sec-padd-top">
         <div class="container">
             <div class="row">
-                <div class="col-md-6 col-sm-12">
 
-                    <figure class="about-img">
-                        <img src="{{asset($registrar->file)}}" alt="about photo">
-                    </figure>
+                <div class="col-md-3 col-sm-12">
+                    <div class="panel panel-primary">
+                        <!-- Default panel contents -->
+                        <div class="panel-heading">ABOUT US</div>
+                        <!-- List group -->
+                        <ul class="list-group">
+                            <li class="list-group-item"><a href="{{url('/registrar')}}">Registrar</a></li>
+                            <li class="list-group-item"><a href="{{url('/what-we-do')}}">What We Do</a></li>
+                            <li class="list-group-item"><a href="{{url('/our-history')}}">Our History</a></li>
+                            <li class="list-group-item"><a href="{{url('/council-structure')}}">Council Structure</a>
+                            </li>
+                            <li class="list-group-item"><a href="{{url('/council-members')}}">Council Members</a></li>
+                            <li class="list-group-item"><a href="{{url('/committees')}}">Committees</a></li>
+
+                        </ul>
+                    </div>
+                    <div class="panel panel-primary">
+                        <!-- Default panel contents -->
+                        <div class="panel-heading">QUICK LINKS</div>
+                        <!-- List group -->
+                        <ul class="list-group">
+                            @foreach($quick_links as $quick_link)
+                                <li class="list-group-item">
+                                    <a href="{{$quick_link->url}}" target="_blank">{{$quick_link->title}}</a>
+                                </li>
+                            @endforeach
+
+                        </ul>
+                    </div>
                 </div>
-                <div class="col-md-6 col-sm-12">
+                <div class="col-md-9 col-sm-12">
                     <div class="about-text">
-                        <h2>
-                            {{$registrar->name}} <span class="thm-color"> {{$registrar->qualifications}} </span>
+                        <figure class="about-img">
+                            <img style="width: 800px" src="{{asset($registrar->file)}}" alt="about photo">
+                        </figure>
+                        <h2 style="padding-top: 10px;text-transform: capitalize;">
+                            {{$registrar->name}} <br/><span class="thm-color"> {{$registrar->qualifications}} </span>
                         </h2>
                         <div class="text">
                             {!! $registrar->bio !!}

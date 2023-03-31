@@ -57,7 +57,7 @@
                 <div class="row">
                     <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                         <div class="footer-col">
-                            <div class="logo-part">
+                            <div style="background-color: white;" class="logo-part">
                                 <a href="{{url('/')}}" class="footer-logo text-uppercase">
                                     <img src="{{asset('images/mdpcz.png')}}" alt="logo">
                                 </a>
@@ -89,7 +89,7 @@
                             <h3 class="footer-title">Bulawayo Office</h3>
                             <div class="post-list">
                                 <div>
-                                    <h5>No 2 Robertson Street</h5>
+                                    <h5 style="color: white">No 2 Robertson Street</h5>
                                     <p>Parkview <br>
                                         Bulawayo, Zimbabwe<br>
                                         Whatsapp: 263 71 254 4066<br>
@@ -104,7 +104,7 @@
                             <h3 class="footer-title">Harare Office</h3>
                             <div class="post-list">
                                 <div>
-                                    <h5>No 8 Harvey Brown</h5>
+                                    <h5 style="color: white">No 8 Harvey Brown</h5>
                                     <p>Milton Park<br>
                                         Harare, Zimbabwe<br>
                                         Whatsapp: 263 71 254 4066<br>
@@ -123,7 +123,7 @@
                     <div class="col-md-3">
                         <p class="copyright">© {{date('Y')}} MDPCZ. All rights reserved</p>
                     </div>
-                    <div class="col-md-9">
+                   {{-- <div class="col-md-9">
                         <nav class="footer-menu pull-right">
                             <ul class="list-inline">
                                 <li><a href="#">home</a></li>
@@ -133,7 +133,7 @@
                                 <li><a href="contact-us.html">contact us</a></li>
                             </ul>
                         </nav>
-                    </div>
+                    </div>--}}
                 </div>
             </div>
         </div>

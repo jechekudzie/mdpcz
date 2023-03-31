@@ -27,8 +27,6 @@
     <!--Start contact form area-->
     <div class="contact-form-area sec-padd-top">
         <div class="container">
-
-
             <div class="row">
 
                 <div class="col-md-8">
@@ -81,8 +79,22 @@
 
                                     <h6>8 Harvey Brown</h6>
                                     <p>Milton Park, Harare, Zimbabwe</p>
+                                    <p>Whatsapp: 263 71 254 4066</p>
                                 </div>
                             </li>
+
+                            <li>
+                                <div class="iocn-holder">
+                                    <span class="fa fa-home"></span>
+                                </div>
+                                <div class="text-holder">
+
+                                    <h6>No 2 Robertson Street</h6>
+                                    <p>Parkview, Bulawayo, Zimbabwe</p>
+                                </div>
+                            </li>
+
+
                             <li>
                                 <div class="iocn-holder">
                                     <span class="icon-technology-1"></span>

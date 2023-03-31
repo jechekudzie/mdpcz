@@ -10,12 +10,12 @@
             <div class="row">
                 <div class="col-12">
                     <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                        <h4 class="mb-sm-0">Policy and Guideline</h4>
+                        <h4 class="mb-sm-0">Exam Guidelines</h4>
 
                         <div class="page-title-right">
                             <ol class="breadcrumb m-0">
                                 <li class="breadcrumb-item"><a href="javascript: void(0);">CRM</a></li>
-                                <li class="breadcrumb-item active">Policy and Guideline</li>
+                                <li class="breadcrumb-item active">Exam Guidelines</li>
                             </ol>
                         </div>
 
@@ -30,7 +30,7 @@
                         <div class="card-header">
                             <div class="d-flex align-items-center flex-wrap gap-2">
                                 <div class="flex-grow-1">
-                                    <a href="{{url('/admin/policy_guideline')}}" class="btn btn-info add-btn"><i
+                                    <a href="{{url('/admin/exam')}}" class="btn btn-info add-btn"><i
                                             class="ri-arrow-left-line align-bottom"></i> Back
                                     </a>
                                 </div>
@@ -63,7 +63,7 @@
                 <div class="col-xxl-9">
                     <div class="card" id="companyList">
                         <div style="color: black;font-size: 18px;font-weight: bolder;" class="card-header">
-                            Edit: {{$policy_guideline->title}}
+                            Edit: {{$exam_guideline->title}}
                         </div>
 
 
@@ -75,60 +75,23 @@
 
                                     <div class="card-body">
 
-                                        <form method="post"
-                                              action="{{url('/admin/policy_guideline/'.$policy_guideline->id)}}"
+                                        <form method="post" action="{{url('/admin/exam_guideline/'.$exam_guideline->id)}}"
                                               enctype="multipart/form-data">
                                             @method('PATCH')
                                             @csrf
                                             <div class="modal-body">
                                                 <input type="hidden" id="id-field"/>
                                                 <div class="row g-3">
-
-                                                    <div class="col-lg-6">
-                                                        <div>
-                                                            <label for="companyname-field"
-                                                                   class="form-label">Select Document Category</label>
-                                                            <select name="policy_category_id" class="form-select mb-3"
-                                                                    aria-label="Default select example">
-                                                                <option selected>Select Document Category</option>
-                                                                @foreach($policy_categories as $policy_category)
-                                                                    <option value="{{$policy_category->id}}"
-                                                                    @if($policy_category->id == $policy_guideline->policy_category_id){{'selected'}}@endif
-                                                                    >{{$policy_category->name}}</option>
-                                                                @endforeach
-
-                                                            </select>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col-lg-6">
-                                                        <div>
-                                                            <label for="companyname-field"
-                                                                   class="form-label">Select Document Type</label>
-                                                            <select name="policy_type_id" class="form-select mb-3"
-                                                                    aria-label="Default select example">
-                                                                <option selected>Select Document Type</option>
-                                                                @foreach($policy_types as $policy_type)
-                                                                    <option
-                                                                        value="{{$policy_type->id}}"
-                                                                    @if($policy_type->id == $policy_guideline->policy_type_id){{'selected'}}@endif
-                                                                    >{{$policy_type->name}}</option>
-                                                                @endforeach
-                                                            </select>
-                                                        </div>
-                                                    </div>
-
                                                     <div class="col-lg-12">
                                                         <div>
                                                             <label for="companyname-field"
-                                                                   class="form-label">Policy and Guideline</label>
+                                                                   class="form-label">Guidelines</label>
                                                             <input type="text" name="title" class="form-control"
-                                                                   value="{{$policy_guideline->title}}" required/>
+                                                                   value="{{$exam_guideline->title}}" required/>
                                                         </div>
                                                     </div>
 
-                                                    <a href="{{url($policy_guideline->file)}}" target="_blank">View
-                                                        current file</a>
+                                                    <a href="{{url($exam_guideline->file)}}" target="_blank">View current file</a>
 
                                                     <div class="col-lg-12">
                                                         <div>
@@ -154,8 +117,7 @@
                                                     <button type="button" class="btn btn-light"
                                                             data-bs-dismiss="modal">Close
                                                     </button>
-                                                    <button type="submit" class="btn btn-success" id="add-btn">Update
-                                                        Policy & Guideline
+                                                    <button type="submit" class="btn btn-success" id="add-btn">Update Exam Guideline
                                                     </button>
 
                                                 </div>

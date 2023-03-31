@@ -54,6 +54,11 @@
                                             data-bs-target="#add_guidelines">
                                         <i class="ri-add-fill me-1 align-bottom"></i> Council Examination Guideline
                                     </button>
+
+                                    <button class="btn btn-info" data-bs-toggle="modal"
+                                            data-bs-target="#add_exam_dates">
+                                        <i class="ri-add-fill me-1 align-bottom"></i> Council Examination Dates
+                                    </button>
                                 </div>
                             </div>
                             <!--end col-->
@@ -198,6 +203,67 @@
                                 <!--end modal-dialog-->
                             </div>
 
+                            <div class="modal fade" id="add_exam_dates" tabindex="-1" aria-hidden="true">
+                                <div class="modal-dialog modal-lg modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="myModalLabel">Add Examination Dates</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form method="post" action="{{url('/admin/exam_date')}}"
+                                                  enctype="multipart/form-data">
+                                                @csrf
+                                                <div class="row">
+                                                    <div class="col-lg-12">
+                                                        <div class="mb-3">
+                                                            <label for="teammembersName" class="form-label">
+                                                                Exam Date</label>
+                                                            <input type="text" class="form-control datepicker" name="date"
+                                                                   placeholder="Enter exam date">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-lg-12">
+                                                        <div class="mb-3">
+                                                            <label for="teammembersName" class="form-label">
+                                                                Exam Time</label>
+                                                            <input type="text" class="form-control" name="time"
+                                                                   placeholder="Enter exam time">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-lg-12">
+                                                        <div class="mb-3">
+                                                            <label for="teammembersName" class="form-label">
+                                                                Exam Venue</label>
+                                                            <input type="text" class="form-control" name="venue"
+                                                                   placeholder="Enter exam title">
+                                                        </div>
+                                                    </div>
+
+
+
+                                                    <div class="col-lg-12">
+                                                        <div class="hstack gap-2 justify-content-end">
+                                                            <button type="button" class="btn btn-light"
+                                                                    data-bs-dismiss="modal">Close
+                                                            </button>
+                                                            <button type="submit" class="btn btn-success">Add Exam
+                                                                Dates
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <!--end modal-content-->
+                                </div>
+                                <!--end modal-dialog-->
+                            </div>
+
                         </div>
                     </div><!-- end col -->
                     <div class="col-lg-5">
@@ -242,6 +308,56 @@
                                         </div>
                                     </div>
                                 @endforeach
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="d-flex align-items-center">
+                                    <div class="flex-grow-1">
+                                        <h6 class="card-title mb-0">Examination Dates</h6>
+                                    </div>
+                                    <div class="flex-shrink-0">
+                                        <ul class="list-inline card-toolbar-menu d-flex align-items-center mb-0">
+                                            <li class="list-inline-item">
+                                                <a class="align-middle" data-toggle="reload" href="javascript:void(0);">
+                                                    <i class="mdi mdi-refresh align-middle"></i>
+                                                </a>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <a class="align-middle minimize-card" data-bs-toggle="collapse"
+                                                   href="#collapseexample1" role="button" aria-expanded="false"
+                                                   aria-controls="collapseExample2">
+                                                    <i class="mdi mdi-plus align-middle plus"></i>
+                                                    <i class="mdi mdi-minus align-middle minus"></i>
+                                                </a>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <button type="button" onclick="delthis('card-none1')"
+                                                        class="btn-close fs-10 align-middle"></button>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body collapse show" id="collapseexample1">
+                                <table style="padding-top: 10px" class="table table-bordered">
+                                    <tr>
+                                        <th>Date</th>
+                                        <th>Time</th>
+                                        <th>Venue</th>
+                                        <th>Action</th>
+                                    </tr>
+                                    @foreach($exam_dates as $exam_date)
+                                        <tr>
+                                            <td>{{$exam_date->date}}</td>
+                                            <td>{{$exam_date->time}}</td>
+                                            <td>{{$exam_date->venue}}</td>
+                                            <td><a href="{{url('/admin/exam_date/'.$exam_date->id.'/edit')}}">Edit</a></td>
+                                        </tr>
+                                    @endforeach
+
+                                </table>
                             </div>
                         </div>
 

@@ -13,11 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('exam_dates', function (Blueprint $table) {
+        Schema::create('policy_categories', function (Blueprint $table) {
             $table->id();
-            $table->string('date')->nullable();
-            $table->string('time')->nullable();
-            $table->string('venue')->nullable();
+            $table->string('name');
             $table->timestamps();
         });
     }
@@ -29,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('exam_dates');
+        Schema::dropIfExists('policy_categories');
     }
 };
