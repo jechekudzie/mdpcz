@@ -16,9 +16,9 @@ class PolicyGuideline extends Model
         return $this->belongsTo(PolicyCategory::class);
     }
 
-    public function policy_type()
+    public function committee()
     {
-        return $this->belongsTo(PolicyType::class);
+        return $this->belongsTo(Committee::class);
     }
 
 }

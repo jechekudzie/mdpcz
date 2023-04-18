@@ -41,9 +41,9 @@
 
 <body>
 <!-- PRELOADER -->
-<div class="page-loader">
+{{--<div class="page-loader">
     <div class="loader">Loading...</div>
-</div>
+</div>--}}
 <!-- /PRELOADER -->
 <div class="boxed_wrapper cleaning_demo">
 
@@ -64,23 +64,10 @@
                             </div>
                             <p class="footer-words">Promoting the health of the population of Zimbabwe through guiding the Medical and Dental Professions.</p>
                             <ul class="list-inline footer-social">
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                <li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
-                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="https://www.facebook.com/mdpcz2019" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="https://twitter.com/MDPCZ2" target="_blank"><i class="fa fa-twitter"></i></a></li>
                             </ul>
 
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                        <div class="footer-col service-col">
-                            <h3 class="footer-title">Services</h3>
-                            <ul class="footer-list">
-                                <li><a href="#">Renewal</a></li>
-                                <li><a href="#">Doctor's Register</a></li>
-                                <li><a href="#">Complaints</a></li>
-                            </ul>
                         </div>
                     </div>
 
@@ -108,7 +95,7 @@
                                     <p>Milton Park<br>
                                         Harare, Zimbabwe<br>
                                         Whatsapp: 263 71 254 4066<br>
-                                        Land: 263 (0)4-792195, 793709, 793707, 790139<br>
+                                        Land: 2263-242-790144, 263-242-793707<br>
                                         E-mail:mdpcz@mdpcz.co.zw<br></p>
                                 </div>
                             </div>
@@ -130,7 +117,7 @@
                                 <li><a href="#">services</a></li>
                                 <li><a href="#">term &amp; condition</a></li>
                                 <li><a href="#">privacy policy</a></li>
-                                <li><a href="contact-us.html">contact us</a></li>
+                                <li><a href="contact_us.html">contact us</a></li>
                             </ul>
                         </nav>
                     </div>--}}
@@ -144,6 +131,7 @@
     <div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-angle-up"></span></div>
     <!-- main jQuery /-->
     <script src="{{asset('js/jquery.js')}}"></script>
+
     <!-- jQuery plugins /-->
     <script src="{{asset('js/plugins.js')}}"></script>
     <!-- jQuery meanmenu /-->

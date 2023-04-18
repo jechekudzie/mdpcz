@@ -13,6 +13,9 @@
 
 
 @section('site_content')
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/list.js/2.3.1/list.min.js"></script>
+
+
     <!--Start breadcrumb area-->
     <div class="breadcrumb-area" style="background-color: #0195DB;">
         <div class="container text-center">
@@ -29,20 +32,6 @@
                 <div style="margin-top: 30px;" class="col-md-3 col-sm-12">
                     <div class="panel panel-primary">
                         <!-- Default panel contents -->
-                        <div class="panel-heading">THE PROFESSION</div>
-                        <!-- List group -->
-                        <ul class="list-group">
-                            <li class="list-group-item"><a href="{{url('/online-services')}}">Online Services</a></li>
-                            <li class="list-group-item"><a href="{{url('/registers')}}">Registers</a></li>
-                            <li class="list-group-item"><a href="{{url('/council-examination')}}">Council Examination</a></li>
-                            <li class="list-group-item"><a href="{{url('/fitness-to-practice')}}">Fitness to Practice</a></li>
-                            <li class="list-group-item"><a href="{{url('/policy_guideline')}}">Policies & Guidelines</a></li>
-                            <li class="list-group-item"><a href="{{url('/act')}}">Acts</a></li>
-
-                        </ul>
-                    </div>
-                    <div class="panel panel-primary">
-                        <!-- Default panel contents -->
                         <div class="panel-heading">QUICK LINKS</div>
                         <!-- List group -->
                         <ul class="list-group">
@@ -57,30 +46,42 @@
 
                 </div>
                 <div style="margin-top: 30px;" class="col-md-9 col-sm-12">
-                    <table class="table">
-                        <thead>
-                        <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">Policy / Guideline</th>
-                            <th scope="col">Option</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        @foreach($policy_guidelines as $policy_guideline)
+
+                    <div class="container mt-5" id="exampleTable">
+                        <input class="search form-control" placeholder="Search" />
+                        <table class="table table-striped table-bordered mt-3">
+                            <thead>
                             <tr>
-                                <th scope="row">{{$policy_guideline->id}}</th>
-                                <td>{{$policy_guideline->title}}</td>
-                                <td><a href="{{asset($policy_guideline->file)}}" target="_blank">View/Download</a></td>
+                                <th>Title</th>
+                                <th>Download</th>
                             </tr>
-                        @endforeach
-                        </tbody>
-                    </table>
+                            </thead>
+                            <tbody class="list">
+                            <tr>
+                                <td class="title">Example 1</td>
+                                <td class="date">2023-04-18</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <ul class="pagination"></ul>
+                    </div>
+
+
+
                 </div>
             </div>
+
         </div>
     </div>
 
+    <script>
+        var options = {
+            valueNames: ['title', 'download'],
+            page: 5,
+            pagination: true,
+        };
 
-
+        var userList = new List('exampleTable', options);
+    </script>
 
 @endsection

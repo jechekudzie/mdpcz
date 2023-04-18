@@ -32,11 +32,11 @@
                         <div class="panel-heading">THE PROFESSION</div>
                         <!-- List group -->
                         <ul class="list-group">
-                            <li class="list-group-item"><a href="{{url('/online-services')}}">Online Services</a></li>
+                            <li class="list-group-item"><a href="{{url('/online_services')}}">Online Services</a></li>
                             <li class="list-group-item"><a href="{{url('/registers')}}">Registers</a></li>
-                            <li class="list-group-item"><a href="{{url('/council-examination')}}">Council
+                            <li class="list-group-item"><a href="{{url('/council_examination')}}">Council
                                     Examination</a></li>
-                            <li class="list-group-item"><a href="{{url('/fitness-to-practice')}}">Fitness to
+                            <li class="list-group-item"><a href="{{url('/fitness_to_practice')}}">Fitness to
                                     Practice</a></li>
                             <li class="list-group-item"><a href="{{url('/policy_guideline')}}">Policies & Guidelines</a>
                             </li>

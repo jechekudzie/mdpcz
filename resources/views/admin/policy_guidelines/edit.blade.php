@@ -10,12 +10,11 @@
             <div class="row">
                 <div class="col-12">
                     <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                        <h4 class="mb-sm-0">Policy and Guideline</h4>
+                        <h4 class="mb-sm-0">INTERNAL & EXTERNAL POLICIES</h4>
 
                         <div class="page-title-right">
                             <ol class="breadcrumb m-0">
                                 <li class="breadcrumb-item"><a href="javascript: void(0);">CRM</a></li>
-                                <li class="breadcrumb-item active">Policy and Guideline</li>
                             </ol>
                         </div>
 
@@ -87,10 +86,10 @@
                                                     <div class="col-lg-6">
                                                         <div>
                                                             <label for="companyname-field"
-                                                                   class="form-label">Select Document Category</label>
+                                                                   class="form-label">Choose Category</label>
                                                             <select name="policy_category_id" class="form-select mb-3"
                                                                     aria-label="Default select example">
-                                                                <option selected>Select Document Category</option>
+                                                                <option selected>Choose Category</option>
                                                                 @foreach($policy_categories as $policy_category)
                                                                     <option value="{{$policy_category->id}}"
                                                                     @if($policy_category->id == $policy_guideline->policy_category_id){{'selected'}}@endif
@@ -105,14 +104,14 @@
                                                         <div>
                                                             <label for="companyname-field"
                                                                    class="form-label">Select Document Type</label>
-                                                            <select name="policy_type_id" class="form-select mb-3"
+                                                            <select name="committee_id" class="form-select mb-3"
                                                                     aria-label="Default select example">
                                                                 <option selected>Select Document Type</option>
-                                                                @foreach($policy_types as $policy_type)
+                                                                @foreach($committees as $committee)
                                                                     <option
-                                                                        value="{{$policy_type->id}}"
-                                                                    @if($policy_type->id == $policy_guideline->policy_type_id){{'selected'}}@endif
-                                                                    >{{$policy_type->name}}</option>
+                                                                        value="{{$committee->id}}"
+                                                                    @if($committee->id == $policy_guideline->committee_id){{'selected'}}@endif
+                                                                    >{{$committee->name}}</option>
                                                                 @endforeach
                                                             </select>
                                                         </div>

@@ -34,11 +34,11 @@
                         <!-- List group -->
                         <ul class="list-group">
                             <li class="list-group-item"><a href="{{url('/registrar')}}">Registrar</a></li>
-                            <li class="list-group-item"><a href="{{url('/what-we-do')}}">What We Do</a></li>
-                            <li class="list-group-item"><a href="{{url('/our-history')}}">Our History</a></li>
-                            <li class="list-group-item"><a href="{{url('/council-structure')}}">Council Structure</a>
-                            </li>
-                            <li class="list-group-item"><a href="{{url('/council-members')}}">Council Members</a></li>
+                            <li class="list-group-item"><a href="{{url('/who_we_are')}}">Who We Are</a></li>
+                            <li class="list-group-item"><a href="{{url('/what_we_do')}}">What We Do</a></li>
+                            <li class="list-group-item"><a href="{{url('/our_history')}}">Our History</a></li>
+                            <li class="list-group-item"><a href="{{url('/council_structure')}}">Council Structure</a></li>
+                            <li class="list-group-item"><a href="{{url('/council_member')}}">Council Members</a></li>
                             <li class="list-group-item"><a href="{{url('/committees')}}">Committees</a></li>
 
                         </ul>
@@ -65,7 +65,7 @@
                             <!--Start single accordion box-->
                                 <div class="accordion accordion-block">
                                     <div style="background-color:white/*#3A25AC*/;" class="accord-btn">
-                                        <h3 style="color: black;">{{$committee->name}} <span> {{$committee->section}}</span></h3>
+                                        <h3 style="color: black;">{{$committee->name}} {{--<span> {{$committee->section}}</span>--}}</h3>
                                     </div>
                                     <div class="accord-content {{--collapsed--}}">
                                         {!! $committee->description !!}

@@ -10,7 +10,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                        <h4 class="mb-sm-0">Policies and Guidelines</h4>
+                        <h4 class="mb-sm-0">INTERNAL & EXTERNAL POLICIES</h4>
 
                         <div class="page-title-right">
                             <ol class="breadcrumb m-0">
@@ -51,7 +51,7 @@
                     </div>
             @endif
             <!--end col-->
-                <div class="col-xxl-9">
+                <div class="col-lg-12 col-md-12 col-xxl-12">
                     <div class="card" id="companyList">
                         <div class="card-header">
                             <div class="row g-2">
@@ -77,8 +77,8 @@
                                                 </div>
                                             </th>
                                             <th class="sort" data-sort="name" scope="col">Title</th>
-                                            <th class="sort" data-sort="name" scope="col">Document Category</th>
-                                            <th class="sort" data-sort="name" scope="col">Document Type</th>
+                                            <th class="sort" data-sort="name" scope="col">Category</th>
+                                            <th class="sort" data-sort="name" scope="col">Committee</th>
                                             <th class="sort" data-sort="owner" scope="col">File</th>
                                             <th scope="col">Action</th>
                                         </tr>
@@ -94,7 +94,7 @@
                                                 </td>
                                                 <td class="owner">{{$policy_guideline->title}}</td>
                                                 <td class="owner">{{$policy_guideline->policy_category->name}}</td>
-                                                <td class="owner">{{$policy_guideline->policy_type->name}}</td>
+                                                <td class="owner">{{$policy_guideline->committee->name}}</td>
                                                 <td class="owner"><a href="{{url($policy_guideline->file)}}" target="_blank">Policy</a>
                                                 </td>
                                                 <td>

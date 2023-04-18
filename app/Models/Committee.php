@@ -10,4 +10,9 @@ class Committee extends Model
     use HasFactory;
 
     protected $guarded = [];
+
+    public function policy_categories()
+    {
+        return $this->hasMany(PolicyCategory::class);
+    }
 }

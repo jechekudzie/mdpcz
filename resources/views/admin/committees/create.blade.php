@@ -94,7 +94,7 @@
                                                 <label for="companyname-field"
                                                        class="form-label">Description</label>
                                                 <textarea name="description" class="form-control" id="editor"
-                                                          required></textarea>
+                                                          ></textarea>
                                             </div>
                                         </div>
 

@@ -16,31 +16,50 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $newsletters = \App\Models\NewsLetter::all();
+    return view('welcome',compact('newsletters'));
+});
+
+Route::get('/tables', function () {
+    $newsletters = \App\Models\NewsLetter::all();
+    return view('website.pages.tables',compact('newsletters'));
 });
 
 Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
-Route::get('/faqs', [WebsiteController::class, 'faqs'])->name('faqs');
-Route::get('/contact-us', [WebsiteController::class, 'contactUs'])->name('contactUs');
+
+/*
+|--------------------------------------------------------------------------
+| About Us
+|--------------------------------------------------------------------------
+*/
 Route::get('/registrar', [WebsiteController::class, 'registrar'])->name('registrar');
-Route::get('/what-we-do', [WebsiteController::class, 'whatWeDo'])->name('whatwedo');
-Route::get('/our-history', [WebsiteController::class, 'ourHistory'])->name('our-history');
-Route::get('/council-structure', [WebsiteController::class, 'councilStructure'])->name('council.structure');
-Route::get('/council-members', [WebsiteController::class, 'councilMembers'])->name('council.members');
+Route::get('/who_we_are', [WebsiteController::class, 'whoWeAre'])->name('whoWeAre');
+Route::get('/what_we_do', [WebsiteController::class, 'whatWeDo'])->name('whatwedo');
+Route::get('/our_history', [WebsiteController::class, 'ourHistory'])->name('our_history');
+Route::get('/council_structure', [WebsiteController::class, 'councilStructure'])->name('council.structure');
+Route::get('/council_member', [WebsiteController::class, 'councilMembers'])->name('council.members');
 Route::get('/committees', [WebsiteController::class, 'committees'])->name('committees');
-Route::get('/registration-pathway', [WebsiteController::class, 'regPathway'])->name('reg.path');
-Route::get('/registration-forms', [WebsiteController::class, 'regForms'])->name('reg.forms');
-Route::get('/banking-details', [WebsiteController::class, 'bankingDetails'])->name('bank.dets');
-Route::get('/online-services', [WebsiteController::class, 'onlineServices'])->name('online.services');
-Route::get('/council-examination', [WebsiteController::class, 'councilExamination'])->name('council.examination');
-Route::get('/fitness-to-practice', [WebsiteController::class, 'fitnessToPractice']);
+
+
+
+Route::get('/registration_pathway', [WebsiteController::class, 'regPathway'])->name('reg.path');
+Route::get('/registration_forms', [WebsiteController::class, 'regForms'])->name('reg.forms');
+Route::get('/banking_details', [WebsiteController::class, 'bankingDetails'])->name('bank.dets');
+Route::get('/online_services', [WebsiteController::class, 'onlineServices'])->name('online.services');
+Route::get('/council_examination', [WebsiteController::class, 'councilExamination'])->name('council.examination');
+Route::get('/fitness_to_practice', [WebsiteController::class, 'fitnessToPractice']);
+Route::get('/training_institution', [WebsiteController::class, 'training_institution']);
+Route::get('/log_book', [WebsiteController::class, 'logBooks']);
+
 Route::get('/policy_guideline', [WebsiteController::class, 'policy_guideline']);
 Route::get('/complaint', [WebsiteController::class, 'complaint']);
 Route::get('/our_resource', [WebsiteController::class, 'our_resource']);
 
+Route::get('/faqs', [WebsiteController::class, 'faqs'])->name('faqs');
+Route::get('/contact_us', [WebsiteController::class, 'contactUs'])->name('contactUs');
 
 Route::get('/act', [WebsiteController::class, 'acts'])->name('acts');
 
@@ -83,10 +102,16 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('/admin/policy_guideline', \App\Http\Controllers\PolicyGuidelineController::class);
     Route::resource('/admin/registrar', \App\Http\Controllers\RegistrarController::class);
     Route::resource('/admin/registration_pathway', \App\Http\Controllers\RegistrationPathWayController::class);
+    Route::resource('/admin/designated_institution', \App\Http\Controllers\DesignatedInstitutionController::class);
+    Route::resource('/admin/training_institution', \App\Http\Controllers\TrainingInstitutionController::class);
+    Route::resource('/admin/log_book', \App\Http\Controllers\LogBookController::class);
     Route::resource('/admin/banking_detail', \App\Http\Controllers\BankingDetailController::class);
     Route::resource('/admin/strategic_goal', \App\Http\Controllers\StrategicGoalController::class);
+
     Route::resource('/admin/vision_and_mission', \App\Http\Controllers\VisionAndMissionController::class);
+
     Route::resource('/admin/what_we_do', \App\Http\Controllers\WhatWeDoController::class);
+    Route::resource('/admin/who_we_are', \App\Http\Controllers\WhoWeAreController::class);
     Route::resource('/admin/newsletter', \App\Http\Controllers\NewsLetterController::class);
     Route::resource('/admin/our_resource', \App\Http\Controllers\OurResourceController::class);
 });

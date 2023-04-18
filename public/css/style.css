@@ -617,7 +617,7 @@ input,textarea {font-family: "Dosis",sans-serif;display: block; font-size: 16px;
   padding-left: 10px;
 }
 .header-contact-info ul li .text-holder h6 {
-  color: #444;
+  color: black;
   font-family: dosis;
   font-size: 18px;
   font-weight: 600;
@@ -625,7 +625,7 @@ input,textarea {font-family: "Dosis",sans-serif;display: block; font-size: 16px;
   text-transform: capitalize;
 }
 .header-contact-info ul li .text-holder p {
-  color: #999;
+  color: black;
   font-size: 16px;
   font-weight: 400;
   margin: 0;

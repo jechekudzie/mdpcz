@@ -96,7 +96,7 @@
                                                             <label for="companyname-field"
                                                                    class="form-label">Section</label>
                                                             <input type="text" name="section" class="form-control"
-                                                                   value="{{$committee->section}}" required/>
+                                                                   value="{{$committee->section}}"/>
                                                         </div>
                                                     </div>
 
@@ -104,8 +104,7 @@
                                                         <div>
                                                             <label for="companyname-field"
                                                                    class="form-label">Description</label>
-                                                            <textarea name="description" class="form-control" id="editor"
-                                                                      required>{!! $committee->description !!}</textarea>
+                                                            <textarea name="description" class="form-control" id="editor">{!! $committee->description !!}</textarea>
                                                         </div>
                                                     </div>
 

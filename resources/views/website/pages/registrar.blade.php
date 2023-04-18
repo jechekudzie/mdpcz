@@ -35,11 +35,11 @@
                         <!-- List group -->
                         <ul class="list-group">
                             <li class="list-group-item"><a href="{{url('/registrar')}}">Registrar</a></li>
-                            <li class="list-group-item"><a href="{{url('/what-we-do')}}">What We Do</a></li>
-                            <li class="list-group-item"><a href="{{url('/our-history')}}">Our History</a></li>
-                            <li class="list-group-item"><a href="{{url('/council-structure')}}">Council Structure</a>
-                            </li>
-                            <li class="list-group-item"><a href="{{url('/council-members')}}">Council Members</a></li>
+                            <li class="list-group-item"><a href="{{url('/who_we_are')}}">Who We Are</a></li>
+                            <li class="list-group-item"><a href="{{url('/what_we_do')}}">What We Do</a></li>
+                            <li class="list-group-item"><a href="{{url('/our_history')}}">Our History</a></li>
+                            <li class="list-group-item"><a href="{{url('/council_structure')}}">Council Structure</a></li>
+                            <li class="list-group-item"><a href="{{url('/council_members')}}">Council Members</a></li>
                             <li class="list-group-item"><a href="{{url('/committees')}}">Committees</a></li>
 
                         </ul>

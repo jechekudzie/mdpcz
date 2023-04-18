@@ -293,6 +293,10 @@
                                         REGISTRAR </a>
                                 </li>
                                 <li class="nav-item">
+                                    <a href="{{url('/admin/who_we_are')}}" style="text-transform: capitalize" class="nav-link {{(request()->is('admin/professions*')) ? 'active' : '' }}" data-key="t-analytics">
+                                        WHO WE ARE </a>
+                                </li>
+                                <li class="nav-item">
                                     <a href="{{url('/admin/what_we_do')}}" style="text-transform: capitalize" class="nav-link {{(request()->is('admin/profession_qualifications*')) ? 'active' : '' }}"
                                        data-key="t-ecommerce"> WHAT WE DO</a>
                                 </li>
@@ -337,6 +341,11 @@
                                 </li>
 
                                 <li class="nav-item">
+                                    <a href="{{url('/admin/designated_institution')}}" style="text-transform: capitalize" class="nav-link {{(request()->is('admin/designated_institution*')) ? 'active' : '' }}" data-key="t-analytics">
+                                        DESIGNATED INSTITUTION </a>
+                                </li>
+
+                                <li class="nav-item">
                                     <a href="{{url('/admin/form_category')}}" style="text-transform: capitalize" class="nav-link {{(request()->is('admin/form_category*')) ? 'active' : '' }}" data-key="t-analytics">
                                         REGISTRATION FORMS </a>
                                 </li>
@@ -355,25 +364,15 @@
                         </div>
                     </li>
 
-                    <!-- the profession -->
+                    <!-- the education -->
                     <li class="nav-item">
                         <a style="text-transform: capitalize" class="nav-link menu-link collapsed" href="#statuses_utilities" data-bs-toggle="collapse"
                            role="button"
                            aria-expanded="false" aria-controls="statuses_utilities">
-                            <span data-key="t-dashboards">THE PROFESSION</span>
+                            <span data-key="t-dashboards">EDUCATION</span>
                         </a>
                         <div class="collapse menu-dropdown" id="statuses_utilities">
                             <ul class="nav nav-sm flex-column">
-                               {{-- <li class="nav-item">
-                                    <a href="--}}{{--{{url('/admin/online_services')}}--}}{{--#" style="text-transform: capitalize" class="nav-link {{(request()->is('admin/restorations*')) ? 'active' : '' }}"
-                                       data-key="t-ecommerce"> ONLINE SERVICES</a>
-                                </li>--}}
-
-                               {{-- <li class="nav-item">
-                                    <a href="--}}{{--{{url('/admin/registration')}}--}}{{--#" style="text-transform: capitalize" class="nav-link {{(request()->is('admin/application_statuses*')) ? 'active' : '' }}" data-key="t-analytics">
-                                        REGISTRATION </a>
-                                </li>--}}
-
                                 <li class="nav-item">
                                     <a href="{{url('/admin/exam')}}" style="text-transform: capitalize" class="nav-link {{(request()->is('admin/exam*')) ? 'active' : '' }}" data-key="t-analytics">
                                         COUNCIL EXAMINATION </a>
@@ -384,18 +383,27 @@
                                         FITNESS TO PRACTICE </a>
                                 </li>
 
+
                                 <li class="nav-item">
-                                    <a href="{{url('/admin/policy_guideline')}}" style="text-transform: capitalize" class="nav-link {{(request()->is('admin/disciplinary_statuses*')) ? 'active' : '' }}" data-key="t-analytics">
-                                        POLICIES & GUIDELINES </a>
+                                    <a href="{{url('/admin/training_institution')}}" style="text-transform: capitalize" class="nav-link {{(request()->is('admin/training_institution*')) ? 'active' : '' }}" data-key="t-analytics">
+                                    TRAINING INSTITUTIONS</a>
                                 </li>
 
                                 <li class="nav-item">
-                                    <a href="{{url('/admin/act')}}" style="text-transform: capitalize" class="nav-link {{(request()->is('admin/disciplinary_statuses*')) ? 'active' : '' }}" data-key="t-analytics">
-                                        ACTS </a>
+                                    <a href="{{url('/admin/log_book')}}" style="text-transform: capitalize" class="nav-link {{(request()->is('admin/log_book*')) ? 'active' : '' }}" data-key="t-analytics">
+                                        LOG BOOKS</a>
                                 </li>
 
                             </ul>
                         </div>
+                    </li>
+
+                    <!-- Policies and Guidelines -->
+                    <li class="nav-item">
+                        <a style="text-transform: capitalize" class="nav-link menu-link" href="{{url('/admin/policy_guideline')}}" role="button" aria-expanded="false" aria-controls="statuses_utilities">
+                            <span data-key="t-dashboards">POLICIES</span>
+                        </a>
+
                     </li>
 
 

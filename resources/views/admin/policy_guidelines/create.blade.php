@@ -10,12 +10,11 @@
             <div class="row">
                 <div class="col-12">
                     <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                        <h4 class="mb-sm-0">Policies and Guidelines</h4>
+                        <h4 class="mb-sm-0">INTERNAL & EXTERNAL POLICES</h4>
 
                         <div class="page-title-right">
                             <ol class="breadcrumb m-0">
                                 <li class="breadcrumb-item"><a href="javascript: void(0);">CRM</a></li>
-                                <li class="breadcrumb-item active">Policies and Guidelines</li>
                             </ol>
                         </div>
 
@@ -63,7 +62,7 @@
                 <div class="col-xxl-9">
                     <div class="card" id="companyList">
                         <div style="color: black;font-size: 18px;font-weight: bolder;" class="card-header">
-                            Add acts
+                            Add INTERNAL & EXTERNAL POLICES
                         </div>
 
                         <div class="card-body">
@@ -78,9 +77,9 @@
                                         <div class="col-lg-6">
                                             <div>
                                                 <label for="companyname-field"
-                                                       class="form-label">Select Document Category</label>
+                                                       class="form-label">Choose Category</label>
                                                 <select name="policy_category_id" class="form-select mb-3" aria-label="Default select example">
-                                                    <option selected>Select Document Category</option>
+                                                    <option selected>Choose Category</option>
                                                     @foreach($policy_categories as $policy_category)
                                                         <option value="{{$policy_category->id}}">{{$policy_category->name}}</option>
                                                     @endforeach
@@ -92,29 +91,29 @@
                                         <div class="col-lg-6">
                                             <div>
                                                 <label for="companyname-field"
-                                                       class="form-label">Select Document Type</label>
-                                                <select name="policy_type_id" class="form-select mb-3" aria-label="Default select example">
-                                                    <option selected>Select Document Type</option>
-                                                    @foreach($policy_types as $policy_type)
-                                                        <option value="{{$policy_type->id}}">{{$policy_type->name}}</option>
+                                                       class="form-label">Choose Committee</label>
+                                                <select name="committee_id" class="form-select mb-3" aria-label="Default select example">
+                                                    <option selected>Choose Committee</option>
+                                                    @foreach($committees as $committee)
+                                                        <option value="{{$committee->id}}">{{$committee->name}}</option>
                                                     @endforeach
                                                 </select>
                                             </div>
                                         </div>
 
-                                        <div class="col-lg-12">
+                                        {{--<div class="col-lg-12">
                                             <div>
                                                 <label for="companyname-field"
-                                                       class="form-label">Policies and Guidelines</label>
-                                                <input type="text" name="title" class="form-control" required/>
+                                                       class="form-label">Policies & Guidelines</label>
+                                                <input type="text" name="title" class="form-control"/>
                                             </div>
-                                        </div>
+                                        </div>--}}
 
                                         <div class="col-lg-12">
                                             <div>
                                                 <label for="companyname-field"
                                                        class="form-label">file</label>
-                                                <input type="file" name="file" class="form-control" required/>
+                                                <input type="file" name="file[]" multiple class="form-control" required/>
                                             </div>
                                         </div>
 

@@ -26,48 +26,55 @@
 <header class="header-area">
     <div class="container">
         <div class="row">
-            <div class="col-lg-4 col-md-3 col-sm-12 col-xs-12">
-                <div class="logo">
+            <div class="col-lg-3 col-md-2 col-sm-12 col-xs-12">
+                <div style="padding-top:55px;" class="logo">
                     <a href="{{url('/')}}">
-                        <img src="{{asset('images/mdpcz.png')}}" alt="Logo" width="300">
+                        <img src="{{asset('images/mdpcz.png')}}" alt="Logo" width="800">
                     </a>
                 </div>
             </div>
-            <div class="col-lg-8 col-md-9 col-sm-12 col-xs-12">
+            <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
                 <div class="header-contact-info">
                     <ul>
                         <li>
-                            <div class="iocn-holder">
-                                <span class="icon-technology-1"></span>
-                            </div>
+                            {{--<div class="iocn-holder">
+                                <span class="fa fa-info-circle"></span>
+                            </div>--}}
                             <div class="text-holder">
                                 <h6>8 Harvey Brown</h6>
-                                <p>Milton Park <br>
-                                    Harare, Zimbabwe <br>
-                                </p>
-                                <p>Land: 263 (0)4-792195, </p>
+                                <p>Milton Park </p><br/>
+                                <p>Harare, Zimbabwe </p> <br>
+                                <p>Land: 263-242-790144, 263-242-793707</p>
                             </div>
                         </li>
                         <li>
-                            <div class="iocn-holder">
-                                <span class="icon-technology-1"></span>
-                            </div>
+                            {{--<div class="iocn-holder">
+                                <span class="fa fa-info-circle"></span>
+                            </div>--}}
                             <div class="text-holder">
                                 <h6>No 2 Robertson Street</h6>
-                                <p>Parkview <br>
-                                    Bulawayo, Zimbabwe <br>
-                                </p>
-                                <p>Land: 263 9 72237/38</p>
+                                <p>Parkview</p> <br>
+                                <p>Bulawayo, Zimbabwe <br>
+                                </p><br/>
+                                <p>Land: 263 9 72237/38, 263-242-793707 </p>
                             </div>
                         </li>
                         <li>
-                            <div class="iocn-holder">
-                                <span class="icon-email-filled-closed-envelope"></span>
-                            </div>
+                            {{--<div class="iocn-holder">
+                                <span class="fa fa-info-circle"></span>
+                            </div>--}}
                             <div class="text-holder mail-holder">
-                                <h6>Mail Us</h6>
-                                <p>mdpcz@mdpcz.co.zw<br>
+                                <h6>Contact Us</h6>
+                                <p>mdpcz@mdpcz.co.zw</p><br/>
+                                <p>WhatsApp: 263 712544066</p><br/>
+                                <p style="margin-top:2px;">
+                                     <a href="https://www.facebook.com/mdpcz2019" target="_blank">Twitter: <i
+                                            class="fa fa-facebook"></i></a> &nbsp;&nbsp;&nbsp;
+                                     <a href="https://twitter.com/MDPCZ2" target="_blank">Facebook <i
+                                            class="fa fa-twitter"></i></a>
                                 </p>
+
+
                             </div>
                         </li>
                         {{--<li>
@@ -93,9 +100,8 @@
 
 <!--Start mainmenu area-->
 <div class="mainmenu-area stricky">
-    <div class="container">
+    <div style="margin-left:10%;margin-right:2%;" class="container-fluid">
         <div class="mainmenu-bg">
-
             <div class="row">
                 <div class="col-md-12 col-sm-12 col-xs-12">
                     <!--Start mainmenu-->
@@ -107,30 +113,31 @@
                                 <li><a href="#">About us</a>
                                     <ul>
                                         <li><a href="{{url('/registrar')}}">Registrar</a></li>
-                                        <li><a href="{{url('/what-we-do')}}">What We Do</a></li>
-                                        <li><a href="{{url('/our-history')}}">Our History</a></li>
-                                        <li><a href="{{url('/council-structure')}}">Council Structure</a></li>
-                                        <li><a href="{{url('/council-members')}}">Council Members</a></li>
+                                        <li><a href="{{url('/who_we_are')}}">Who We Are</a></li>
+                                        <li><a href="{{url('/what_we_do')}}">What We Do</a></li>
+                                        <li><a href="{{url('/our_history')}}">Our History</a></li>
+                                        <li><a href="{{url('/council_structure')}}">Council Structure</a></li>
+                                        <li><a href="{{url('/council_member')}}">Council Members</a></li>
                                         <li><a href="{{url('/committees')}}">Committees</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="#">Registration</a>
                                     <ul>
-                                        <li><a href="{{url('/registration-pathway')}}">Registration Pathway</a></li>
-                                        <li><a href="{{url('/registration-forms')}}">Registration Forms</a></li>
-                                        <li><a href="{{url('/banking-details')}}">Banking Details</a></li>
+                                        <li><a href="{{url('/registration_pathway')}}">Registration Pathway</a></li>
+                                        <li><a href="{{url('/registration_forms')}}">Registration Forms</a></li>
                                         <li><a href="http://www.mdpcz.co.zw/mdpcz_find/_f/_find_practitioner.php"
-                                               target="_blank">Registered Doctors</a></li>
+                                               target="_blank">Public Register</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="#">The Profession</a>
+                                <li><a href="#">Education</a>
                                     <ul>
-                                        <li><a href="{{url('/online-services')}}">Online Services</a></li>
-                                        <li><a href="{{url('/registers')}}">Registers</a></li>
-                                        <li><a href="{{url('/council-examination')}}">Council Examination</a></li>
-                                        <li><a href="{{url('/fitness-to-practice')}}">Fitness to Practice</a></li>
-                                        <li><a href="{{url('/policy_guideline')}}">Policies & Guidelines</a></li>
-                                        <li><a href="{{url('/act')}}">Acts</a></li>
+
+                                        {{--<li><a href="{{url('/council_examination')}}">Education and Training</a></li>--}}
+                                        <li><a href="{{url('/council_examination')}}">Council Examination</a></li>
+                                        <li><a href="{{url('/fitness_to_practice')}}">Fitness to Practice</a></li>
+                                        <li><a href="{{url('/training_institution')}}">Accreditation</a></li>
+                                        <li><a href="{{url('/log_book')}}">Log Books</a></li>
+
                                     </ul>
                                 </li>
                                 <li><a href="#">The Public</a>
@@ -139,9 +146,11 @@
                                         <li><a href="{{url('/our_resource')}}">Resources</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="{{url('/policy_guideline')}}">Policies & Guidelines</a></li>
+                                <li>
+                                    <a href="{{url('policy_guideline')}}">Internal & External Policies</a>
+                                </li>
                                 <li><a href="{{url('/faqs')}}">FAQ's</a></li>
-                                <li><a href="{{url('/contact-us')}}">Contact Us</a></li>
+                                <li><a href="{{url('/contact_us')}}">Contact Us</a></li>
 
                             </ul>
                         </div>
@@ -156,30 +165,29 @@
                                 <li><a href="#">About us</a>
                                     <ul>
                                         <li><a href="{{url('/registrar')}}">Registrar</a></li>
-                                        <li><a href="{{url('/what-we-do')}}">What We Do</a></li>
-                                        <li><a href="{{url('/our-history')}}">Our History</a></li>
-                                        <li><a href="{{url('/council-structure')}}">Council Structure</a></li>
-                                        <li><a href="{{url('/council-members')}}">Council Members</a></li>
+                                        <li><a href="{{url('/who_we_are')}}">Who We Are</a></li>
+                                        <li><a href="{{url('/what_we_do')}}">What We Do</a></li>
+                                        <li><a href="{{url('/our_history')}}">Our History</a></li>
+                                        <li><a href="{{url('/council_structure')}}">Council Structure</a></li>
+                                        <li><a href="{{url('/council_member')}}">Council Members</a></li>
                                         <li><a href="{{url('/committees')}}">Committees</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="#">Registration</a>
                                     <ul>
-                                        <li><a href="{{url('/registration-pathway')}}">Registration Pathway</a></li>
-                                        <li><a href="{{url('/registration-forms')}}">Registration Forms</a></li>
-                                        <li><a href="{{url('/banking-details')}}">Banking Details</a></li>
-                                        <li><a href="http://www.mdpcz.co.zw/mdpcz_find/_f/_find_practitioner.php">Registered
-                                                Doctors</a></li>
+                                        <li><a href="{{url('/registration_pathway')}}">Registration Pathway</a></li>
+                                        <li><a href="{{url('/registration_forms')}}">Registration Forms</a></li>
+                                        <li><a href="http://www.mdpcz.co.zw/mdpcz_find/_f/_find_practitioner.php"
+                                               target="_blank">Public Register</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="#">The Profession</a>
+                                <li><a href="#">Education</a>
                                     <ul>
-                                        <li><a href="{{url('/online-services')}}">Online Services</a></li>
-                                        <li><a href="{{url('/registers')}}">Registers</a></li>
-                                        <li><a href="{{url('/council-examination')}}">Council Examination</a></li>
-                                        <li><a href="{{url('/fitness-to-practice')}}">Fitness to Practice</a></li>
-                                        <li><a href="{{url('/policy_guideline')}}">Policies & Guidelines</a></li>
-                                        <li><a href="{{url('/act')}}">Acts</a></li>
+                                        {{--<li><a href="{{url('/council_examination')}}">Education and Training</a></li>--}}
+                                        <li><a href="{{url('/council_examination')}}">Council Examination</a></li>
+                                        <li><a href="{{url('/fitness_to_practice')}}">Fitness to Practice</a></li>
+                                        <li><a href="{{url('/training_institution')}}">Accreditation</a></li>
+                                        <li><a href="{{url('/log_books')}}">Log Books</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="#">The Public</a>
@@ -188,16 +196,19 @@
                                         <li><a href="{{url('/our_resource')}}">Resources</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="{{url('/policy_guideline')}}">Policies & Guidelines</a></li>
+                                <li><a href="{{url('/policy_guideline')}}">Internal & External Policies</a>
+
+                                </li>
                                 <li><a href="{{url('/faqs')}}">FAQ's</a></li>
-                                <li><a href="{{url('/contact-us')}}">Contact Us</a></li>
+                                <li><a href="{{url('/contact_us')}}">Contact Us</a></li>
 
                             </ul>
                         </nav>
                     </div>
                 </div>
             </div>
-            <div class="right-column">
+
+            <div style="margin-left:2%;" class="right-column">
                 <div class="right-area">
                     <div class="nav_side_content">
                         <div class="search_option">
