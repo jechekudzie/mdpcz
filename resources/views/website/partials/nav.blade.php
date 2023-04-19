@@ -208,7 +208,7 @@
                 </div>
             </div>
 
-            <div style="margin-left:2%;" class="right-column">
+          {{--  <div style="margin-left:2%;" class="right-column">
                 <div class="right-area">
                     <div class="nav_side_content">
                         <div class="search_option">
@@ -224,7 +224,7 @@
                     </div>
 
                 </div>
-            </div>
+            </div>--}}
         </div>
     </div>
 </div>

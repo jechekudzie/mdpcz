@@ -65,7 +65,7 @@
                                     @foreach($committee->policy_guidelines as $policy_guideline)
                                         <tr>
                                             <td class="title">{{$policy_guideline->title}}</td>
-                                            <td class="date">2023-04-18</td>
+                                            <td class="date"><a href="{{asset($policy_guideline->file)}}" target="_blank">Download</a> </td>
                                         </tr>
                                     @endforeach
 
