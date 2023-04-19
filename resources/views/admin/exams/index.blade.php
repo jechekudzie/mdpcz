@@ -219,6 +219,14 @@
                                                     <div class="col-lg-12">
                                                         <div class="mb-3">
                                                             <label for="teammembersName" class="form-label">
+                                                                Exam Schedule</label>
+                                                            <input type="text" class="form-control" name="period"
+                                                                   placeholder="Enter exam period">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-12">
+                                                        <div class="mb-3">
+                                                            <label for="teammembersName" class="form-label">
                                                                 Exam Date</label>
                                                             <input type="text" class="form-control datepicker" name="date"
                                                                    placeholder="Enter exam date">

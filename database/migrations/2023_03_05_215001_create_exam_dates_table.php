@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('exam_dates', function (Blueprint $table) {
             $table->id();
+            $table->string('period')->nullable();
             $table->string('date')->nullable();
             $table->string('time')->nullable();
             $table->string('venue')->nullable();

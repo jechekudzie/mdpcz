@@ -137,8 +137,9 @@ class WebsiteController extends Controller
     public function policy_guideline()
     {
         $policy_guidelines = PolicyGuideline::all();
+        $committees = Committee::all();
         $quick_links = ImportantLink::all();
-        return view('website.pages.policy_guideline', compact('policy_guidelines','quick_links'));
+        return view('website.pages.policy_guideline', compact('policy_guidelines','quick_links','committees'));
     }
 
     public function complaint()

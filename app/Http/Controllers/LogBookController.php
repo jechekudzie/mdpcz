@@ -23,28 +23,37 @@ class LogBookController extends Controller
     public function store(Request $request)
     {
         //
-        $log_book = request()->validate([
+        /*$log_book = request()->validate([
             'title' => 'required',
-        ]);
+        ]);*/
 
         if (request()->hasfile('file')) {
+
             //get the file field data and name field from form submission
-            $file = request()->file('file');
+            $uploadedFiles = request()->file('file');
 
-            //get file original name
-            $name = $file->getClientOriginalName();
+            foreach ($uploadedFiles as $file) {
+                //get file original name
+                $name = $file->getClientOriginalName();
 
-            //create a unique file name using the time variable plus the name
-            $file_name = time() . $name;
+                $fileNameWithoutExtension = pathinfo($name, PATHINFO_FILENAME);
 
-            //upload the file to a directory in Public folder
-            $log_book_file = $file->move('log_books', $file_name);
+                //create a unique file name using the time variable plus the name
+                $file_name = time() . $name;
 
-            $log_book['file'] = $log_book_file;
+                //upload the file to a directory in Public folder
+                $log_book_file = $file->move('log_books', $file_name);
+
+                $log_book['title'] = $fileNameWithoutExtension;
+                $log_book['file'] = $log_book_file;
+
+                LogBook::create($log_book);
+            }
+
         }
 
 
-        LogBook::create($log_book);
+
 
         return back()->with('message', 'log book uploaded successfully');
     }

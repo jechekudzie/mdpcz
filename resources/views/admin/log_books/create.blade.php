@@ -73,19 +73,12 @@
                                 <div class="modal-body">
                                     <input type="hidden" id="id-field"/>
                                     <div class="row g-3">
-                                        <div class="col-lg-12">
-                                            <div>
-                                                <label for="companyname-field"
-                                                       class="form-label">Log Book</label>
-                                                <input type="text" name="title" class="form-control" required/>
-                                            </div>
-                                        </div>
 
                                         <div class="col-lg-12">
                                             <div>
                                                 <label for="companyname-field"
-                                                       class="form-label">file</label>
-                                                <input type="file" name="file" class="form-control"/>
+                                                       class="form-label">Upload file(s)</label>
+                                                <input type="file" name="file[]" multiple class="form-control"/>
                                             </div>
                                         </div>
 

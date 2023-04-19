@@ -73,17 +73,18 @@
                     <div style="padding-top: 30px">
                         <table class="table table-bordered">
                             <tr>
+                                <th>Period</th>
                                 <th>Date</th>
                                 <th>Time</th>
                                 <th>Venue</th>
-                                <th>Action</th>
+
                             </tr>
                             @foreach($exam_dates as $exam_date)
                                 <tr>
+                                    <td>{{$exam_date->period}}</td>
                                     <td>{{$exam_date->date}}</td>
                                     <td>{{$exam_date->time}}</td>
                                     <td>{{$exam_date->venue}}</td>
-                                    <td><a href="{{url('/admin/exam_date/'.$exam_date->id.'/edit')}}">Edit</a></td>
                                 </tr>
                             @endforeach
 

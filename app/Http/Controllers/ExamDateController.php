@@ -27,9 +27,10 @@ class ExamDateController extends Controller
         //
 
         $exam_date = ExamDate::create(request()->validate([
-            'date' => 'required',
-            'time' => 'required',
-            'venue' => 'required',
+            'period' => 'required',
+            'date' => 'nullable',
+            'time' => 'nullable',
+            'venue' => 'nullable',
 
         ]));
 
@@ -55,9 +56,10 @@ class ExamDateController extends Controller
     {
         //
         $exam_date->update(request()->validate([
-            'date' => 'required',
-            'time' => 'required',
-            'venue' => 'required',
+            'period' => 'required',
+            'date' => 'nullable',
+            'time' => 'nullable',
+            'venue' => 'nullable',
         ]));
 
 

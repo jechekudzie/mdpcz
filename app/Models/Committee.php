@@ -11,8 +11,8 @@ class Committee extends Model
 
     protected $guarded = [];
 
-    public function policy_categories()
+    public function policy_guidelines()
     {
-        return $this->hasMany(PolicyCategory::class);
+        return $this->hasMany(PolicyGuideline::class);
     }
 }

@@ -63,7 +63,7 @@
                 <div class="col-xxl-9">
                     <div class="card" id="companyList">
                         <div style="color: black;font-size: 18px;font-weight: bolder;" class="card-header">
-                            Edit: {{$exam_guideline->title}}
+                            Edit: {{$exam_date->period}} Exam Details
                         </div>
 
 
@@ -75,53 +75,60 @@
 
                                     <div class="card-body">
 
-                                        <form method="post" action="{{url('/admin/exam_guideline/'.$exam_guideline->id)}}"
+                                        <form method="post" action="{{url('/admin/exam_date/'.$exam_date->id)}}"
                                               enctype="multipart/form-data">
                                             @method('PATCH')
                                             @csrf
-                                            <div class="modal-body">
-                                                <input type="hidden" id="id-field"/>
-                                                <div class="row g-3">
-                                                    <div class="col-lg-12">
-                                                        <div>
-                                                            <label for="companyname-field"
-                                                                   class="form-label">Guidelines</label>
-                                                            <input type="text" name="title" class="form-control"
-                                                                   value="{{$exam_guideline->title}}" required/>
-                                                        </div>
+                                            <div class="row">
+                                                <div class="col-lg-12">
+                                                    <div class="mb-3">
+                                                        <label for="teammembersName" class="form-label">
+                                                            Exam Schedule</label>
+                                                        <input type="text" class="form-control" name="period"
+                                                               placeholder="Enter exam period" value="{{$exam_date->period}}">
                                                     </div>
-
-                                                    <a href="{{url($exam_guideline->file)}}" target="_blank">View current file</a>
-
-                                                    <div class="col-lg-12">
-                                                        <div>
-                                                            <label for="companyname-field"
-                                                                   class="form-label">Upload new file</label>
-                                                            <input type="file" name="file" class="form-control"/>
-                                                        </div>
+                                                </div>
+                                                <div class="col-lg-12">
+                                                    <div class="mb-3">
+                                                        <label for="teammembersName" class="form-label">
+                                                            Exam Date</label>
+                                                        <input type="text" class="form-control datepicker" name="date"
+                                                               placeholder="Enter exam date" value="{{$exam_date->date}}">
                                                     </div>
+                                                </div>
 
-                                                    {{--<div class="col-lg-12">
-                                                        <div>
-                                                            <label for="companyname-field"
-                                                                   class="form-label">Description</label>
-                                                            <textarea name="description" class="form-control" id="editor1"
-                                                                      required></textarea>
-                                                        </div>
-                                                    </div>--}}
+                                                <div class="col-lg-12">
+                                                    <div class="mb-3">
+                                                        <label for="teammembersName" class="form-label">
+                                                            Exam Time</label>
+                                                        <input type="text" class="form-control" name="time"
+                                                               placeholder="Enter exam time" value="{{$exam_date->time}}">
+                                                    </div>
+                                                </div>
 
+                                                <div class="col-lg-12">
+                                                    <div class="mb-3">
+                                                        <label for="teammembersName" class="form-label">
+                                                            Exam Venue</label>
+                                                        <input type="text" class="form-control" name="venue"
+                                                               placeholder="Enter exam title" value="{{$exam_date->venue}}">
+                                                    </div>
+                                                </div>
+
+
+
+                                                <div class="col-lg-12">
+                                                    <div class="hstack gap-2 justify-content-end">
+                                                        <button type="button" class="btn btn-light"
+                                                                data-bs-dismiss="modal">Close
+                                                        </button>
+                                                        <button type="submit" class="btn btn-success">Update Exam
+                                                            Schedule
+                                                        </button>
+                                                    </div>
                                                 </div>
                                             </div>
-                                            <div class="modal-footer">
-                                                <div class="hstack gap-2 justify-content-end">
-                                                    <button type="button" class="btn btn-light"
-                                                            data-bs-dismiss="modal">Close
-                                                    </button>
-                                                    <button type="submit" class="btn btn-success" id="add-btn">Update Exam Guideline
-                                                    </button>
 
-                                                </div>
-                                            </div>
                                         </form>
 
                                     </div>

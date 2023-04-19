@@ -2,6 +2,7 @@
 @push('head')
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="/resources/demos/style.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
 @endpush
 @section('content')
     <div class="page-content">
@@ -53,29 +54,12 @@
             <!--end col-->
                 <div class="col-lg-12 col-md-12 col-xxl-12">
                     <div class="card" id="companyList">
-                        <div class="card-header">
-                            <div class="row g-2">
-                                <div class="col-md-3">
-                                    <div class="search-box">
-                                        <input type="text" class="form-control search"
-                                               placeholder="search...">
-                                        <i class="ri-search-line search-icon"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                         <div class="card-body">
                             <div>
                                 <div class="table-responsive table-card mb-3">
-                                    <table class="table align-middle table-nowrap mb-0">
+                                    <table id="example" class="table align-middle table-nowrap mb-0">
                                         <thead class="table-light">
                                         <tr>
-                                            <th scope="col" style="width: 50px;">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" id="checkAll"
-                                                           value="option">
-                                                </div>
-                                            </th>
                                             <th class="sort" data-sort="name" scope="col">Title</th>
                                             <th class="sort" data-sort="name" scope="col">Category</th>
                                             <th class="sort" data-sort="name" scope="col">Committee</th>
@@ -86,12 +70,6 @@
                                         <tbody class="list form-check-all">
                                         @foreach($policy_guidelines as $policy_guideline)
                                             <tr>
-                                                <td scope="row">
-                                                    <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" name="chk_child"
-                                                               value="option1">
-                                                    </div>
-                                                </td>
                                                 <td class="owner">{{$policy_guideline->title}}</td>
                                                 <td class="owner">{{$policy_guideline->policy_category->name}}</td>
                                                 <td class="owner">{{$policy_guideline->committee->name}}</td>
@@ -117,17 +95,6 @@
                                         @endforeach
                                         </tbody>
                                     </table>
-                                </div>
-                                <div class="d-flex justify-content-end mt-3">
-                                    <div class="pagination-wrap hstack gap-2">
-                                        <a class="page-item pagination-prev disabled" href="#">
-                                            Previous
-                                        </a>
-                                        <ul class="pagination listjs-pagination mb-0"></ul>
-                                        <a class="page-item pagination-next" href="#">
-                                            Next
-                                        </a>
-                                    </div>
                                 </div>
                             </div>
 
@@ -167,11 +134,16 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
     <script>
         $(function () {
             $(".datepicker").datepicker({
                 dateFormat: "yy-mm-dd"
             });
+        });
+
+        $(document).ready(function () {
+            $('#example').DataTable();
         });
     </script>
 

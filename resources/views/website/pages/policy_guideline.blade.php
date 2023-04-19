@@ -47,25 +47,35 @@
                 </div>
                 <div style="margin-top: 30px;" class="col-md-9 col-sm-12">
 
-                    <div class="container mt-5" id="exampleTable">
-                        <input class="search form-control" placeholder="Search" />
-                        <table class="table table-striped table-bordered mt-3">
-                            <thead>
-                            <tr>
-                                <th>Title</th>
-                                <th>Download</th>
-                            </tr>
-                            </thead>
-                            <tbody class="list">
-                            <tr>
-                                <td class="title">Example 1</td>
-                                <td class="date">2023-04-18</td>
-                            </tr>
-                            </tbody>
-                        </table>
-                        <ul class="pagination"></ul>
-                    </div>
+                    @foreach($committees as $committee)
+                        @if($committee->policy_guidelines->count() > 0)
 
+                            <div class="container mt-5" id="exampleTable{{$committee->id}}">
+                                <h3>{{$committee->name}}</h3>
+
+                                <input style="margin-bottom:10px;" class="search form-control" placeholder="Search"/>
+                                <table class="table table-striped table-bordered mt-3">
+                                    <thead>
+                                    <tr>
+                                        <th>Title</th>
+                                        <th>Download</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody class="list">
+                                    @foreach($committee->policy_guidelines as $policy_guideline)
+                                        <tr>
+                                            <td class="title">{{$policy_guideline->title}}</td>
+                                            <td class="date">2023-04-18</td>
+                                        </tr>
+                                    @endforeach
+
+                                    </tbody>
+                                </table>
+                                <ul class="pagination"></ul>
+
+                            </div>
+                        @endif
+                    @endforeach
 
 
                 </div>
@@ -73,15 +83,18 @@
 
         </div>
     </div>
+    @foreach($committees as $committee)
+        @if($committee->policy_guidelines->count() > 0)
+            <script>
+                var options = {
+                    valueNames: ['title', 'download'],
+                    page: 5,
+                    pagination: true,
+                };
 
-    <script>
-        var options = {
-            valueNames: ['title', 'download'],
-            page: 5,
-            pagination: true,
-        };
-
-        var userList = new List('exampleTable', options);
-    </script>
+                var userList = new List('exampleTable{{$committee->id}}', options);
+            </script>
+        @endif
+    @endforeach
 
 @endsection
