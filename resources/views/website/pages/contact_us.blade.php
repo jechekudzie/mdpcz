@@ -30,24 +30,34 @@
             <div class="row">
 
                 <div class="col-md-8">
-
+                    @if(session('message'))
+                    <div class="container">
+                        <div class="alert alert-info alert-dismissible" role="alert">
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <strong>Success!</strong> Your message has been sent successfully!
+                        </div>
+                    </div>
+                    @endif
                     <div class="contact-form">
-                        <form id="contact-page-form" name="contact_form" class="default-form" action="mail.php"
-                              method="post">
+
+                        <form action="{{url('/submitContactForm')}}" method="post" {{--id="contact-page-form"--}} {{--class="default-form"--}} >
+                            @csrf
                             <div class="row">
                                 <div class="col-md-6">
-                                    <input type="text" name="name" value="" placeholder="Your Name*" required="">
+                                    <input type="text" name="name" placeholder="Your Name*" required="">
                                 </div>
                                 <div class="col-md-6">
-                                    <input type="email" name="email" value="" placeholder="Your Mail*" required="">
+                                    <input type="email" name="email" placeholder="Your Mail*" required="">
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
-                                    <input type="text" name="phone" value="" placeholder="Phone">
+                                    <input type="text" name="phone" placeholder="Phone">
                                 </div>
                                 <div class="col-md-6">
-                                    <input type="text" name="Subject" value="" placeholder="Subject">
+                                    <input type="text" name="subject" placeholder="Subject">
                                 </div>
                             </div>
                             <div class="row">
@@ -57,7 +67,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-md-12">
-                                    <input class="thm-btn bg-clr1" type="submit" value="Send Message">
+                                    <button class="thm-btn bg-clr1" type="submit" >Send Message</button>
                                 </div>
                             </div>
                         </form>
@@ -147,31 +157,4 @@
         </div>
     </div>
     <!--End contact form area-->
-
-    {{-- <div class="home-google-map">
-         <div
-             class="google-map"
-             id="contact-google-map"
-             data-map-lat="51.507192"
-             data-map-lng="-0.127265"
-             data-icon-path="images/icon/marker.png"
-             data-map-title="Services"
-             data-map-zoom="10" >
-
-         </div>
-
-     </div>
-
-     <div class="brand-logo sec-padd">
-         <div class="container">
-             <ul class="brand-carousel">
-                 <li><a href="#"><img src="images/brand/1.png" alt=""></a></li>
-                 <li><a href="#"><img src="images/brand/2.png" alt=""></a></li>
-                 <li><a href="#"><img src="images/brand/3.png" alt=""></a></li>
-                 <li><a href="#"><img src="images/brand/4.png" alt=""></a></li>
-                 <li><a href="#"><img src="images/brand/5.png" alt=""></a></li>
-                 <li><a href="#"><img src="images/brand/6.png" alt=""></a></li>
-             </ul>
-         </div>
-     </div>--}}
 @endsection

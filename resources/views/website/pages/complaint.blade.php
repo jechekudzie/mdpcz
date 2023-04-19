@@ -32,21 +32,30 @@
             <div class="row">
 
                 <div class="col-md-8">
-
+                    @if(session('message'))
+                        <div class="container">
+                            <div class="alert alert-info alert-dismissible" role="alert">
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                <strong>Success!</strong> Your complaint has been sent successfully!
+                            </div>
+                        </div>
+                    @endif
                     <div class="contact-form">
-                        <form id="contact-page-form" name="contact_form" class="default-form" action="mail.php"
-                              method="post">
+                        <form action="{{url('/submitComplaintForm')}}" method="post" >
+                            @csrf
                             <div class="row">
                                 <div class="col-md-6">
-                                    <input type="text" name="name" value="" placeholder="Your Name*" required="">
+                                    <input type="text" name="name" placeholder="Your Name*">
                                 </div>
                                 <div class="col-md-6">
-                                    <input type="email" name="email" value="" placeholder="Your Mail*" required="">
+                                    <input type="email" name="email" placeholder="Your Mail*">
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
-                                    <input type="text" name="Subject" value="" placeholder="Subject">
+                                    <input type="text" name="subject" placeholder="Subject">
                                 </div>
                             </div>
                             <div class="row">

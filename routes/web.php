@@ -22,7 +22,7 @@ Route::get('/', function () {
 
 Route::get('/tables', function () {
     $newsletters = \App\Models\NewsLetter::all();
-    return view('website.pages.tables',compact('newsletters'));
+    return view('emails.contact_form',compact('newsletters'));
 });
 
 Auth::routes();
@@ -60,6 +60,9 @@ Route::get('/our_resource', [WebsiteController::class, 'our_resource']);
 
 Route::get('/faqs', [WebsiteController::class, 'faqs'])->name('faqs');
 Route::get('/contact_us', [WebsiteController::class, 'contactUs'])->name('contactUs');
+
+Route::post('/submitContactForm', [WebsiteController::class, 'submitContactForm'])->name('submitContactForm');
+Route::post('/submitComplaintForm', [WebsiteController::class, 'submitComplaintForm'])->name('submitComplaintForm');
 
 Route::get('/act', [WebsiteController::class, 'acts'])->name('acts');
 

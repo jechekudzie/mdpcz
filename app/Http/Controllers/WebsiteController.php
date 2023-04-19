@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\ComplaintFormMail;
+use App\Mail\ContactFormMail;
 use App\Models\Act;
 use App\Models\BankingDetail;
 use App\Models\Committee;
+use App\Models\Complaint;
 use App\Models\CouncilMember;
 use App\Models\DesignatedInstitution;
 use App\Models\Exam;
@@ -23,6 +26,7 @@ use App\Models\TrainingInstitution;
 use App\Models\WhatWeDo;
 use App\Models\WhoWeAre;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class WebsiteController extends Controller
 {
@@ -171,6 +175,44 @@ class WebsiteController extends Controller
     public function contactUs()
     {
         return view('website.pages.contact_us');
+    }
+
+    public function submitContactForm(Request $request)
+    {
+        // Validate the contact form data
+        $validatedData = request()->validate([
+            'name' => 'required',
+            'email' => 'required|email',
+            'phone' => 'nullable',
+            'subject' => 'nullable',
+            'message' => 'nullable',
+        ]);
+
+
+        // Send the email using the user's email as the "from" address
+        Mail::to('nigel@leadingdigital.africa')->send(new ContactFormMail($validatedData));
+
+        // Redirect back to the contact form with a success message
+        return redirect()->back()->with('message', 'Your message has been sent successfully!');
+    }
+
+    public function submitComplaintForm(Request $request)
+    {
+        // Validate the contact form data
+        $validatedData = request()->validate([
+            'name' => 'nullable',
+            'email' => 'nullable',
+            'subject' => 'nullable',
+            'message' => 'nullable',
+        ]);
+
+        Complaint::create($validatedData);
+
+        // Send the email using the user's email as the "from" address
+        Mail::to('nigel@leadingdigital.africa')->send(new ComplaintFormMail($validatedData));
+
+        // Redirect back to the contact form with a success message
+        return redirect()->back()->with('message', 'Your message has been sent successfully!');
     }
 
 
