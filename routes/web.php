@@ -57,6 +57,7 @@ Route::get('/log_book', [WebsiteController::class, 'logBooks']);
 Route::get('/policy_guideline', [WebsiteController::class, 'policy_guideline']);
 Route::get('/complaint', [WebsiteController::class, 'complaint']);
 Route::get('/our_resource', [WebsiteController::class, 'our_resource']);
+Route::get('/public_register', [WebsiteController::class, 'public_register']);
 
 Route::get('/faqs', [WebsiteController::class, 'faqs'])->name('faqs');
 Route::get('/contact_us', [WebsiteController::class, 'contactUs'])->name('contactUs');

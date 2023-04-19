@@ -125,7 +125,7 @@
                                     <ul>
                                         <li><a href="{{url('/registration_pathway')}}">Registration Pathway</a></li>
                                         <li><a href="{{url('/registration_forms')}}">Registration Forms</a></li>
-                                        <li><a href="http://www.mdpcz.co.zw/mdpcz_find/_f/_find_practitioner.php"
+                                        <li><a href="{{url('/public_register')}}"
                                                target="_blank">Public Register</a></li>
                                     </ul>
                                 </li>
@@ -177,7 +177,7 @@
                                     <ul>
                                         <li><a href="{{url('/registration_pathway')}}">Registration Pathway</a></li>
                                         <li><a href="{{url('/registration_forms')}}">Registration Forms</a></li>
-                                        <li><a href="http://www.mdpcz.co.zw/mdpcz_find/_f/_find_practitioner.php"
+                                        <li><a href="{{url('/public_register')}}"
                                                target="_blank">Public Register</a></li>
                                     </ul>
                                 </li>

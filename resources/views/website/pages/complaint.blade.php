@@ -78,10 +78,15 @@
                         <div class="title">
                             <h4>Quick Complaint</h4>
                             <p>Generally doctors treating patients are willing to address patients’ concerns directly.
+                                <br/>
+                                <br/>
                                 If you have a concern about your Doctor that involves his/her conduct, communication or
-                                treatment you should feel free to openly discuss these issues with him/her. However, if
-                                you fail to reach a consensus you may choose to file a complaint with the Council for
+                                treatment you should feel free to openly discuss these issues with him/her.
+                                <br/>
+                                <br/>
+                                However, if you fail to reach a consensus you may choose to file a complaint with the Council for
                                 further investigation. </p>
+                            <p style="background-color:white;color:black;">Send all complaints to: <a href="mailto:complaints@mdpcz.co.zw">complaints@mdpcz.co.zw</a> </p>
                         </div>
 
                     </div>

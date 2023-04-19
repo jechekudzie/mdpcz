@@ -20,8 +20,10 @@ use App\Models\ImportantLink;
 use App\Models\LogBook;
 use App\Models\OurResource;
 use App\Models\PolicyGuideline;
+use App\Models\PractitionersSearch;
 use App\Models\Registrar;
 use App\Models\RegistrationPathWay;
+use App\Models\Speciality;
 use App\Models\TrainingInstitution;
 use App\Models\WhatWeDo;
 use App\Models\WhoWeAre;
@@ -35,47 +37,48 @@ class WebsiteController extends Controller
     {
         $registrar = Registrar::find(1);
         $quick_links = ImportantLink::all();
-        return view('website.pages.registrar', compact('registrar','quick_links'));
+        return view('website.pages.registrar', compact('registrar', 'quick_links'));
     }
 
     public function whoWeAre()
     {
         $who_we_are = WhoWeAre::find(1);
         $quick_links = ImportantLink::all();
-        return view('website.pages.who_we_are', compact('who_we_are','quick_links'));
+        return view('website.pages.who_we_are', compact('who_we_are', 'quick_links'));
     }
+
     public function whatWeDo()
     {
         $what_we_do = WhatWeDo::find(1);
         $quick_links = ImportantLink::all();
-        return view('website.pages.what_we_do', compact('what_we_do','quick_links'));
+        return view('website.pages.what_we_do', compact('what_we_do', 'quick_links'));
     }
 
     public function ourHistory()
     {
 
         $quick_links = ImportantLink::all();
-        return view('website.pages.our_history',compact('quick_links'));
+        return view('website.pages.our_history', compact('quick_links'));
     }
 
     public function councilStructure()
     {
         $quick_links = ImportantLink::all();
-        return view('website.pages.council_structure',compact('quick_links'));
+        return view('website.pages.council_structure', compact('quick_links'));
     }
 
     public function councilMembers()
     {
         $council_members = CouncilMember::all();
         $quick_links = ImportantLink::all();
-        return view('website.pages.council_members', compact('council_members','quick_links'));
+        return view('website.pages.council_members', compact('council_members', 'quick_links'));
     }
 
     public function committees()
     {
         $committees = Committee::all();
         $quick_links = ImportantLink::all();
-        return view('website.pages.committees',compact('committees','quick_links'));
+        return view('website.pages.committees', compact('committees', 'quick_links'));
     }
 
 
@@ -86,7 +89,7 @@ class WebsiteController extends Controller
         $quick_links = ImportantLink::all();
         $registration_pathway = RegistrationPathWay::find(1);
 
-        return view('website.pages.registration_pathway', compact('registration_pathway','quick_links','designated_institutions'));
+        return view('website.pages.registration_pathway', compact('registration_pathway', 'quick_links', 'designated_institutions'));
     }
 
     public function bankingDetails()
@@ -106,7 +109,7 @@ class WebsiteController extends Controller
     public function onlineServices()
     {
         $quick_links = ImportantLink::all();
-        return view('website.pages.online_services',compact('quick_links'));
+        return view('website.pages.online_services', compact('quick_links'));
     }
 
     public function councilExamination()
@@ -115,27 +118,28 @@ class WebsiteController extends Controller
         $exam_guidelines = ExamGuideline::all();
         $exam_dates = ExamDate::all();
         $quick_links = ImportantLink::all();
-        return view('website.pages.council_examination', compact('exams', 'exam_guidelines','quick_links','exam_dates'));
+        return view('website.pages.council_examination', compact('exams', 'exam_guidelines', 'quick_links', 'exam_dates'));
     }
 
     public function fitnessToPractice()
     {
         $fitness_to_practice = FitnessPractice::find(1);
         $quick_links = ImportantLink::all();
-        return view('website.pages.practice_fitness', compact('fitness_to_practice','quick_links'));
+        return view('website.pages.practice_fitness', compact('fitness_to_practice', 'quick_links'));
     }
+
     public function training_institution()
     {
         $training_institutions = TrainingInstitution::all();
         $quick_links = ImportantLink::all();
-        return view('website.pages.training_institution', compact('training_institutions','quick_links'));
+        return view('website.pages.training_institution', compact('training_institutions', 'quick_links'));
     }
 
     public function logBooks()
     {
         $log_books = LogBook::all();
         $quick_links = ImportantLink::all();
-        return view('website.pages.log_books', compact('log_books','quick_links'));
+        return view('website.pages.log_books', compact('log_books', 'quick_links'));
     }
 
     public function policy_guideline()
@@ -143,13 +147,13 @@ class WebsiteController extends Controller
         $policy_guidelines = PolicyGuideline::all();
         $committees = Committee::all();
         $quick_links = ImportantLink::all();
-        return view('website.pages.policy_guideline', compact('policy_guidelines','quick_links','committees'));
+        return view('website.pages.policy_guideline', compact('policy_guidelines', 'quick_links', 'committees'));
     }
 
     public function complaint()
     {
         $quick_links = ImportantLink::all();
-        return view('website.pages.complaint',compact('quick_links'));
+        return view('website.pages.complaint', compact('quick_links'));
     }
 
 
@@ -157,19 +161,20 @@ class WebsiteController extends Controller
     {
         $acts = Act::all();
         $quick_links = ImportantLink::all();
-        return view('website.pages.acts', compact('acts','quick_links'));
+        return view('website.pages.acts', compact('acts', 'quick_links'));
     }
 
     public function faqs()
     {
         $faq_categories = FaqCategory::all();
-        return view('website.pages.faqs',compact('faq_categories'));
+        return view('website.pages.faqs', compact('faq_categories'));
     }
+
     public function our_resource()
     {
         $our_resources = OurResource::all();
         $quick_links = ImportantLink::all();
-        return view('website.pages.our_resource',compact('our_resources','quick_links'));
+        return view('website.pages.our_resource', compact('our_resources', 'quick_links'));
     }
 
     public function contactUs()
@@ -215,5 +220,10 @@ class WebsiteController extends Controller
         return redirect()->back()->with('message', 'Your message has been sent successfully!');
     }
 
+
+    public function public_register()
+    {
+        return view('website.pages.public_register');
+    }
 
 }

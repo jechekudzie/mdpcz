@@ -107,12 +107,12 @@
         <div class="container">
             <div class="clearfix">
                 <div class="float_left">
-                    <h4>Looking for registered doctors ?</h4>
+                    <h4>Public Register ?</h4>
                     <br>
                     <div class="text-center center">
                         <a class="btn btn-primary btn-lg"
-                           href="http://www.mdpcz.co.zw/mdpcz_find/_f/_find_practitioner.php" target="_blank">
-                            Find Registered Practitioners
+                           href="{{url('/public_register')}}" target="_blank">
+                            Public Register
                         </a>
                     </div>
                 </div>
@@ -222,7 +222,7 @@
                                                         <p style="color: white;margin-top: 10px;margin-bottom:15px;font-size: 18px;">
                                                             {{--Provides a list of doctors recognized as operational.--}}</p>
                                                         <div class="my-flip-btn-box"><a
-                                                                href="http://www.mdpcz.co.zw/mdpcz_find/_f/_find_practitioner.php"
+                                                                href="{{url('/public_register')}}"
                                                                 target="_blank" class="btn btn-default btn-lg">
                                                                 ClICK TO VIEW PUBLIC REGISTER
                                                             </a>
