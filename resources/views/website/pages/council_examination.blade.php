@@ -33,13 +33,11 @@
                         <!-- List group -->
                         <ul class="list-group">
 
-                            <li class="list-group-item"><a href="{{url('/council_examination')}}">Council
-                                    Examination</a></li>
-                            <li class="list-group-item"><a href="{{url('/fitness_to_practice')}}">Fitness to
-                                    Practice</a></li>
-                            <li class="list-group-item"><a href="{{url('/training_institution')}}">Accreditation</a>
-                            </li>
-                            <li class="list-group-item"><a href="{{url('/log_book')}}">Log Books</a></li>
+                            <li class="list-group-item"><a href="{{url('/council_examination')}}">Council Examination</a></li>
+                            <li class="list-group-item"><a href="{{url('/training_institution')}}">Accredited Training Institutions</a></li>
+                            <li class="list-group-item"><a href="{{url('/internship_institution')}}">Accredited Internship Training Institutions</a></li>
+                            <li class="list-group-item"><a href="{{url('/contact_us')}}">Request Log Books</a></li>
+
                         </ul>
                     </div>
                     <div class="panel panel-primary">

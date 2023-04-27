@@ -8,7 +8,7 @@
 @extends('website.partials.layout')
 
 @section('template_title')
-    Internship Teaching Unit
+    Accredited Internship Training Institutions
 @endsection
 
 
@@ -16,9 +16,9 @@
     <!--Start breadcrumb area-->
     <div class="breadcrumb-area" style="background-color: #0195DB;">
         <div class="container text-center">
-            <h1>Internship Teaching Unit</h1>
+            <h1>Accredited Internship Training Institutions</h1>
             <div class="breadcrumbs_path">
-                <a href="#">Home</a>&nbsp;&nbsp;-&nbsp;&nbsp; Internship Teaching Unit
+                <a href="#">Home</a>&nbsp;&nbsp;-&nbsp;&nbsp; Accredited Internship Training Institutions
             </div>
         </div>
     </div>
@@ -36,13 +36,11 @@
                         <!-- List group -->
                         <ul class="list-group">
 
-                            <li class="list-group-item"><a href="{{url('/council_examination')}}">Council
-                                    Examination</a></li>
-                            <li class="list-group-item"><a href="{{url('/fitness_to_practice')}}">Fitness to
-                                    Practice</a></li>
-                            <li class="list-group-item"><a href="{{url('/training_institution')}}">Accreditation</a>
-                            </li>
-                            <li class="list-group-item"><a href="{{url('/log_book')}}">Log Books</a></li>
+                            <li class="list-group-item"><a href="{{url('/council_examination')}}">Council Examination</a></li>
+                            <li class="list-group-item"><a href="{{url('/training_institution')}}">Accredited Training Institutions</a></li>
+                            <li class="list-group-item"><a href="{{url('/internship_institution')}}">Accredited Internship Training Institutions</a></li>
+                            <li class="list-group-item"><a href="{{url('/contact_us')}}">Request Log Books</a></li>
+
                         </ul>
                     </div>
                     <div class="panel panel-primary">
@@ -63,7 +61,7 @@
 
                 <div style="text-align:center;" class="col-md-9 col-sm-12">
                     <div class="about-text">
-                        <h4 style="padding-bottom:15px;">Internship Teaching Unit</h4>
+                        <h4 style="padding-bottom:15px;">Accredited Internship Training Institutions</h4>
                         <ul class="list-unstyled">
                             <div class="row">
                                 @foreach($internship_institutions as $internship_institution)

@@ -32,6 +32,19 @@
                 <div style="margin-top: 30px;" class="col-md-3 col-sm-12">
                     <div class="panel panel-primary">
                         <!-- Default panel contents -->
+                        <div class="panel-heading">POLICIES AND GUIDELINES</div>
+                        <!-- List group -->
+                        <ul class="list-group">
+
+                            <li class="list-group-item"><a href="{{url('/policy_guideline')}}">Internal Policies</a>
+                            </li>
+                            <li class="list-group-item"><a href="{{url('/external_policy')}}">External Policies</a></li>
+                            <li class="list-group-item"><a href="{{url('/act')}}">Acts</a></li>
+
+                        </ul>
+                    </div>
+                    <div class="panel panel-primary">
+                        <!-- Default panel contents -->
                         <div class="panel-heading">QUICK LINKS</div>
                         <!-- List group -->
                         <ul class="list-group">
@@ -43,41 +56,42 @@
 
                         </ul>
                     </div>
-
                 </div>
-                <div style="margin-top: 30px;" class="col-md-9 col-sm-12">
-
+                <div style="margin-top: 30px;" class="col-md-8 col-sm-12">
                     @foreach($committees as $committee)
                         @if($committee->policy_guidelines->count() > 0)
 
-                            <div class="container mt-5" id="exampleTable{{$committee->id}}">
-                                <h3>{{$committee->name}}</h3>
+                            <div class="container" id="exampleTable{{$committee->id}}">
+                                <div class="row">
+                                    <div class="col-md-10 col-sm-12">
+                                        <h3>{{$committee->name}}</h3>
 
-                                <input style="margin-bottom:10px;" class="search form-control" placeholder="Search"/>
-                                <table class="table table-striped table-bordered mt-3">
-                                    <thead>
-                                    <tr>
-                                        <th>Title</th>
-                                        <th>Download</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody class="list">
-                                    @foreach($committee->policy_guidelines as $policy_guideline)
-                                        <tr>
-                                            <td class="title">{{$policy_guideline->title}}</td>
-                                            <td class="date"><a href="{{asset($policy_guideline->file)}}" target="_blank">Download</a> </td>
-                                        </tr>
-                                    @endforeach
+                                        <input style="margin-bottom:10px;" class="search form-control"
+                                               placeholder="Search"/>
+                                        <table class="table table-striped table-bordered {{--mt-3--}}">
+                                            <thead>
+                                            <tr>
+                                                <th>Title</th>
+                                                <th>Download</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody class="list">
+                                            @foreach($committee->policy_guidelines as $policy_guideline)
+                                                <tr>
+                                                    <td class="title">{{$policy_guideline->title}}</td>
+                                                    <td class="date"><a href="{{asset($policy_guideline->file)}}"
+                                                                        target="_blank">Download</a></td>
+                                                </tr>
+                                            @endforeach
 
-                                    </tbody>
-                                </table>
-                                <ul class="pagination"></ul>
-
+                                            </tbody>
+                                        </table>
+                                        <ul class="pagination"></ul>
+                                    </div>
+                                </div>
                             </div>
                         @endif
                     @endforeach
-
-
                 </div>
             </div>
 

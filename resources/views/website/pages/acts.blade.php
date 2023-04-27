@@ -29,17 +29,12 @@
                 <div style="margin-top: 30px;" class="col-md-3 col-sm-12">
                     <div class="panel panel-primary">
                         <!-- Default panel contents -->
-                        <div class="panel-heading">THE PROFESSION</div>
+                        <div class="panel-heading">POLICIES AND GUIDELINES</div>
                         <!-- List group -->
                         <ul class="list-group">
-                            <li class="list-group-item"><a href="{{url('/online_services')}}">Online Services</a></li>
-                            <li class="list-group-item"><a href="{{url('/registers')}}">Registers</a></li>
-                            <li class="list-group-item"><a href="{{url('/council_examination')}}">Council
-                                    Examination</a></li>
-                            <li class="list-group-item"><a href="{{url('/fitness_to_practice')}}">Fitness to
-                                    Practice</a></li>
-                            <li class="list-group-item"><a href="{{url('/policy_guideline')}}">Policies & Guidelines</a>
-                            </li>
+
+                            <li class="list-group-item"><a href="{{url('/policy_guideline')}}">Internal Policies</a></li>
+                            <li class="list-group-item"><a href="{{url('/external_policy')}}">External Policies</a></li>
                             <li class="list-group-item"><a href="{{url('/act')}}">Acts</a></li>
 
                         </ul>

@@ -141,6 +141,7 @@
                                         {{--<li><a href="{{url('/council_examination')}}">Education and Training</a></li>--}}
                                         <li><a href="{{url('/policy_guideline')}}">Internal</a></li>
                                         <li><a href="{{url('/external_policy')}}">External</a></li>
+                                        <li><a href="{{url('/act')}}">Acts</a></li>
 
                                     </ul>
                                 </li>
@@ -199,6 +200,7 @@
                                         {{--<li><a href="{{url('/council_examination')}}">Education and Training</a></li>--}}
                                         <li><a href="{{url('/policy_guideline')}}">Internal</a></li>
                                         <li><a href="{{url('/external_policy')}}">External</a></li>
+                                        <li><a href="{{url('/act')}}">Acts</a></li>
 
                                     </ul>
                                 </li>
