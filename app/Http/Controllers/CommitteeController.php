@@ -66,6 +66,7 @@ class CommitteeController extends Controller
     public function destroy(Committee $committee)
     {
         //
+        $committee->policy_guidelines()->delete();
         $committee->delete();
 
         return redirect('/admin/committee')->with('message', 'committee deleted successfully');

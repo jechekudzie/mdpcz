@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('complaints', function (Blueprint $table) {
             $table->id();
+            $table->string('category')->nullable();
             $table->string('name')->nullable();
             $table->string('email')->nullable();
             $table->string('subject')->nullable();

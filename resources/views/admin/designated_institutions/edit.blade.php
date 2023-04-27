@@ -32,6 +32,10 @@
                                     <a href="{{url('/admin/designated_institution')}}" class="btn btn-info add-btn"><i
                                             class="ri-arrow-left-line align-bottom"></i> Back
                                     </a>
+                                    <button class="btn btn-info" data-bs-toggle="modal"
+                                            data-bs-target="#delete">
+                                        <i class="ri-add-fill me-1 align-bottom"></i> Delete this item?
+                                    </button>
                                 </div>
                                 <div class="flex-shrink-0">
                                     <div class="hstack text-nowrap gap-2">
@@ -65,7 +69,6 @@
                             Edit: {{$designated_institution->name}}
                         </div>
 
-
                         <div class="card-body">
                             <!--end add modal-->
 
@@ -74,11 +77,28 @@
 
                                     <div class="card-body">
 
-                                        <form method="post" action="{{url('/admin/designated_institution/'.$designated_institution->id)}}"
+                                        <form method="post"
+                                              action="{{url('/admin/designated_institution/'.$designated_institution->id)}}"
                                               enctype="multipart/form-data">
                                             @method('PATCH')
                                             @csrf
                                             <div class="row">
+                                                <div class="col-lg-12">
+                                                    <div class="mb-3">
+                                                        <label for="teammembersName" class="form-label">Category</label>
+                                                        <select class="form-control" name="category">
+                                                            <option
+                                                                value="central" @if($designated_institution->category == 'central'){{'selected'}}@endif>
+                                                                Central Hospital
+                                                            </option>
+                                                            <option
+                                                                value="province" @if($designated_institution->category == 'province'){{'selected'}}@endif>
+                                                                Provincial Hospital
+                                                            </option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+
                                                 <div class="col-lg-12">
                                                     <div class="mb-3">
                                                         <label for="teammembersName" class="form-label">Name</label>
@@ -96,12 +116,12 @@
                                                 </div>
                                                 <div class="col-lg-12">
                                                     <div class="mb-3">
-                                                        <label for="teammembersName" class="form-label">Website link</label>
+                                                        <label for="teammembersName" class="form-label">Website
+                                                            link</label>
                                                         <input type="text" class="form-control" name="website_link"
                                                                value="{{$designated_institution->website_link}}">
                                                     </div>
                                                 </div>
-
 
 
                                                 <div class="col-lg-12">
@@ -109,7 +129,8 @@
                                                         <button type="button" class="btn btn-light"
                                                                 data-bs-dismiss="modal">Close
                                                         </button>
-                                                        <button type="submit" class="btn btn-success">Update Designated Institution
+                                                        <button type="submit" class="btn btn-success">Update Designated
+                                                            Institution
                                                         </button>
                                                     </div>
                                                 </div>
@@ -120,6 +141,42 @@
                                 </div>
                             </div>
                         </div>
+
+                        <div class="modal fade" id="delete" tabindex="-1" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="myModalLabel">Confirm delete</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form method="post" action="{{url('/admin/designated_institution/'.$designated_institution->id)}}"
+                                              enctype="multipart/form-data">
+                                            @method('DELETE')
+                                            @csrf
+                                            <div class="row">
+                                                <p>Are you sure you want to delete</p>
+
+                                                <div class="col-lg-12">
+                                                    <div class="hstack gap-2">
+                                                        <button type="button" class="btn btn-light"
+                                                                data-bs-dismiss="modal">No, Cancel
+                                                        </button>
+                                                        <button type="submit" class="btn btn-success">Yes, Delete
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <!--end modal-content-->
+                            </div>
+                            <!--end modal-dialog-->
+                        </div>
+
+
                     </div>
                     <!--end card-->
                 </div>

@@ -82,52 +82,38 @@
                 </div>
 
                 <div class="col-md-4">
-                    <div class="footer-contact-info">
+                    <div style="background-color:#2470a6;font-weight:bold;" class="footer-contact-info">
                         <div class="title">
-                            <h4>Quick Contact</h4>
-                            <p>If you are passionate about helping people: through education, or preventing then
-                                you </p>
+                            <h4>Contact Us</h4>
                         </div>
                         <ul class="clearfix">
                             <li>
-                                <div class="iocn-holder">
-                                    <span class="fa fa-home"></span>
-                                </div>
                                 <div class="text-holder">
-
-                                    <h6>8 Harvey Brown</h6>
+                                    <h6>HARARE OFFICE</h6>
+                                    <p>8 Harvey Brown</p>
                                     <p>Milton Park, Harare, Zimbabwe</p>
                                     <p>Whatsapp: 263 71 254 4066</p>
                                 </div>
                             </li>
 
                             <li>
-                                <div class="iocn-holder">
-                                    <span class="fa fa-home"></span>
-                                </div>
                                 <div class="text-holder">
-
-                                    <h6>No 2 Robertson Street</h6>
+                                    <h6>BULAWAYO OFFICE</h6>
+                                    <p>No 2 Robertson Street</p>
                                     <p>Parkview, Bulawayo, Zimbabwe</p>
+                                    <p>Whatsapp: 263 71 254 4066</p>
                                 </div>
                             </li>
 
-
                             <li>
-                                <div class="iocn-holder">
-                                    <span class="icon-technology-1"></span>
-                                </div>
                                 <div class="text-holder">
-                                    <h6>Call Us On</h6>
+                                    <h6>Call Us</h6>
                                     <p>263-242-790144,<br/> 263-242-793707</p>
                                 </div>
                             </li>
                             <li>
-                                <div class="iocn-holder">
-                                    <span class="icon-letter-1"></span>
-                                </div>
                                 <div class="text-holder">
-                                    <h6>Mail Us @</h6>
+                                    <h6>COUNCIL Email</h6>
                                     <a href="#"><p>mdpcz@mdpcz.co.zw</p></a>
                                 </div>
                             </li>

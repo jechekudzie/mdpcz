@@ -15,4 +15,11 @@ class Committee extends Model
     {
         return $this->hasMany(PolicyGuideline::class);
     }
+
+    public function add_policy_guidelines($policy_guideline)
+    {
+        return $this->policy_guidelines()->create($policy_guideline);
+    }
+
+
 }

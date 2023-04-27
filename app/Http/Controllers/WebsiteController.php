@@ -13,10 +13,12 @@ use App\Models\DesignatedInstitution;
 use App\Models\Exam;
 use App\Models\ExamDate;
 use App\Models\ExamGuideline;
+use App\Models\ExternalPolicy;
 use App\Models\FaqCategory;
 use App\Models\FitnessPractice;
 use App\Models\FormCategory;
 use App\Models\ImportantLink;
+use App\Models\InternshipInstitution;
 use App\Models\LogBook;
 use App\Models\OurResource;
 use App\Models\PolicyGuideline;
@@ -135,6 +137,20 @@ class WebsiteController extends Controller
         return view('website.pages.training_institution', compact('training_institutions', 'quick_links'));
     }
 
+    public function internship_institution()
+    {
+        $internship_institutions = InternshipInstitution::all();
+        $quick_links = ImportantLink::all();
+        return view('website.pages.internship_institution', compact('internship_institutions', 'quick_links'));
+    }
+
+    public function designated_institution()
+    {
+        $designated_institutions = DesignatedInstitution::all();
+        $quick_links = ImportantLink::all();
+        return view('website.pages.designated_institution', compact('designated_institutions', 'quick_links'));
+    }
+
     public function logBooks()
     {
         $log_books = LogBook::all();
@@ -148,6 +164,14 @@ class WebsiteController extends Controller
         $committees = Committee::all();
         $quick_links = ImportantLink::all();
         return view('website.pages.policy_guideline', compact('policy_guidelines', 'quick_links', 'committees'));
+    }
+
+    public function external_policy()
+    {
+        $external_policies = ExternalPolicy::all();
+        $quick_links = ImportantLink::all();
+
+        return view('website.pages.external_policies', compact('external_policies','quick_links'));
     }
 
     public function complaint()
@@ -205,6 +229,7 @@ class WebsiteController extends Controller
     {
         // Validate the contact form data
         $validatedData = request()->validate([
+            'category' => 'required',
             'name' => 'nullable',
             'email' => 'nullable',
             'subject' => 'nullable',

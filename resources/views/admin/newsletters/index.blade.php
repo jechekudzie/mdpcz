@@ -107,6 +107,13 @@
                                                             <a class="edit-item-btn"
                                                                href="{{url('/admin/newsletter/'.$newsletter->id.'/edit')}}">Edit</a>
                                                         </li>
+
+                                                        <li class="list-inline-item" data-bs-toggle="tooltip"
+                                                            data-bs-trigger="hover" data-bs-placement="top"
+                                                            title="Edit">
+                                                            <a class="edit-item-btn"
+                                                               href="{{url('/admin/newsletter/'.$newsletter->id.'/published_unpublished')}}">{{$newsletter->is_published == 1 ? 'Un-publish':'Publish'}}</a>
+                                                        </li>
                                                     </ul>
                                                 </td>
                                             </tr>

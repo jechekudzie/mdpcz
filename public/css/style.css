@@ -1742,6 +1742,7 @@ margin-bottom: 50px;
 }
 .contact-form-area .contact-form form input[type="text"],
 .contact-form-area .contact-form form input[type="email"],
+.contact-form-area .contact-form form select,
 .contact-form-area .contact-form form textarea{
   border: 1px solid #f4f4f4;
   display: block;

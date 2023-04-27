@@ -33,6 +33,10 @@
                                     <a href="{{url('/admin/committee')}}" class="btn btn-info add-btn"><i
                                             class="ri-arrow-left-line align-bottom"></i> Back
                                     </a>
+                                    <button class="btn btn-info" data-bs-toggle="modal"
+                                            data-bs-target="#delete">
+                                        <i class="ri-add-fill me-1 align-bottom"></i> Delete this item?
+                                    </button>
                                 </div>
                                 <div class="flex-shrink-0">
                                     <div class="hstack text-nowrap gap-2">
@@ -126,10 +130,45 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="modal fade" id="delete" tabindex="-1" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="myModalLabel">Confirm delete</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form method="post" action="{{url('/admin/committee/'.$committee->id)}}"
+                                              enctype="multipart/form-data">
+                                            @method('DELETE')
+                                            @csrf
+                                            <div class="row">
+                                                <p>Are you sure you want to delete</p>
+
+                                                <div class="col-lg-12">
+                                                    <div class="hstack gap-2">
+                                                        <button type="button" class="btn btn-light"
+                                                                data-bs-dismiss="modal">No, Cancel
+                                                        </button>
+                                                        <button type="submit" class="btn btn-success">Yes, Delete
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <!--end modal-content-->
+                            </div>
+                            <!--end modal-dialog-->
+                        </div>
                     </div>
                     <!--end card-->
                 </div>
                 <!--end col-->
+
+
 
             </div>
             <!--end row-->

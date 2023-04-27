@@ -11,7 +11,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                        <h4 class="mb-sm-0">INTERNAL & EXTERNAL POLICIES</h4>
+                        <h4 class="mb-sm-0">{{$committee->name}} (POLICIES & GUIDELINES)</h4>
 
                         <div class="page-title-right">
                             <ol class="breadcrumb m-0">
@@ -31,7 +31,11 @@
                         <div class="card-header">
                             <div class="d-flex align-items-center flex-wrap gap-2">
                                 <div class="flex-grow-1">
-                                    <a href="{{url('/admin/policy_guideline/create')}}" class="btn btn-info add-btn"><i
+                                    <a href="{{url('/admin/committee')}}" class="btn btn-info add-btn"><i
+                                            class="ri-arrow-go-back-fill me-1 align-bottom"></i> Back to committees
+                                    </a>
+
+                                    <a href="{{url('/admin/policy_guideline/'.$committee->id.'/create')}}" class="btn btn-info add-btn"><i
                                             class="ri-add-fill me-1 align-bottom"></i> Add Policy & Guideline
                                     </a>
                                 </div>
@@ -61,17 +65,15 @@
                                         <thead class="table-light">
                                         <tr>
                                             <th class="sort" data-sort="name" scope="col">Title</th>
-                                            <th class="sort" data-sort="name" scope="col">Category</th>
                                             <th class="sort" data-sort="name" scope="col">Committee</th>
                                             <th class="sort" data-sort="owner" scope="col">File</th>
                                             <th scope="col">Action</th>
                                         </tr>
                                         </thead>
                                         <tbody class="list form-check-all">
-                                        @foreach($policy_guidelines as $policy_guideline)
+                                        @foreach($committee->policy_guidelines as $policy_guideline)
                                             <tr>
                                                 <td class="owner">{{$policy_guideline->title}}</td>
-                                                <td class="owner">{{$policy_guideline->policy_category->name}}</td>
                                                 <td class="owner">{{$policy_guideline->committee->name}}</td>
                                                 <td class="owner"><a href="{{url($policy_guideline->file)}}" target="_blank">Policy</a>
                                                 </td>

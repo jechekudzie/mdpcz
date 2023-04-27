@@ -10,7 +10,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                        <h4 class="mb-sm-0">INTERNAL & EXTERNAL POLICIES</h4>
+                        <h4 class="mb-sm-0">{{$policyGuideline->committee->name}} (POLICIES & GUIDELINES)</h4>
 
                         <div class="page-title-right">
                             <ol class="breadcrumb m-0">
@@ -29,9 +29,14 @@
                         <div class="card-header">
                             <div class="d-flex align-items-center flex-wrap gap-2">
                                 <div class="flex-grow-1">
-                                    <a href="{{url('/admin/policy_guideline')}}" class="btn btn-info add-btn"><i
+                                    <a href="{{url('/admin/policy_guideline/'.$policyGuideline->committee->id.'/index')}}"
+                                       class="btn btn-info add-btn"><i
                                             class="ri-arrow-left-line align-bottom"></i> Back
                                     </a>
+                                    <button class="btn btn-info" data-bs-toggle="modal"
+                                            data-bs-target="#delete">
+                                        <i class="ri-add-fill me-1 align-bottom"></i> Delete this item?
+                                    </button>
                                 </div>
                                 <div class="flex-shrink-0">
                                     <div class="hstack text-nowrap gap-2">
@@ -62,7 +67,7 @@
                 <div class="col-xxl-9">
                     <div class="card" id="companyList">
                         <div style="color: black;font-size: 18px;font-weight: bolder;" class="card-header">
-                            Edit: {{$policy_guideline->title}}
+                            Edit: {{$policyGuideline->title}}
                         </div>
 
 
@@ -75,7 +80,7 @@
                                     <div class="card-body">
 
                                         <form method="post"
-                                              action="{{url('/admin/policy_guideline/'.$policy_guideline->id)}}"
+                                              action="{{url('/admin/policy_guideline/'.$policyGuideline->id.'/update')}}"
                                               enctype="multipart/form-data">
                                             @method('PATCH')
                                             @csrf
@@ -83,50 +88,16 @@
                                                 <input type="hidden" id="id-field"/>
                                                 <div class="row g-3">
 
-                                                    <div class="col-lg-6">
-                                                        <div>
-                                                            <label for="companyname-field"
-                                                                   class="form-label">Choose Category</label>
-                                                            <select name="policy_category_id" class="form-select mb-3"
-                                                                    aria-label="Default select example">
-                                                                <option selected>Choose Category</option>
-                                                                @foreach($policy_categories as $policy_category)
-                                                                    <option value="{{$policy_category->id}}"
-                                                                    @if($policy_category->id == $policy_guideline->policy_category_id){{'selected'}}@endif
-                                                                    >{{$policy_category->name}}</option>
-                                                                @endforeach
-
-                                                            </select>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col-lg-6">
-                                                        <div>
-                                                            <label for="companyname-field"
-                                                                   class="form-label">Select Document Type</label>
-                                                            <select name="committee_id" class="form-select mb-3"
-                                                                    aria-label="Default select example">
-                                                                <option selected>Select Document Type</option>
-                                                                @foreach($committees as $committee)
-                                                                    <option
-                                                                        value="{{$committee->id}}"
-                                                                    @if($committee->id == $policy_guideline->committee_id){{'selected'}}@endif
-                                                                    >{{$committee->name}}</option>
-                                                                @endforeach
-                                                            </select>
-                                                        </div>
-                                                    </div>
-
                                                     <div class="col-lg-12">
                                                         <div>
                                                             <label for="companyname-field"
                                                                    class="form-label">Policy and Guideline</label>
                                                             <input type="text" name="title" class="form-control"
-                                                                   value="{{$policy_guideline->title}}" required/>
+                                                                   value="{{$policyGuideline->title}}" required/>
                                                         </div>
                                                     </div>
 
-                                                    <a href="{{url($policy_guideline->file)}}" target="_blank">View
+                                                    <a href="{{url($policyGuideline->file)}}" target="_blank">View
                                                         current file</a>
 
                                                     <div class="col-lg-12">
@@ -137,14 +108,6 @@
                                                         </div>
                                                     </div>
 
-                                                    {{--<div class="col-lg-12">
-                                                        <div>
-                                                            <label for="companyname-field"
-                                                                   class="form-label">Description</label>
-                                                            <textarea name="description" class="form-control" id="editor1"
-                                                                      required></textarea>
-                                                        </div>
-                                                    </div>--}}
 
                                                 </div>
                                             </div>
@@ -165,6 +128,41 @@
                                 </div>
                             </div>
                         </div>
+
+                        <div class="modal fade" id="delete" tabindex="-1" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="myModalLabel">Confirm delete</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form method="post" action="{{url('/admin/policy_guideline/'.$policyGuideline->id.'/destroy')}}"
+                                              enctype="multipart/form-data">
+                                            @method('DELETE')
+                                            @csrf
+                                            <div class="row">
+                                                <p>Are you sure you want to delete</p>
+
+                                                <div class="col-lg-12">
+                                                    <div class="hstack gap-2">
+                                                        <button type="button" class="btn btn-light"
+                                                                data-bs-dismiss="modal">No, Cancel
+                                                        </button>
+                                                        <button type="submit" class="btn btn-success">Yes, Delete
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <!--end modal-content-->
+                            </div>
+                            <!--end modal-dialog-->
+                        </div>
+
                     </div>
                     <!--end card-->
                 </div>

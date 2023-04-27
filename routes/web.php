@@ -16,13 +16,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    $newsletters = \App\Models\NewsLetter::all();
-    return view('welcome',compact('newsletters'));
+    $newsletters = \App\Models\NewsLetter::where('is_published',1)->get();
+    return view('welcome', compact('newsletters'));
 });
 
 Route::get('/tables', function () {
     $newsletters = \App\Models\NewsLetter::all();
-    return view('emails.contact_form',compact('newsletters'));
+    return view('emails.contact_form', compact('newsletters'));
 });
 
 Auth::routes();
@@ -44,7 +44,6 @@ Route::get('/council_member', [WebsiteController::class, 'councilMembers'])->nam
 Route::get('/committees', [WebsiteController::class, 'committees'])->name('committees');
 
 
-
 Route::get('/registration_pathway', [WebsiteController::class, 'regPathway'])->name('reg.path');
 Route::get('/registration_forms', [WebsiteController::class, 'regForms'])->name('reg.forms');
 Route::get('/banking_details', [WebsiteController::class, 'bankingDetails'])->name('bank.dets');
@@ -52,9 +51,13 @@ Route::get('/online_services', [WebsiteController::class, 'onlineServices'])->na
 Route::get('/council_examination', [WebsiteController::class, 'councilExamination'])->name('council.examination');
 Route::get('/fitness_to_practice', [WebsiteController::class, 'fitnessToPractice']);
 Route::get('/training_institution', [WebsiteController::class, 'training_institution']);
+Route::get('/internship_institution', [WebsiteController::class, 'internship_institution']);
 Route::get('/log_book', [WebsiteController::class, 'logBooks']);
 
+Route::get('/designated_institution', [WebsiteController::class, 'designated_institution']);
+
 Route::get('/policy_guideline', [WebsiteController::class, 'policy_guideline']);
+Route::get('/external_policy', [WebsiteController::class, 'external_policy']);
 Route::get('/complaint', [WebsiteController::class, 'complaint']);
 Route::get('/our_resource', [WebsiteController::class, 'our_resource']);
 Route::get('/public_register', [WebsiteController::class, 'public_register']);
@@ -78,6 +81,20 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('/admin/act', \App\Http\Controllers\ActController::class);
     Route::resource('/admin/blog', \App\Http\Controllers\BlogController::class);
     Route::resource('/admin/committee', \App\Http\Controllers\CommitteeController::class);
+    //Committee policies
+    Route::get('/admin/policy_guideline/{committee}/index', [\App\Http\Controllers\PolicyGuidelineController::class, 'index']);
+    Route::get('/admin/policy_guideline/{committee}/create', [\App\Http\Controllers\PolicyGuidelineController::class, 'create']);
+    Route::post('/admin/policy_guideline/{committee}/store', [\App\Http\Controllers\PolicyGuidelineController::class, 'store']);
+    Route::get('/admin/policy_guideline/{policyGuideline}/edit', [\App\Http\Controllers\PolicyGuidelineController::class, 'edit']);
+    Route::patch('/admin/policy_guideline/{policyGuideline}/update', [\App\Http\Controllers\PolicyGuidelineController::class, 'update']);
+    Route::delete('/admin/policy_guideline/{policyGuideline}/destroy', [\App\Http\Controllers\PolicyGuidelineController::class, 'destroy']);
+    Route::get('/admin/policy_guideline/{policyGuideline}/published_unpublished', [\App\Http\Controllers\PolicyGuidelineController::class, 'published_unpublished']);
+
+    //internal policies
+    Route::get('/admin/internal_policy', [\App\Http\Controllers\PolicyGuidelineController::class, 'internal_policies']);
+    Route::resource('/admin/external_policy', \App\Http\Controllers\ExternalPolicyController::class);
+    Route::get('/admin/external_policy/{externalPolicy}/published_unpublished', [\App\Http\Controllers\ExternalPolicyController::class, 'published_unpublished']);
+
     Route::resource('/admin/complaint', \App\Http\Controllers\ComplaintController::class);
     Route::resource('/admin/council_member', \App\Http\Controllers\CouncilMemberController::class);
     Route::resource('/admin/council_structure', \App\Http\Controllers\CouncilStructureController::class);
@@ -103,10 +120,12 @@ Route::middleware(['auth'])->group(function () {
 
     Route::resource('/admin/our_history', \App\Http\Controllers\HistoryController::class);
     Route::resource('/admin/important_link', \App\Http\Controllers\ImportantLinkController::class);
-    Route::resource('/admin/policy_guideline', \App\Http\Controllers\PolicyGuidelineController::class);
+
+
     Route::resource('/admin/registrar', \App\Http\Controllers\RegistrarController::class);
     Route::resource('/admin/registration_pathway', \App\Http\Controllers\RegistrationPathWayController::class);
     Route::resource('/admin/designated_institution', \App\Http\Controllers\DesignatedInstitutionController::class);
+    Route::resource('/admin/internship_institution', \App\Http\Controllers\InternshipInstitutionController::class);
     Route::resource('/admin/training_institution', \App\Http\Controllers\TrainingInstitutionController::class);
     Route::resource('/admin/log_book', \App\Http\Controllers\LogBookController::class);
     Route::resource('/admin/banking_detail', \App\Http\Controllers\BankingDetailController::class);
@@ -117,6 +136,9 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('/admin/what_we_do', \App\Http\Controllers\WhatWeDoController::class);
     Route::resource('/admin/who_we_are', \App\Http\Controllers\WhoWeAreController::class);
     Route::resource('/admin/newsletter', \App\Http\Controllers\NewsLetterController::class);
+    Route::get('/admin/newsletter/{newsletter}/published_unpublished', [\App\Http\Controllers\NewsLetterController::class, 'published_unpublished']);
+
+
     Route::resource('/admin/our_resource', \App\Http\Controllers\OurResourceController::class);
 });
 

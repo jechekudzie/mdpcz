@@ -12,31 +12,29 @@ use Illuminate\Http\Request;
 class PolicyGuidelineController extends Controller
 {
 
-    public function index()
+    public function internal_policies()
     {
-        //
-        $policy_guidelines = PolicyGuideline::all();
-        return view('admin.policy_guidelines.index', compact('policy_guidelines'));
+        $internal_policies = PolicyGuideline::all();
+        return view('admin.policy_guidelines.internal_policies', compact('internal_policies'));
+
     }
 
-    public function create()
+    public function index(Committee $committee)
     {
         //
-        $policy_categories = PolicyCategory::all();
-        $committees = Committee::all();
-        return view('admin.policy_guidelines.create', compact('policy_categories', 'committees'));
+        $policyGuidelines = PolicyGuideline::all();
+        return view('admin.policy_guidelines.index', compact('committee'));
     }
 
-    public function store(Request $request)
+    public function create(Committee $committee)
     {
         //
-        $policy_guideline_file = '';
-        $fileNameWithoutExtension = '';
-        $policy_guideline = request()->validate([
-            'policy_category_id' => 'required',
-            'committee_id' => 'required',
-        ]);
+        return view('admin.policy_guidelines.create', compact('committee'));
+    }
 
+    public function store(Committee $committee)
+    {
+        //
         if (request()->hasfile('file')) {
             $uploadedFiles = request()->file('file');
 
@@ -51,47 +49,39 @@ class PolicyGuidelineController extends Controller
                 $file_name = time() . $name;
 
                 //upload the file to a directory in Public folder
-                $policy_guideline_file = $file->move('policy_guidelines', $file_name);
+                $policyGuideline_file = $file->move('policy_guidelines', $file_name);
 
-                $policy_guideline['file'] = $policy_guideline_file;
-                $policy_guideline['title'] = $fileNameWithoutExtension;
+                $policyGuideline['file'] = $policyGuideline_file;
+                $policyGuideline['title'] = $fileNameWithoutExtension;
 
-                PolicyGuideline::create($policy_guideline);
+                $committee->add_policy_guidelines($policyGuideline);
             }
         }
-
 
 
         return back()->with('message', 'policy guideline uploaded successfully');
     }
 
 
-    public function show(PolicyGuideline $policy_guideline)
+    public function show(PolicyGuideline $policyGuideline)
     {
         //
-        return view('admin.policy_guidelines.show', compact('policy_guideline'));
+        return view('admin.policy_guidelines.show', compact('policyGuideline'));
     }
 
 
-    public function edit(PolicyGuideline $policy_guideline)
+    public function edit(PolicyGuideline $policyGuideline)
     {
         //
-        $policy_categories = PolicyCategory::all();
-        $committees = Committee::all();
-        return view('admin.policy_guidelines.edit', compact('policy_guideline', 'policy_categories', 'committees'));
+        return view('admin.policy_guidelines.edit', compact('policyGuideline'));
     }
 
-    public function update(Request $request, PolicyGuideline $policy_guideline)
+    public function update(PolicyGuideline $policyGuideline)
     {
         //
-
+        $title = request('title');
         $new_policy_guideline_file = '';
-        $update = request()->validate([
-            'policy_category_id' => 'required',
-            'committee_id' => 'required',
-            'title' => 'required',
-        ]);
-
+        $update = null;
         if (request()->hasfile('file')) {
             //get the file field data and name field from form submission
             $file = request()->file('file');
@@ -105,24 +95,43 @@ class PolicyGuidelineController extends Controller
             //upload the file to a directory in Public folder
             $new_policy_guideline_file = $file->move('policy_guidelines', $file_name);
 
-            $old_path = $policy_guideline->file;
+            $old_path = $policyGuideline->file;
             if ($old_path != null) {
                 unlink($old_path);
             }
+
             $update['file'] = $new_policy_guideline_file;
 
         }
-
-        $policy_guideline->update($update);
+        $update['title'] = $title;
+        $policyGuideline->update($update);
 
         return back()->with('message', 'policy guideline updated successfully');
     }
 
-    public function destroy(PolicyGuideline $policy_guideline)
+    public function destroy(PolicyGuideline $policyGuideline)
     {
         //
-        $policy_guideline->delete();
+        $committee = $policyGuideline->committee;
+        $policyGuideline->delete();
 
-        return redirect('/admin/policy_guideline')->with('message', 'policy guideline deleted successfully');
+        return redirect('/admin/policy_guideline/' . $committee->id . '/index')->with('message', 'policy guideline deleted successfully');
+    }
+
+    public function published_unpublished(PolicyGuideline $policyGuideline)
+    {
+        //
+        $committee = $policyGuideline->committee;
+        if ($policyGuideline->is_published == 0) {
+            $policyGuideline->update([
+                'is_published' => 1
+            ]);
+        } else {
+            $policyGuideline->update([
+                'is_published' => 0
+            ]);
+        }
+
+        return redirect('/admin/policy_guideline/' . $committee.'/index')->with('message', $policyGuideline . ' has been updated successfully');
     }
 }

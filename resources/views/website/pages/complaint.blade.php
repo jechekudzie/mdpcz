@@ -57,7 +57,16 @@
                                 <div class="col-md-6">
                                     <input type="text" name="subject" placeholder="Subject">
                                 </div>
+
+                                <div class="col-md-6">
+                                    <select name="category" class="select">
+                                        <option>About Staff Member</option>
+                                        <option>About Doctor</option>
+                                        <option>About Health Institution</option>
+                                    </select>
+                                </div>
                             </div>
+
                             <div class="row">
                                 <div class="col-md-12">
                                     <textarea name="message" placeholder="Your Message.." required=""></textarea>
@@ -74,19 +83,10 @@
                 </div>
 
                 <div class="col-md-4">
-                    <div class="footer-contact-info">
+                    <div style="background-color:#2470a6;color:white;" class="footer-contact-info">
                         <div class="title">
-                            <h4>Quick Complaint</h4>
-                            <p>Generally doctors treating patients are willing to address patients’ concerns directly.
-                                <br/>
-                                <br/>
-                                If you have a concern about your Doctor that involves his/her conduct, communication or
-                                treatment you should feel free to openly discuss these issues with him/her.
-                                <br/>
-                                <br/>
-                                However, if you fail to reach a consensus you may choose to file a complaint with the Council for
-                                further investigation. </p>
-                            <p style="background-color:white;color:black;">Send all complaints to: <a href="mailto:complaints@mdpcz.co.zw">complaints@mdpcz.co.zw</a> </p>
+                            <p>If you have any complaint fill in the form or contact us on the email below. </p>
+                            <a style="color:white;" href="mailto:complaints@mdpcz.co.zw">complaints@mdpcz.co.zw</a>
                         </div>
 
                     </div>

@@ -25,6 +25,7 @@ class DesignatedInstitutionController extends Controller
         //
 
         $designated_institution = DesignatedInstitution::create(request()->validate([
+            'category' => 'required',
             'name' => 'required',
             'address' => 'nullable',
             'website_link' => 'nullable',
@@ -52,6 +53,7 @@ class DesignatedInstitutionController extends Controller
     {
         //
         $designated_institution->update(request()->validate([
+            'category' => 'required',
             'name' => 'required',
             'address' => 'nullable',
             'website_link' => 'nullable',

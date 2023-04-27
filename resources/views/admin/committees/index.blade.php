@@ -78,6 +78,7 @@
                                             </th>
                                             <th class="sort" data-sort="name" scope="col">Committee</th>
                                             <th class="sort" data-sort="owner" scope="col">Section</th>
+                                            <th class="sort" data-sort="owner" scope="col">Policies</th>
                                             <th scope="col">Action</th>
                                         </tr>
                                         </thead>
@@ -92,7 +93,7 @@
                                                 </td>
                                                 <td class="owner">{{$committee->name}}</td>
                                                 <td class="owner">{{$committee->section}}</td>
-                                                </td>
+                                                <td class="owner"><a href="{{url('/admin/policy_guideline/'.$committee->id.'/index')}}">Policies & Guidelines ({{$committee->policy_guidelines->count()}})</a> </td>
                                                 <td>
                                                     <ul class="list-inline hstack gap-2 mb-0">
                                                         <li class="list-inline-item" data-bs-toggle="tooltip"

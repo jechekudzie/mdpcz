@@ -70,22 +70,6 @@
 
                         </div>
                     </div>
-
-                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                        <div class="footer-col post-column">
-                            <h3 class="footer-title">Bulawayo Office</h3>
-                            <div class="post-list">
-                                <div>
-                                    <h5 style="color: white">No 2 Robertson Street</h5>
-                                    <p>Parkview <br>
-                                        Bulawayo, Zimbabwe<br>
-                                        Whatsapp: 263 71 254 4066<br>
-                                        Land: 263 9 72237/38<br>
-                                        E-mail:mdpcz@mdpcz.co.zw<br></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                     <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                         <div class="footer-col post-column">
                             <h3 class="footer-title">Harare Office</h3>
@@ -101,6 +85,22 @@
                             </div>
                         </div>
                     </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                        <div class="footer-col post-column">
+                            <h3 class="footer-title">Bulawayo Office</h3>
+                            <div class="post-list">
+                                <div>
+                                    <h5 style="color: white">No 2 Robertson Street</h5>
+                                    <p>Parkview <br>
+                                        Bulawayo, Zimbabwe<br>
+                                        Whatsapp: 263 71 254 4066<br>
+                                        Land: 263 9 72237/38<br>
+                                        E-mail:mdpcz@mdpcz.co.zw<br></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>

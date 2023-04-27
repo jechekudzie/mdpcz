@@ -4,7 +4,6 @@
     Home
 @endsection
 
-
 @section('site_content')
     <style>
         .reminder {
@@ -17,11 +16,11 @@
     <div id="hero-area" class="hero-area section">
         <!-- Hero Slider -->
         <div id="hero-slider" class="nivoSlider">
-            <img src="{{asset('img/hero/banner1-01.jpg')}}" alt=""
+            <img src="{{asset('img/hero/vision.png')}}" alt=""
                  title="#herocaption-1"/>
-            <img src="{{asset('img/hero/banner2-01.jpg')}}" alt="" title="#herocaption-2"/>
+            <img src="{{asset('img/hero/mission.png')}}" alt="" title="#herocaption-2"/>
 
-            <img src="{{asset('img/hero/2.jpg')}}" alt="" title="#herocaption-3"/>
+            <img src="{{asset('img/hero/coreValues.png')}}" alt="" title="#herocaption-3"/>
         </div>
         <!-- Hero Slider Caption -->
         <div id="herocaption-1" class="nivo-html-caption">
@@ -29,15 +28,15 @@
                 <div class="row">
                     <!-- Hero Content -->
                     <div class="hero-content col-xs-12">
-                        <h1 style="color: white;" class="wow cusFadeInRight" data-wow-duration=".5s"
+                       {{-- <h1 style="color: white;" class="wow cusFadeInRight" data-wow-duration=".5s"
                             data-wow-delay="0.5s">Our Vision</h1>
                         <p style="background-color:white;color: black;" class="wow cusFadeInRight"
                            data-wow-duration=".5s" data-wow-delay="1s">To be the referenced
                             regulatory authority in promoting excellence in standards of healthcare, education and
-                            ethics.</p>
-                        <a href="{{url('/who_we_are')}}" class="learn-more wow cusFadeInRight" data-wow-duration=".5s"
-                           data-wow-delay="1.5s">Who We Are</a>
-                        </a>
+                            ethics.</p>--}}
+                       {{-- <a href="{{url('/who_we_are')}}" class="learn-more wow cusFadeInRight" data-wow-duration=".5s"
+                           data-wow-delay="1.5s">Who We Are</a>--}}
+
                     </div>
                 </div>
             </div>
@@ -48,15 +47,15 @@
                 <div class="row">
                     <!-- Hero Content -->
                     <div class="hero-content col-xs-12">
-                        <h1 style="color: black;" class="wow cusFadeInRight" data-wow-duration=".5s"
+                       {{-- <h1 style="color: black;" class="wow cusFadeInRight" data-wow-duration=".5s"
                             data-wow-delay="0.5s">Our
                             Mission</h1>
                         <p style="background-color:white;color: black;" class="wow cusFadeInRight"
                            data-wow-duration=".5s"
                            data-wow-delay="1s">To promote the health of the public through licensing, education,
-                            regulation and supervision of the Medical and Dental Professions.</p>
-                        <a href="{{url('/who_we_are')}}" class="learn-more wow cusFadeInRight" data-wow-duration=".5s"
-                           data-wow-delay="1.5s">Who We Are</a>
+                            regulation and supervision of the Medical and Dental Professions.</p>--}}
+                        {{--<a href="{{url('/who_we_are')}}" class="learn-more wow cusFadeInRight" data-wow-duration=".5s"
+                           data-wow-delay="1.5s">Who We Are</a>--}}
                     </div>
                 </div>
             </div>
@@ -67,7 +66,7 @@
                 <div class="row">
                     <!-- Hero Content -->
                     <div class="hero-content col-xs-12">
-                        <h1 style="color: black;" class="wow cusFadeInRight" data-wow-duration=".5s"
+                        {{--<h1 style="color: black;" class="wow cusFadeInRight" data-wow-duration=".5s"
                             data-wow-delay="0.5s">
                             Core Values</h1>
                         <ol style="background-color:white;color: black;" class="wow cusFadeInRight"
@@ -93,9 +92,9 @@
                                 safety and
                                 patient care regulatory compliance.
                             </li>
-                        </ol>
-                        <a href="{{url('/who_we_are')}}" class="learn-more wow cusFadeInRight" data-wow-duration=".5s"
-                           data-wow-delay="1.5s">Who We Are</a>
+                        </ol>--}}
+                        {{--<a href="{{url('/who_we_are')}}" class="learn-more wow cusFadeInRight" data-wow-duration=".5s"
+                           data-wow-delay="1.5s">Who We Are</a>--}}
                     </div>
                 </div>
             </div>
@@ -121,7 +120,7 @@
                     <h4>Check Student Results Online</h4>
                     <br>
                     <div class="text-center center">
-                        <a class="btn btn-primary btn-lg" href="http://www.mdpcz.co.zw/mdpcz_results/" target="_blank">
+                        <a class="btn btn-primary" href="http://www.mdpcz.co.zw/mdpcz_results/" target="_blank">
                             Check Results
                         </a>
                     </div>
@@ -354,7 +353,7 @@
                     </div>
                 </div>
 
-                <div class="row mt-5">
+               {{-- <div class="row mt-5">
                     <div class="col-md-12">
                         <div class="panel panel-default">
                             <div class="panel-heading">
@@ -396,7 +395,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>--}}
 
             </div>
         </div>

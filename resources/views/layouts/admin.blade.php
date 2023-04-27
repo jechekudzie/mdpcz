@@ -262,7 +262,7 @@
                 <span class="logo-lg">
                      <img src="administration/assets/images/logo-light.png" alt="" height="17">
                  </span>--}}
-                <span style="color: white;">WEBSITE ADMINa`  </span>
+                <span style="color: white;"> ADMINISTARTOR  </span>
             </a>
             <button type="button" class="btn btn-sm p-0 fs-20 header-item float-end btn-vertical-sm-hover"
                     id="vertical-hover">
@@ -341,11 +341,6 @@
                                 </li>
 
                                 <li class="nav-item">
-                                    <a href="{{url('/admin/designated_institution')}}" style="text-transform: capitalize" class="nav-link {{(request()->is('admin/designated_institution*')) ? 'active' : '' }}" data-key="t-analytics">
-                                        DESIGNATED INSTITUTION </a>
-                                </li>
-
-                                <li class="nav-item">
                                     <a href="{{url('/admin/form_category')}}" style="text-transform: capitalize" class="nav-link {{(request()->is('admin/form_category*')) ? 'active' : '' }}" data-key="t-analytics">
                                         REGISTRATION FORMS </a>
                                 </li>
@@ -383,10 +378,19 @@
                                         FITNESS TO PRACTICE </a>
                                 </li>
 
+                                <li class="nav-item">
+                                    <a href="{{url('/admin/designated_institution')}}" style="text-transform: capitalize" class="nav-link {{(request()->is('admin/designated_institution*')) ? 'active' : '' }}" data-key="t-analytics">
+                                        DESIGNATED INSTITUTION </a>
+                                </li>
 
                                 <li class="nav-item">
                                     <a href="{{url('/admin/training_institution')}}" style="text-transform: capitalize" class="nav-link {{(request()->is('admin/training_institution*')) ? 'active' : '' }}" data-key="t-analytics">
-                                    TRAINING INSTITUTIONS</a>
+                                   ACCREDITED TRAINING INSTITUTIONS</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="{{url('/admin/internship_institution')}}" style="text-transform: capitalize" class="nav-link {{(request()->is('admin/internship_institution*')) ? 'active' : '' }}" data-key="t-analytics">
+                                        INTERNSHIP TEACHING INSTITUTION </a>
                                 </li>
 
                                 <li class="nav-item">
@@ -400,10 +404,20 @@
 
                     <!-- Policies and Guidelines -->
                     <li class="nav-item">
-                        <a style="text-transform: capitalize" class="nav-link menu-link" href="{{url('/admin/policy_guideline')}}" role="button" aria-expanded="false" aria-controls="statuses_utilities">
-                            <span data-key="t-dashboards">POLICIES</span>
+                        <a style="text-transform: capitalize" class="nav-link menu-link" href="{{url('/admin/internal_policy')}}" role="button" aria-expanded="false" aria-controls="statuses_utilities">
+                            <span data-key="t-dashboards">INTERNAL POLICIES</span>
                         </a>
+                    </li>
+                    <li class="nav-item">
+                        <a style="text-transform: capitalize" class="nav-link menu-link" href="{{url('/admin/external_policy')}}" role="button" aria-expanded="false" aria-controls="statuses_utilities">
+                            <span data-key="t-dashboards">EXTERNAL POLICIES </span>
+                        </a>
+                    </li>
 
+                    <li class="nav-item">
+                        <a style="text-transform: capitalize" class="nav-link menu-link" href="{{url('/admin/act')}}" role="button" aria-expanded="false" aria-controls="statuses_utilities">
+                            <span data-key="t-dashboards">ACTS </span>
+                        </a>
                     </li>
 
 

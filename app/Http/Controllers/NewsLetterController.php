@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\NewsLetter;
+
 use Illuminate\Http\Request;
 
 class NewsLetterController extends Controller
@@ -107,5 +108,22 @@ class NewsLetterController extends Controller
         $newsletter->delete();
 
         return redirect('/admin/newsletter')->with('message', 'newsletter deleted successfully');
+    }
+
+    public function published_unpublished(NewsLetter $newsletter)
+    {
+        //
+
+        if ($newsletter->is_published == 0) {
+            $newsletter->update([
+                'is_published' => 1
+            ]);
+        } else {
+            $newsletter->update([
+                'is_published' => 0
+            ]);
+        }
+
+        return redirect('/admin/newsletter')->with('message',  'Newsletter has been updated successfully');
     }
 }

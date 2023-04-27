@@ -65,7 +65,7 @@
                             <div class="accordion accordion-block">
                                 <div style="background-color:#3A25AC;" class="accord-btn active"><h1
                                         style="color: white;">Vision</h1></div>
-                                <div class="accord-content collapsed">
+                                <div style="font-size: 20px;" class="accord-content collapsed">
                                     {{$who_we_are->vision}}
                                 </div>
                             </div>
@@ -74,7 +74,7 @@
                             <div class="accordion accordion-block">
                                 <div style="background-color:#3A25AC;" class="accord-btn active"><h1
                                         style="color: white;">Mission</h1></div>
-                                <div class="accord-content collapsed">
+                                <div style="font-size: 20px;" class="accord-content collapsed">
                                     {{$who_we_are->mission }}
                                 </div>
                             </div>
@@ -82,7 +82,7 @@
 
                             <div class="accordion accordion-block">
                                 <div style="background-color:#3A25AC;" class="accord-btn active"><h1
-                                        style="color: white;">Core Value</h1></div>
+                                        style="color: white;">Core Values</h1></div>
                                 <div style="color:black;" class="accord-content collapsed">
                                      {!! $who_we_are->core_values !!}
                                 </div>
@@ -91,13 +91,13 @@
 
                             <!--End single accordion box-->
 
-                            <div class="accordion accordion-block">
+                            {{--<div class="accordion accordion-block">
                                 <div style="background-color:#3A25AC;" class="accord-btn active"><h1
                                         style="color: white;">Strategic Goals</h1></div>
                                 <div style="color:black;" class="accord-content collapsed">
                                     {!! $who_we_are->strategic_goals !!}
                                 </div>
-                            </div>
+                            </div>--}}
                             <!--End single accordion box-->
                         </div>
                     </div>

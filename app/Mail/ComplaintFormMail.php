@@ -26,9 +26,10 @@ class ComplaintFormMail extends Mailable
         $user_name = $this->data['name'];
         $user_email = $this->data['email'];
         $user_subject = $this->data['subject'];
+        $category = $this->data['category'];
 
         return $this->from($user_email, $user_name)
-            ->subject('Complaint: '. $user_subject)
+            ->subject('Complaint: ('.$category.') '. $user_subject)
             ->replyTo($user_email)
             ->view('emails.complaint');
     }

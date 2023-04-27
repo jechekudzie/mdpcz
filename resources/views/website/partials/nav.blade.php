@@ -56,7 +56,7 @@
                                 <p>Parkview</p> <br>
                                 <p>Bulawayo, Zimbabwe <br>
                                 </p><br/>
-                                <p>Land: 263 9 72237/38, 263-242-793707 </p>
+                                <p>Land: 263 9 72237/38 </p>
                             </div>
                         </li>
                         <li>
@@ -68,28 +68,14 @@
                                 <p>mdpcz@mdpcz.co.zw</p><br/>
                                 <p>WhatsApp: 263 712544066</p><br/>
                                 <p style="margin-top:2px;">
-                                     <a href="https://www.facebook.com/mdpcz2019" target="_blank">Twitter: <i
+                                    <a href="https://www.facebook.com/mdpcz2019" target="_blank">Facebook: <i
                                             class="fa fa-facebook"></i></a> &nbsp;&nbsp;&nbsp;
-                                     <a href="https://twitter.com/MDPCZ2" target="_blank">Facebook <i
+                                    <a href="https://twitter.com/MDPCZ2" target="_blank">Twitter <i
                                             class="fa fa-twitter"></i></a>
                                 </p>
-
-
                             </div>
                         </li>
-                        {{--<li>
-                            <div class="link_btn float_right">
-                                @if (Route::has('login'))
-                                    <div>
-                                        @auth
-                                            <a href="{{ url('/home') }}" class="thm-btn bg-clr1">Home</a>
-                                        @else
-                                            <a href="{{ route('login') }}" class="thm-btn bg-clr1">Log in /Register</a>
-                                        @endauth
-                                    </div>
-                                @endif
-                            </div>
-                        </li>--}}
+
                     </ul>
                 </div>
             </div>
@@ -121,9 +107,10 @@
                                         <li><a href="{{url('/committees')}}">Committees</a></li>
                                     </ul>
                                 </li>
+                                <li class=""><a href="{{url('/designated_institution')}}">DHIS</a></li>
                                 <li><a href="#">Registration</a>
                                     <ul>
-                                        <li><a href="{{url('/registration_pathway')}}">Registration Pathway</a></li>
+                                        <li><a href="{{url(\App\Models\RegistrationPathWay::find(1)->file)}}" target="_blank">Registration Pathway</a></li>
                                         <li><a href="{{url('/registration_forms')}}">Registration Forms</a></li>
                                         <li><a href="{{url('/public_register')}}"
                                                target="_blank">Public Register</a></li>
@@ -134,8 +121,8 @@
 
                                         {{--<li><a href="{{url('/council_examination')}}">Education and Training</a></li>--}}
                                         <li><a href="{{url('/council_examination')}}">Council Examination</a></li>
-                                        <li><a href="{{url('/fitness_to_practice')}}">Fitness to Practice</a></li>
-                                        <li><a href="{{url('/training_institution')}}">Accreditation</a></li>
+                                        <li><a href="{{url('/training_institution')}}">Accredited Training Institutions (Medical schools)</a></li>
+                                        <li><a href="{{url('/internship_institution')}}">Internship Teaching Units</a></li>
                                         <li><a href="{{url('/log_book')}}">Log Books</a></li>
 
                                     </ul>
@@ -146,8 +133,13 @@
                                         <li><a href="{{url('/our_resource')}}">Resources</a></li>
                                     </ul>
                                 </li>
-                                <li>
-                                    <a href="{{url('policy_guideline')}}">Internal & External Policies</a>
+                                <li><a href="#">Policies & Guidelines</a>
+                                    <ul>
+                                        {{--<li><a href="{{url('/council_examination')}}">Education and Training</a></li>--}}
+                                        <li><a href="{{url('/policy_guideline')}}">Internal</a></li>
+                                        <li><a href="{{url('/external_policy')}}">External</a></li>
+
+                                    </ul>
                                 </li>
                                 <li><a href="{{url('/faqs')}}">FAQ's</a></li>
                                 <li><a href="{{url('/contact_us')}}">Contact Us</a></li>
@@ -173,9 +165,10 @@
                                         <li><a href="{{url('/committees')}}">Committees</a></li>
                                     </ul>
                                 </li>
+                                <li class="active"><a href="{{url('/designated_institution')}}">DHIS</a></li>
                                 <li><a href="#">Registration</a>
                                     <ul>
-                                        <li><a href="{{url('/registration_pathway')}}">Registration Pathway</a></li>
+                                        <li><a href="{{url(\App\Models\RegistrationPathWay::find(1)->file)}}" target="_blank">Registration Pathway</a></li>
                                         <li><a href="{{url('/registration_forms')}}">Registration Forms</a></li>
                                         <li><a href="{{url('/public_register')}}"
                                                target="_blank">Public Register</a></li>
@@ -185,9 +178,10 @@
                                     <ul>
                                         {{--<li><a href="{{url('/council_examination')}}">Education and Training</a></li>--}}
                                         <li><a href="{{url('/council_examination')}}">Council Examination</a></li>
-                                        <li><a href="{{url('/fitness_to_practice')}}">Fitness to Practice</a></li>
-                                        <li><a href="{{url('/training_institution')}}">Accreditation</a></li>
-                                        <li><a href="{{url('/log_books')}}">Log Books</a></li>
+                                        <li><a href="{{url('/training_institution')}}">Accredited Training Institutions (Medical schools)</a></li>
+                                        <li><a href="{{url('/internship_institution')}}">Internship Teaching Units</a></li>
+                                        <li><a href="{{url('/log_book')}}">Log Books</a></li>
+
                                     </ul>
                                 </li>
                                 <li><a href="#">The Public</a>
@@ -196,8 +190,14 @@
                                         <li><a href="{{url('/our_resource')}}">Resources</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="{{url('/policy_guideline')}}">Internal & External Policies</a>
 
+                                <li><a href="#">Policies & Guidelines</a>
+                                    <ul>
+                                        {{--<li><a href="{{url('/council_examination')}}">Education and Training</a></li>--}}
+                                        <li><a href="{{url('/policy_guideline')}}">Internal</a></li>
+                                        <li><a href="{{url('/external_policy')}}">External</a></li>
+
+                                    </ul>
                                 </li>
                                 <li><a href="{{url('/faqs')}}">FAQ's</a></li>
                                 <li><a href="{{url('/contact_us')}}">Contact Us</a></li>
@@ -208,23 +208,23 @@
                 </div>
             </div>
 
-          {{--  <div style="margin-left:2%;" class="right-column">
-                <div class="right-area">
-                    <div class="nav_side_content">
-                        <div class="search_option">
-                            <button class="search tran3s dropdown-toggle color1_bg" id="searchDropdown"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i
-                                    class="fa fa-search" aria-hidden="true"></i></button>
-                            <form action="#" class="dropdown-menu" aria-labelledby="searchDropdown">
-                                <input type="text" placeholder="Search...">
-                                <button><i class="fa fa-search" aria-hidden="true"></i></button>
-                            </form>
-                        </div>
+            {{--  <div style="margin-left:2%;" class="right-column">
+                  <div class="right-area">
+                      <div class="nav_side_content">
+                          <div class="search_option">
+                              <button class="search tran3s dropdown-toggle color1_bg" id="searchDropdown"
+                                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i
+                                      class="fa fa-search" aria-hidden="true"></i></button>
+                              <form action="#" class="dropdown-menu" aria-labelledby="searchDropdown">
+                                  <input type="text" placeholder="Search...">
+                                  <button><i class="fa fa-search" aria-hidden="true"></i></button>
+                              </form>
+                          </div>
 
-                    </div>
+                      </div>
 
-                </div>
-            </div>--}}
+                  </div>
+              </div>--}}
         </div>
     </div>
 </div>
