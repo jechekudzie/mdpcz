@@ -65,7 +65,7 @@
                             <!--Start single accordion box-->
                                 <div class="accordion accordion-block">
                                     <div style="background-color:white/*#3A25AC*/;" class="accord-btn">
-                                        <h3 style="color: black;">{{$committee->name}} {{--<span> {{$committee->section}}</span>--}}</h3>
+                                        <h3 style="color: black;">{{$committee->name}} {{$committee->section}}</h3>
                                     </div>
                                     <div class="accord-content {{--collapsed--}}">
                                         {!! $committee->description !!}
