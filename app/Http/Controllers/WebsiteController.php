@@ -102,7 +102,7 @@ class WebsiteController extends Controller
 
     public function regForms()
     {
-        $forms_categories = FormCategory::all();
+        $forms_categories = FormCategory::all()->sortBy('order');
         return view('website.pages.registration_forms', compact('forms_categories'));
     }
 
@@ -168,7 +168,7 @@ class WebsiteController extends Controller
 
     public function external_policy()
     {
-        $external_policies = ExternalPolicy::all();
+        $external_policies = ExternalPolicy::all()->sortBy('title');
         $quick_links = ImportantLink::all();
 
         return view('website.pages.external_policies', compact('external_policies','quick_links'));

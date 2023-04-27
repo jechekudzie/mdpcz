@@ -10,7 +10,7 @@ class FormCategoryController extends Controller
     public function index()
     {
         //
-        $form_categories = FormCategory::all();
+        $form_categories = FormCategory::all()->sortBy('order');
         return view('admin.form_categories.index', compact('form_categories'));
     }
 
@@ -62,6 +62,10 @@ class FormCategoryController extends Controller
     public function destroy(FormCategory $form_category)
     {
         //
+        if ($form_category->forms->count() > 0) {
+            $forms = $form_category->forms();
+            $forms->delete();
+        }
         $form_category->delete();
 
         return redirect('/admin/form_category')->with('message', 'form_category deleted successfully');

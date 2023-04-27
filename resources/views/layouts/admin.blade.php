@@ -350,9 +350,10 @@
                                         BANKING DETAILS </a>
                                 </li>
 
+
                                 <li class="nav-item">
-                                    <a href="{{url('/admin/registered_doctors')}}" style="text-transform: capitalize" class="nav-link {{(request()->is('admin/restorations*')) ? 'active' : '' }}"
-                                       data-key="t-ecommerce"> REGISTERED DOCTORS</a>
+                                    <a href="{{url('/admin/designated_institution')}}" style="text-transform: capitalize" class="nav-link {{(request()->is('admin/designated_institution*')) ? 'active' : '' }}" data-key="t-analytics">
+                                        DESIGNATED HEALTH INSTITUTION </a>
                                 </li>
 
                             </ul>
@@ -378,19 +379,15 @@
                                         FITNESS TO PRACTICE </a>
                                 </li>
 
-                                <li class="nav-item">
-                                    <a href="{{url('/admin/designated_institution')}}" style="text-transform: capitalize" class="nav-link {{(request()->is('admin/designated_institution*')) ? 'active' : '' }}" data-key="t-analytics">
-                                        DESIGNATED INSTITUTION </a>
-                                </li>
 
                                 <li class="nav-item">
                                     <a href="{{url('/admin/training_institution')}}" style="text-transform: capitalize" class="nav-link {{(request()->is('admin/training_institution*')) ? 'active' : '' }}" data-key="t-analytics">
-                                   ACCREDITED TRAINING INSTITUTIONS</a>
+                                   APPROVED TRAINING INSTITUTIONS</a>
                                 </li>
 
                                 <li class="nav-item">
                                     <a href="{{url('/admin/internship_institution')}}" style="text-transform: capitalize" class="nav-link {{(request()->is('admin/internship_institution*')) ? 'active' : '' }}" data-key="t-analytics">
-                                        INTERNSHIP TEACHING INSTITUTION </a>
+                                        INTERNSHIP TRAINING INSTITUTIONS </a>
                                 </li>
 
                                 <li class="nav-item">

@@ -117,6 +117,7 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/admin/form/{formCategory}/store', [\App\Http\Controllers\FormController::class, 'store']);
     Route::get('/admin/form/{form}/edit', [\App\Http\Controllers\FormController::class, 'edit']);
     Route::patch('/admin/form/{form}/update', [\App\Http\Controllers\FormController::class, 'update']);
+    Route::delete('/admin/form/{form}/destroy', [\App\Http\Controllers\FormController::class, 'destroy']);
 
     Route::resource('/admin/our_history', \App\Http\Controllers\HistoryController::class);
     Route::resource('/admin/important_link', \App\Http\Controllers\ImportantLinkController::class);

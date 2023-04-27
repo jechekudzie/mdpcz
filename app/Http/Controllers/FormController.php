@@ -102,8 +102,9 @@ class FormController extends Controller
     public function destroy(Form $form)
     {
         //
+        $form_category = $form->form_category;
         $form->delete();
 
-        return redirect('/admin/form')->with('message', 'form deleted successfully');
+        return redirect('/admin/form/'.$form_category->id.'/index')->with('message', 'form deleted successfully');
     }
 }

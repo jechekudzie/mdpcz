@@ -87,6 +87,7 @@
                                                     <div class="mb-3">
                                                         <label for="teammembersName" class="form-label">Category</label>
                                                         <select class="form-control" name="category">
+                                                            <option value="">Choose category</option>
                                                             <option
                                                                 value="central" @if($designated_institution->category == 'central'){{'selected'}}@endif>
                                                                 Central Hospital

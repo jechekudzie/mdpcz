@@ -18,7 +18,7 @@
         <div id="hero-slider" class="nivoSlider">
             <img src="{{asset('img/hero/vision.png')}}" alt=""
                  title="#herocaption-1"/>
-            <img src="{{asset('img/hero/mission.png')}}" alt="" title="#herocaption-2"/>
+            <img src="{{asset('img/hero/mission-01.png')}}" alt="" title="#herocaption-2"/>
 
             <img src="{{asset('img/hero/coreValues.png')}}" alt="" title="#herocaption-3"/>
         </div>

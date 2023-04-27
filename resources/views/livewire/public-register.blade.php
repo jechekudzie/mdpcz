@@ -98,11 +98,15 @@
         </tbody>
     </table>
 
-    {{$practitioners->links('pagination::bootstrap-4')}}
+    @if ($practitioners->count())
+        {{ $practitioners->links('pagination::bootstrap-4') }}
+    @endif
+
 
     <div>
+        @if ($practitioners->count())
         Showing {!! $practitioners->firstItem() !!} of {!! $practitioners->lastItem() !!} out
         of {!! $practitioners->total() !!}
-
+        @endif
     </div>
 </div>

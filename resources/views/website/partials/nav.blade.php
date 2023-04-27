@@ -107,26 +107,29 @@
                                         <li><a href="{{url('/committees')}}">Committees</a></li>
                                     </ul>
                                 </li>
-                                <li class=""><a href="{{url('/designated_institution')}}">DHIS</a></li>
                                 <li><a href="#">Registration</a>
                                     <ul>
                                         <li><a href="{{url(\App\Models\RegistrationPathWay::find(1)->file)}}" target="_blank">Registration Pathway</a></li>
-                                        <li><a href="{{url('/registration_forms')}}">Registration Forms</a></li>
-                                        <li><a href="{{url('/public_register')}}"
-                                               target="_blank">Public Register</a></li>
+                                        <li><a href="{{url('/registration_forms')}}">Application forms for registration</a></li>
+                                        <li><a href="{{url('/public_register')}}" target="_blank">Public Register</a></li>
+                                        <li><a href="{{url('/designated_institution')}}">DHIS</a></li>
                                     </ul>
                                 </li>
+
+                                <li><a href="{{url('/public_register')}}" target="_blank">Public Register</a></li>
+
                                 <li><a href="#">Education</a>
                                     <ul>
 
                                         {{--<li><a href="{{url('/council_examination')}}">Education and Training</a></li>--}}
-                                        <li><a href="{{url('/council_examination')}}">Council Examination</a></li>
-                                        <li><a href="{{url('/training_institution')}}">Accredited Training Institutions (Medical schools)</a></li>
-                                        <li><a href="{{url('/internship_institution')}}">Internship Teaching Units</a></li>
-                                        <li><a href="{{url('/log_book')}}">Log Books</a></li>
+                                        <li><a href="{{url('/council_examination')}}">Examination</a></li>
+                                        <li><a href="{{url('/training_institution')}}">Accredited Training Institutions</a></li>
+                                        <li><a href="{{url('/internship_institution')}}">Accredited Internship Training Institutions</a></li>
+                                        <li><a href="{{url('/contact_us')}}">Request Log Books</a></li>
 
                                     </ul>
                                 </li>
+
                                 <li><a href="#">The Public</a>
                                     <ul>
                                         <li><a href="{{url('/complaint')}}">Complaints</a></li>
@@ -165,25 +168,25 @@
                                         <li><a href="{{url('/committees')}}">Committees</a></li>
                                     </ul>
                                 </li>
-                                <li class="active"><a href="{{url('/designated_institution')}}">DHIS</a></li>
                                 <li><a href="#">Registration</a>
                                     <ul>
                                         <li><a href="{{url(\App\Models\RegistrationPathWay::find(1)->file)}}" target="_blank">Registration Pathway</a></li>
-                                        <li><a href="{{url('/registration_forms')}}">Registration Forms</a></li>
-                                        <li><a href="{{url('/public_register')}}"
-                                               target="_blank">Public Register</a></li>
+                                        <li><a href="{{url('/registration_forms')}}">Application forms for registration</a></li>
+                                        <li class=""><a href="{{url('/designated_institution')}}">DHIS</a></li>
                                     </ul>
                                 </li>
+                                <li><a href="{{url('/public_register')}}" target="_blank">Public Register</a></li>
                                 <li><a href="#">Education</a>
                                     <ul>
                                         {{--<li><a href="{{url('/council_examination')}}">Education and Training</a></li>--}}
                                         <li><a href="{{url('/council_examination')}}">Council Examination</a></li>
-                                        <li><a href="{{url('/training_institution')}}">Accredited Training Institutions (Medical schools)</a></li>
-                                        <li><a href="{{url('/internship_institution')}}">Internship Teaching Units</a></li>
-                                        <li><a href="{{url('/log_book')}}">Log Books</a></li>
+                                        <li><a href="{{url('/training_institution')}}">Accredited Training Institutions</a></li>
+                                        <li><a href="{{url('/internship_institution')}}">Accredited Internship Training Institutions</a></li>
+                                        <li><a href="{{url('/contact_us')}}">Request Log Books</a></li>
 
                                     </ul>
                                 </li>
+
                                 <li><a href="#">The Public</a>
                                     <ul>
                                         <li><a href="{{url('/complaint')}}">Complaints</a></li>

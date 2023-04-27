@@ -63,7 +63,6 @@
                     <table class="table">
                         <thead>
                         <tr>
-                            <th scope="col">#</th>
                             <th scope="col">External Policy</th>
                             <th scope="col">Option</th>
                         </tr>
@@ -71,7 +70,6 @@
                         <tbody>
                         @foreach($external_policies as $external_policy)
                             <tr>
-                                <th scope="row">{{$external_policy->id}}</th>
                                 <td>{{$external_policy->title}}</td>
                                 <td><a href="{{asset($external_policy->file)}}" target="_blank">View/Download</a></td>
                             </tr>

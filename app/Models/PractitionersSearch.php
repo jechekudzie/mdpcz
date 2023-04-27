@@ -23,7 +23,6 @@ class PractitionersSearch extends Model
                 ->orWhere('gender', 'like', '%' . $search . '%');
     }
 
-
     public function scopeRegister($query, $specialty)
     {
         if ($specialty) {

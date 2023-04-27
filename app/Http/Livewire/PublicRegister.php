@@ -15,7 +15,7 @@ class PublicRegister extends Component
     protected $paginationTheme = 'bootstrap';
     public $perPage = 10;
     public $search;
-    public $orderBy = 'Title';
+    public $orderBy = 'Fullname';
     public $orderAsc = true;
     public $specialty;
 
@@ -27,12 +27,19 @@ class PublicRegister extends Component
 
     public function render()
     {
-        return view('livewire.public-register', [
-            'practitioners' => PractitionersSearch::search($this->search)
+        $practitioners = collect([]);
+
+        if (!empty($this->search)) {
+            $practitioners = PractitionersSearch::search($this->search)
                 ->Register($this->specialty)
                 ->orderBy($this->orderBy, $this->orderAsc ? 'asc' : 'desc')
-                ->paginate($this->perPage),
+                ->paginate($this->perPage);
+        }
+
+        return view('livewire.public-register', [
+            'practitioners' => $practitioners,
             'specialities' => Speciality::all(),
         ]);
     }
+
 }

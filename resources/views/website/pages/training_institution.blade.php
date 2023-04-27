@@ -8,7 +8,7 @@
 @extends('website.partials.layout')
 
 @section('template_title')
-    Accredited Training Institutions
+    Approved Training Institutions
 @endsection
 
 
@@ -16,9 +16,9 @@
     <!--Start breadcrumb area-->
     <div class="breadcrumb-area" style="background-color: #0195DB;">
         <div class="container text-center">
-            <h1>Accredited Training Institutions</h1>
+            <h1>Approved Training Institutions</h1>
             <div class="breadcrumbs_path">
-                <a href="#">Home</a>&nbsp;&nbsp;-&nbsp;&nbsp; Accredited Training Institutions
+                <a href="#">Home</a>&nbsp;&nbsp;-&nbsp;&nbsp; Approved Training Institutions
             </div>
         </div>
     </div>
@@ -63,7 +63,7 @@
 
                 <div style="text-align:center;" class="col-md-9 col-sm-12">
                     <div class="about-text">
-                        <h4 style="padding-bottom:15px;">Accredited Training Institutions</h4>
+                        <h4 style="padding-bottom:15px;">Approved Training Institutions</h4>
                         <ul class="list-unstyled">
                             <div class="row">
                                 @foreach($training_institutions as $training_institution)

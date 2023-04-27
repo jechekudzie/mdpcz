@@ -85,7 +85,7 @@
                 <div class="col-md-4">
                     <div style="background-color:#2470a6;color:white;" class="footer-contact-info">
                         <div class="title">
-                            <p>If you have any complaint fill in the form or contact us on the email below. </p>
+                            <p>If you have a complaint that you cannot resolve with your practitioner, please contact Council. </p>
                             <a style="color:white;" href="mailto:complaints@mdpcz.co.zw">complaints@mdpcz.co.zw</a>
                         </div>
 
