@@ -17,7 +17,7 @@
     <div class="breadcrumb-area" style="background-color: #0195DB;">
         <div class="container text-center">
             <h1>Designated Health Institutions</h1>
-            <div class="breadcrumbs_path">
+            <div style="display:none" class="breadcrumbs_path">
                 <a href="#">Home</a>&nbsp;&nbsp;-&nbsp;&nbsp; Designated Health Institutions
             </div>
         </div>
@@ -66,26 +66,23 @@
                         <h4 style="padding-bottom:15px;">Designated Health Institutions(DHIs)</h4>
                         <ul class="list-unstyled">
                             <div class="row">
-                                @foreach($designated_institutions->groupBy('category') as $category => $institutionInCategory)
-
+                                @foreach($designated_institutions->sortBy('name') as $institution)
                                     <div style="text-align:left" class="col-md-6 col-lg-6 col-sm-12">
-                                        <h2>{{$category}}</h2>
-                                        @foreach($institutionInCategory as $institution)
-                                            <div class="media">
-                                                <div class="media-body">
-                                                    <h5 class="mt-0 mb-1">
-                                                        <a href="{{$institution->website_link}}"
-                                                           target="_blank">
-                                                            {{$institution->name}}
-                                                        </a>
-                                                    </h5>
-                                                    <p>{{$institution->address}}</p>
-                                                </div>
+                                        <div class="media">
+                                            <div class="media-body">
+                                                <h5 class="mt-0 mb-1">
+                                                    <a href="{{$institution->website_link}}"
+                                                       target="_blank">
+                                                        {{$institution->name}}
+                                                    </a>
+                                                </h5>
+                                                <p>{{$institution->address}}</p>
                                             </div>
-                                        @endforeach
+                                        </div>
                                     </div>
-
                                 @endforeach
+
+
                             </div>
 
 
@@ -96,8 +93,5 @@
             </div>
         </div>
     </div>
-
-
-
 
 @endsection

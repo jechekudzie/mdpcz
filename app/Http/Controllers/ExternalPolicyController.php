@@ -22,35 +22,63 @@ class ExternalPolicyController extends Controller
         return view('admin.external_policies.create');
     }
 
+
     public function store()
     {
         //
+        $external = request()->validate(['title' => 'required']);
+
+        $externalPolicy_file = '';
+
         if (request()->hasfile('file')) {
-            $uploadedFiles = request()->file('file');
+            //get the file field data and name field from form submission
+            $file = request()->file('file');
 
-            foreach ($uploadedFiles as $file) {
+            //get file original name
+            $name = $file->getClientOriginalName();
 
-                //get file original name
-                $name = $file->getClientOriginalName();
+            //create a unique file name using the time variable plus the name
+            $file_name = time() . $name;
+            //upload the file to a directory in Public folder
+            $externalPolicy_file = $file->move('external_policies', $file_name);
 
-                $fileNameWithoutExtension = pathinfo($name, PATHINFO_FILENAME);
 
-                //create a unique file name using the time variable plus the name
-                $file_name = time() . $name;
-
-                //upload the file to a directory in Public folder
-                $externalPolicy_file = $file->move('external_policies', $file_name);
-
-                $externalPolicy['file'] = $externalPolicy_file;
-                $externalPolicy['title'] = $fileNameWithoutExtension;
-
-                ExternalPolicy::create($externalPolicy);
-            }
         }
-
+        $external['file'] = $externalPolicy_file;
+        ExternalPolicy::create($external);
 
         return back()->with('message', 'policy guideline uploaded successfully');
     }
+
+    /*  public function store()
+      {
+          //
+          if (request()->hasfile('file')) {
+              $uploadedFiles = request()->file('file');
+
+              foreach ($uploadedFiles as $file) {
+
+                  //get file original name
+                  $name = $file->getClientOriginalName();
+
+                  $fileNameWithoutExtension = pathinfo($name, PATHINFO_FILENAME);
+
+                  //create a unique file name using the time variable plus the name
+                  $file_name = time() . $name;
+
+                  //upload the file to a directory in Public folder
+                  $externalPolicy_file = $file->move('external_policies', $file_name);
+
+                  $externalPolicy['file'] = $externalPolicy_file;
+                  $externalPolicy['title'] = $fileNameWithoutExtension;
+
+                  ExternalPolicy::create($externalPolicy);
+              }
+          }
+
+
+          return back()->with('message', 'policy guideline uploaded successfully');
+      }*/
 
 
     public function show(ExternalPolicy $externalPolicy)
@@ -121,6 +149,6 @@ class ExternalPolicyController extends Controller
             ]);
         }
 
-        return redirect('/admin/external_policy')->with('message',  'Policy has been updated successfully');
+        return redirect('/admin/external_policy')->with('message', 'Policy has been updated successfully');
     }
 }

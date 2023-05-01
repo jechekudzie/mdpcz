@@ -17,7 +17,7 @@
     <div class="breadcrumb-area" style="background-color: #0195DB;">
         <div class="container text-center">
             <h1>Complaints</h1>
-            <div class="breadcrumbs_path">
+            <div style="display:none" class="breadcrumbs_path">
                 <a href="#">Home</a>&nbsp;&nbsp;-&nbsp;&nbsp; Complaint
             </div>
         </div>
@@ -85,7 +85,7 @@
                 <div class="col-md-4">
                     <div style="background-color:#2470a6;color:white;" class="footer-contact-info">
                         <div class="title">
-                            <p>If you have a complaint that you cannot resolve with your practitioner, please contact Council. </p>
+                            <p style="font-size: 20px;">If you have a complaint that you cannot resolve with your practitioner, please contact Council. </p>
                             <a style="color:white;" href="mailto:complaints@mdpcz.co.zw">complaints@mdpcz.co.zw</a>
                         </div>
 

@@ -34,7 +34,7 @@
     <div class="breadcrumb-area" style="background-color: #0195DB;">
         <div class="container text-center">
             <h1>Application forms for registration’</h1>
-            <div class="breadcrumbs_path">
+            <div style="display:none" class="breadcrumbs_path">
                 <a href="#">Home</a>&nbsp;&nbsp;-&nbsp;&nbsp; Application forms for registration’
             </div>
         </div>

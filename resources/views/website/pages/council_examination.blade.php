@@ -8,17 +8,15 @@
 @extends('website.partials.layout')
 
 @section('template_title')
-    Council Examination
+    Council Registration Assessment
 @endsection
 
 @section('site_content')
     <!--Start breadcrumb area-->
     <div class="breadcrumb-area" style="background-color: #0195DB;">
         <div class="container text-center">
-            <h1>Council Examination</h1>
-            <div class="breadcrumbs_path">
-                <a href="#">Home</a>&nbsp;&nbsp;-&nbsp;&nbsp; Council Examination
-            </div>
+            <h1>Council Registration Assessment</h1>
+
         </div>
     </div>
     <!--End breadcrumb area-->
@@ -33,10 +31,10 @@
                         <!-- List group -->
                         <ul class="list-group">
 
-                            <li class="list-group-item"><a href="{{url('/council_examination')}}">Council Examination</a></li>
-                            <li class="list-group-item"><a href="{{url('/training_institution')}}">Accredited Training Institutions</a></li>
-                            <li class="list-group-item"><a href="{{url('/internship_institution')}}">Accredited Internship Training Institutions</a></li>
-                            <li class="list-group-item"><a href="{{url('/contact_us')}}">Request Log Books</a></li>
+                            <li class="list-group-item"><a href="{{url('/council_examination')}}">Council Registration Assessment</a></li>
+                            <li class="list-group-item"><a href="{{url('/training_institution')}}">Medical / Dental Training Institutions</a></li>
+                            <li class="list-group-item"><a href="{{url('/internship_institution')}}">Medical / Dental Teaching Units</a></li>
+                           {{-- <li class="list-group-item"><a href="{{url('/contact_us')}}">Request Log Books</a></li>--}}
 
                         </ul>
                     </div>
@@ -64,12 +62,13 @@
                         </div>
 
                         <div class="col-md-6 col-sm-12">
-                            <p>Please be advised that Council will be conducting registration examinations for foreign
+                            <p style="color: black">Please be advised that Council will be conducting registration examinations for foreign
                                 trained medical and dental applicants on the following date and time:</p>
                         </div>
                     </div>
                     <div style="padding-top: 30px">
-                        <table class="table table-bordered">
+                        <p style="color: black">The Council Registration Assessment Exams are scheduled March, June and October of each year.</p>
+                    {{--    <table class="table table-bordered">
                             <tr>
                                 <th>Period</th>
                                 <th>Date</th>
@@ -86,7 +85,7 @@
                                 </tr>
                             @endforeach
 
-                        </table>
+                        </table>--}}
                     </div>
                     <div style="padding-top: 30px">
                         @foreach($exams as $exam)

@@ -28,7 +28,7 @@
     <div {{--class="breadcrumb-area" style="background-color: #0195DB;"--}}>
         <div class="container text-center">
             <h1 style="padding-top:30px;">Public Register</h1>
-            <div class="breadcrumbs_path">
+            <div style="display:none" class="breadcrumbs_path">
                 <a href="#">Home</a>&nbsp;&nbsp;-&nbsp;&nbsp; Public Register
             </div>
         </div>

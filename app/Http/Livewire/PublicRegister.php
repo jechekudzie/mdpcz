@@ -15,7 +15,7 @@ class PublicRegister extends Component
     protected $paginationTheme = 'bootstrap';
     public $perPage = 10;
     public $search;
-    public $orderBy = 'Fullname';
+   public $orderBy = 'Fullname';
     public $orderAsc = true;
     public $specialty;
 

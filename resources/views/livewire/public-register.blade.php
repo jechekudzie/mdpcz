@@ -1,11 +1,17 @@
 <div>
+    <style type="text/css">
+        input,
+        input::placeholder {
+            font: 20px/3 sans-serif;
+        }
+    </style>
     <div class="w-full flex pb-10">
         <div class="w-3/6 mx-1">
             <input wire:model.debounce.300ms="search" type="text"
                    class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                   placeholder="Search practitioners by name, reg number, or profession ...">
+                   placeholder="Search Practitioners By Name">
         </div>
-        <div class="w-1/6 relative mx-1">
+        <div style="display: none;" class="w-1/6 relative mx-1">
             <select wire:model="orderBy"
                     class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                     id="grid-state">
@@ -22,11 +28,11 @@
             </div>
         </div>
 
-        <div class="w-1/6 relative mx-1">
+        <div class="w-1/3 relative mx-1">
              <select wire:model="specialty"
                      class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                      id="grid-state">
-                 <option value="">Choose By Registers</option>
+                 <option value="">Search By Profession</option>
                  @foreach($specialities as $speciality)
                      <option value="{{$speciality->sp_name}}">{{$speciality->sp_name}}</option>
                  @endforeach
@@ -40,7 +46,7 @@
          </div>
 
 
-        <div class="w-1/6 relative mx-1">
+        <div style="display: none;" class="w-1/6 relative mx-1">
             <select wire:model="orderAsc"
                     class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                     id="grid-state">
@@ -53,7 +59,7 @@
                 </svg>
             </div>
         </div>
-        <div class="w-1/6 relative mx-1">
+        <div style="display: none;" class="w-1/6 relative mx-1">
             <select wire:model="perPage"
                     class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                     id="grid-state">

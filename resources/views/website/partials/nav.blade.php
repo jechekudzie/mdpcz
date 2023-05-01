@@ -122,10 +122,10 @@
                                     <ul>
 
                                         {{--<li><a href="{{url('/council_examination')}}">Education and Training</a></li>--}}
-                                        <li><a href="{{url('/council_examination')}}">Examination</a></li>
-                                        <li><a href="{{url('/training_institution')}}">Accredited Training Institutions</a></li>
-                                        <li><a href="{{url('/internship_institution')}}">Accredited Internship Training Institutions</a></li>
-                                        <li><a href="{{url('/contact_us')}}">Request Log Books</a></li>
+                                        <li><a href="{{url('/council_examination')}}">Council Registration Assessment</a></li>
+                                        <li><a href="{{url('/training_institution')}}">Medical / Dental Training Institutions </a></li>
+                                        <li><a href="{{url('/internship_institution')}}">Medical / Dental Teaching Units</a></li>
+                                        <li><a href="{{asset('cpd_form_.pdf')}}" target="_blank">CPD Application Form</a></li>
 
                                     </ul>
                                 </li>
@@ -180,10 +180,11 @@
                                 <li><a href="#">Education</a>
                                     <ul>
                                         {{--<li><a href="{{url('/council_examination')}}">Education and Training</a></li>--}}
-                                        <li><a href="{{url('/council_examination')}}">Council Examination</a></li>
-                                        <li><a href="{{url('/training_institution')}}">Accredited Training Institutions</a></li>
-                                        <li><a href="{{url('/internship_institution')}}">Accredited Internship Training Institutions</a></li>
-                                        <li><a href="{{url('/contact_us')}}">Request Log Books</a></li>
+                                        <li><a href="{{url('/council_examination')}}">Council Registration Assessment</a></li>
+                                        <li><a href="{{url('/training_institution')}}">Medical / Dental Training Institutions </a></li>
+                                        <li><a href="{{url('/internship_institution')}}">Medical / Dental Teaching Units</a></li>
+                                        <li><a href="{{asset('cpd_form_.pdf')}}" target="_blank">CPD Application Form</a></li>
+
 
                                     </ul>
                                 </li>

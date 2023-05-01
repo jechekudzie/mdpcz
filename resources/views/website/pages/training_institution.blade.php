@@ -8,7 +8,7 @@
 @extends('website.partials.layout')
 
 @section('template_title')
-    Approved Training Institutions
+    Medical / Dental Training Institutions
 @endsection
 
 
@@ -16,10 +16,7 @@
     <!--Start breadcrumb area-->
     <div class="breadcrumb-area" style="background-color: #0195DB;">
         <div class="container text-center">
-            <h1>Approved Training Institutions</h1>
-            <div class="breadcrumbs_path">
-                <a href="#">Home</a>&nbsp;&nbsp;-&nbsp;&nbsp; Approved Training Institutions
-            </div>
+            <h1>Medical / Dental Training Institutions</h1>
         </div>
     </div>
     <!--End breadcrumb area-->
@@ -36,10 +33,11 @@
                         <!-- List group -->
                         <ul class="list-group">
 
-                            <li class="list-group-item"><a href="{{url('/council_examination')}}">Council Examination</a></li>
-                            <li class="list-group-item"><a href="{{url('/training_institution')}}">Accredited Training Institutions</a></li>
-                            <li class="list-group-item"><a href="{{url('/internship_institution')}}">Accredited Internship Training Institutions</a></li>
-                            <li class="list-group-item"><a href="{{url('/contact_us')}}">Request Log Books</a></li>
+                            <li class="list-group-item"><a href="{{url('/council_examination')}}">Council Registration Assessment</a></li>
+                            <li class="list-group-item"><a href="{{url('/training_institution')}}">Medical / Dental Training Institutions</a></li>
+                            <li class="list-group-item"><a href="{{url('/internship_institution')}}">Medical / Dental Teaching Units</a></li>
+                            {{-- <li class="list-group-item"><a href="{{url('/contact_us')}}">Request Log Books</a></li>--}}
+
                         </ul>
                     </div>
                     <div class="panel panel-primary">
@@ -60,7 +58,7 @@
 
                 <div style="text-align:center;" class="col-md-9 col-sm-12">
                     <div class="about-text">
-                        <h4 style="padding-bottom:15px;">Approved Training Institutions</h4>
+                        <h4 style="padding-bottom:15px;">MEDICAL / DENTAL TRAINING INSTITUTIONS</h4>
                         <ul class="list-unstyled">
                             <div class="row">
                                 @foreach($training_institutions as $training_institution)

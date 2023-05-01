@@ -17,7 +17,7 @@
     <div class="breadcrumb-area" style="background-color: #0195DB;">
         <div class="container text-center">
             <h1>Committees</h1>
-            <div class="breadcrumbs_path">
+            <div style="display:none" class="breadcrumbs_path">
                 <a href="#">Home</a>&nbsp;&nbsp;-&nbsp;&nbsp; Committees
             </div>
         </div>
@@ -65,7 +65,7 @@
                             <!--Start single accordion box-->
                                 <div class="accordion accordion-block">
                                     <div style="background-color:white/*#3A25AC*/;" class="accord-btn">
-                                        <h3 style="color: black;">{{$committee->name}} {{$committee->section}}</h3>
+                                        <h3 style="color: black;">{{$committee->name}} <span style="font-size: 13px;color: red;">Established in terms of {{$committee->section}}</span></h3>
                                     </div>
                                     <div class="accord-content {{--collapsed--}}">
                                         {!! $committee->description !!}

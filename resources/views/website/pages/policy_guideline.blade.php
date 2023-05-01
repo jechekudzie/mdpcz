@@ -8,7 +8,7 @@
 @extends('website.partials.layout')
 
 @section('template_title')
-    Policies and Guidelines
+    Internal Policies and Guidelines
 @endsection
 
 
@@ -19,10 +19,8 @@
     <!--Start breadcrumb area-->
     <div class="breadcrumb-area" style="background-color: #0195DB;">
         <div class="container text-center">
-            <h1>Policies and Guidelines</h1>
-            <div class="breadcrumbs_path">
-                <a href="#">Home</a>&nbsp;&nbsp;-&nbsp;&nbsp; Policies and Guidelines
-            </div>
+            <h1>Internal Policies and Guidelines</h1>
+
         </div>
     </div>
     <!--End breadcrumb area-->
@@ -86,7 +84,7 @@
 
                                             </tbody>
                                         </table>
-                                        <ul class="pagination"></ul>
+                                       {{-- <ul class="pagination"></ul>--}}
                                     </div>
                                 </div>
                             </div>
@@ -102,7 +100,7 @@
             <script>
                 var options = {
                     valueNames: ['title', 'download'],
-                    page: 5,
+                    page: 10,
                     pagination: true,
                 };
 

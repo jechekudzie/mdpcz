@@ -16,7 +16,7 @@
     <div id="hero-area" class="hero-area section">
         <!-- Hero Slider -->
         <div id="hero-slider" class="nivoSlider">
-            <img src="{{asset('img/hero/vision.png')}}" alt=""
+            <img src="{{asset('img/hero/Veezhen-01.png')}}" alt=""
                  title="#herocaption-1"/>
             <img src="{{asset('img/hero/mission-01.png')}}" alt="" title="#herocaption-2"/>
 
@@ -402,7 +402,7 @@
     </div>
 
 
-    <div class="why-us sec-padd-top">
+    {{--<div class="why-us sec-padd-top">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 col-sm-12">
@@ -456,16 +456,16 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div>--}}
 
     <div class="call-out2">
         <div class="container">
             <div class="clearfix">
-                <div class="float_left">
+                {{--<div class="float_left">
                     <h4>Have any question or need any business consultation?</h4>
-                </div>
+                </div>--}}
                 <div class="float_right">
-                    <a href="{{url('/contact_us')}}" class="thm-btn bg-clr2">Reach Out to Us</a>
+                    <a href="{{url('/contact_us')}}" class="thm-btn bg-clr2">Contact Us</a>
                 </div>
             </div>
 
@@ -484,7 +484,16 @@
         reminders.forEach(reminder => {
             setInterval(() => flicker(reminder), 1500);
         });
+
+        $(document).ready(function(){
+            $('#hero-slider').nivoSlider({
+                pauseTime: 10000, // Set pause time to 5 seconds
+                manualAdvance: false // Enable automatic advancement of slides
+            });
+        });
+
     </script>
+
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
 @endsection
