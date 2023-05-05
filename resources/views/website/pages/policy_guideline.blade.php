@@ -37,7 +37,7 @@
                             <li class="list-group-item"><a href="{{url('/policy_guideline')}}">Internal Policies</a>
                             </li>
                             <li class="list-group-item"><a href="{{url('/external_policy')}}">External Policies</a></li>
-                            <li class="list-group-item"><a href="{{url('/act')}}">Acts</a></li>
+                            <li class="list-group-item"><a href="{{url('/act')}}">MDPCZ GOVERNING LEGISLATION</a></li>
 
                         </ul>
                     </div>
@@ -90,6 +90,11 @@
                             </div>
                         @endif
                     @endforeach
+                        <h2>Other Policies</h2>
+                            <p style="padding-right:200px;" class="title">Medical Records Amendment</p>
+                            <p class="date"><a href="{{asset('Medical records ammendment.pdf')}}"
+                                                target="_blank">Download</a></p>
+
                 </div>
             </div>
 

@@ -26,7 +26,7 @@ class ImportantLinkController extends Controller
 
         $important_link = ImportantLink::create(request()->validate([
             'title' => 'required',
-            'url' => 'required',
+            'url' => 'nullable',
         ]));
 
 

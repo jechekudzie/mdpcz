@@ -8,7 +8,7 @@
 @extends('website.partials.layout')
 
 @section('template_title')
-    Acts
+    MDPCZ Governing Legislation
 @endsection
 
 
@@ -16,7 +16,7 @@
     <!--Start breadcrumb area-->
     <div class="breadcrumb-area" style="background-color: #0195DB;">
         <div class="container text-center">
-            <h1>Acts</h1>
+            <h1>MDPCZ Governing Legislation</h1>
             <div style="display:none" class="breadcrumbs_path">
                 <a href="#">Home</a>&nbsp;&nbsp;-&nbsp;&nbsp; Acts
             </div>
@@ -35,7 +35,7 @@
 
                             <li class="list-group-item"><a href="{{url('/policy_guideline')}}">Internal Policies</a></li>
                             <li class="list-group-item"><a href="{{url('/external_policy')}}">External Policies</a></li>
-                            <li class="list-group-item"><a href="{{url('/act')}}">Acts</a></li>
+                            <li class="list-group-item"><a href="{{url('/act')}}">MDPCZ GOVERNING LEGISLATION</a></li>
 
                         </ul>
                     </div>

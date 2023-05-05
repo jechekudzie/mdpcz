@@ -35,7 +35,7 @@
 
                             <li class="list-group-item"><a href="{{url('/policy_guideline')}}">Internal Policies</a></li>
                             <li class="list-group-item"><a href="{{url('/external_policy')}}">External Policies</a></li>
-                            <li class="list-group-item"><a href="{{url('/act')}}">Acts</a></li>
+                            <li class="list-group-item"><a href="{{url('/act')}}">MDPCZ GOVERNING LEGISLATION</a></li>
 
                         </ul>
                     </div>

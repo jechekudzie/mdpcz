@@ -63,7 +63,7 @@
 
                 <div style="text-align:center;" class="col-md-9 col-sm-12">
                     <div class="about-text">
-                        <h4 style="padding-bottom:15px;">Designated Health Institutions(DHIs)</h4>
+                        <h4 style="padding-bottom:15px;">Designated Health Institutions(DHI)</h4>
                         <ul class="list-unstyled">
                             <div class="row">
                                 @foreach($designated_institutions->sortBy('name') as $institution)

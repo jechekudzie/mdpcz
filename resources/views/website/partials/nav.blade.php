@@ -112,7 +112,7 @@
                                         <li><a href="{{url(\App\Models\RegistrationPathWay::find(1)->file)}}" target="_blank">Registration Pathway</a></li>
                                         <li><a href="{{url('/registration_forms')}}">Application forms for registration</a></li>
                                         <li><a href="{{url('/public_register')}}" target="_blank">Public Register</a></li>
-                                        <li><a href="{{url('/designated_institution')}}">DHIS</a></li>
+                                        <li><a href="{{url('/designated_institution')}}">DHI</a></li>
                                     </ul>
                                 </li>
 
@@ -124,7 +124,7 @@
                                         {{--<li><a href="{{url('/council_examination')}}">Education and Training</a></li>--}}
                                         <li><a href="{{url('/council_examination')}}">Council Registration Assessment</a></li>
                                         <li><a href="{{url('/training_institution')}}">Medical / Dental Training Institutions </a></li>
-                                        <li><a href="{{url('/internship_institution')}}">Medical / Dental Teaching Units</a></li>
+                                        <li><a href="{{url('/internship_institution')}}">Intern / Specialist Teaching Units</a></li>
                                         <li><a href="{{asset('cpd_form_.pdf')}}" target="_blank">CPD Application Form</a></li>
 
                                     </ul>
@@ -141,7 +141,7 @@
                                         {{--<li><a href="{{url('/council_examination')}}">Education and Training</a></li>--}}
                                         <li><a href="{{url('/policy_guideline')}}">Internal</a></li>
                                         <li><a href="{{url('/external_policy')}}">External</a></li>
-                                        <li><a href="{{url('/act')}}">Acts</a></li>
+                                        <li><a href="{{url('/act')}}">MDPCZ Governing Legislation</a></li>
 
                                     </ul>
                                 </li>
@@ -173,7 +173,7 @@
                                     <ul>
                                         <li><a href="{{url(\App\Models\RegistrationPathWay::find(1)->file)}}" target="_blank">Registration Pathway</a></li>
                                         <li><a href="{{url('/registration_forms')}}">Application forms for registration</a></li>
-                                        <li class=""><a href="{{url('/designated_institution')}}">DHIS</a></li>
+                                        <li class=""><a href="{{url('/designated_institution')}}">DHI</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="{{url('/public_register')}}" target="_blank">Public Register</a></li>
@@ -182,7 +182,7 @@
                                         {{--<li><a href="{{url('/council_examination')}}">Education and Training</a></li>--}}
                                         <li><a href="{{url('/council_examination')}}">Council Registration Assessment</a></li>
                                         <li><a href="{{url('/training_institution')}}">Medical / Dental Training Institutions </a></li>
-                                        <li><a href="{{url('/internship_institution')}}">Medical / Dental Teaching Units</a></li>
+                                        <li><a href="{{url('/internship_institution')}}">Intern / Specialist Teaching Units</a></li>
                                         <li><a href="{{asset('cpd_form_.pdf')}}" target="_blank">CPD Application Form</a></li>
 
 
@@ -201,7 +201,7 @@
                                         {{--<li><a href="{{url('/council_examination')}}">Education and Training</a></li>--}}
                                         <li><a href="{{url('/policy_guideline')}}">Internal</a></li>
                                         <li><a href="{{url('/external_policy')}}">External</a></li>
-                                        <li><a href="{{url('/act')}}">Acts</a></li>
+                                        <li><a href="{{url('/act')}}">MDPCZ Governing Legislation</a></li>
 
                                     </ul>
                                 </li>

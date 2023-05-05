@@ -60,12 +60,13 @@
 
                 <div style="margin-top: -80px;" class="col-md-9 col-sm-12">
                     <div class="about-text">
+                        <h5>Committees established in terms of the Health Professions Acts (Chapter 27:19) </h5>
                         <div class="accordion-box">
                         @foreach($committees as $committee)
                             <!--Start single accordion box-->
                                 <div class="accordion accordion-block">
                                     <div style="background-color:white/*#3A25AC*/;" class="accord-btn">
-                                        <h3 style="color: black;">{{$committee->name}} <span style="font-size: 13px;color: red;">Established in terms of {{$committee->section}}</span></h3>
+                                        <h3 style="color: black;">{{$committee->name}} <span style="font-size: 18px;color: red;">{{$committee->section}}</span></h3>
                                     </div>
                                     <div class="accord-content {{--collapsed--}}">
                                         {!! $committee->description !!}

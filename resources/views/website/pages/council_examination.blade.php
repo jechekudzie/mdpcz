@@ -33,7 +33,7 @@
 
                             <li class="list-group-item"><a href="{{url('/council_examination')}}">Council Registration Assessment</a></li>
                             <li class="list-group-item"><a href="{{url('/training_institution')}}">Medical / Dental Training Institutions</a></li>
-                            <li class="list-group-item"><a href="{{url('/internship_institution')}}">Medical / Dental Teaching Units</a></li>
+                            <li class="list-group-item"><a href="{{url('/internship_institution')}}">Intern / Specialist Teaching Units</a></li>
                            {{-- <li class="list-group-item"><a href="{{url('/contact_us')}}">Request Log Books</a></li>--}}
 
                         </ul>
@@ -67,7 +67,7 @@
                         </div>
                     </div>
                     <div style="padding-top: 30px">
-                        <p style="color: black">The Council Registration Assessment Exams are scheduled March, June and October of each year.</p>
+                        <p style="color: black">The Council Registration Assessment are scheduled March, June and October of each year.</p>
                     {{--    <table class="table table-bordered">
                             <tr>
                                 <th>Period</th>
