@@ -361,7 +361,10 @@
                                             <td>{{$exam_date->date}}</td>
                                             <td>{{$exam_date->time}}</td>
                                             <td>{{$exam_date->venue}}</td>
-                                            <td><a href="{{url('/admin/exam_date/'.$exam_date->id.'/edit')}}">Edit</a></td>
+                                            <td>
+                                                <a href="{{url('/admin/exam_date/'.$exam_date->id.'/edit')}}">Edit</a> |
+                                                <a href="{{url('/admin/exam_date/'.$exam_date->id.'/published_unpublished')}}">{{$exam_date->is_published == 1 ? 'Un-publish':'Publish'}}</a>
+                                            </td>
                                         </tr>
                                     @endforeach
 

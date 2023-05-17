@@ -5,6 +5,8 @@
             font: 20px/3 sans-serif;
         }
     </style>
+    <button class="btn btn-primary" wire:click="exportToExcel()">Export to Excel</button>
+
     <div class="w-full flex pb-10">
         <div class="w-3/6 mx-1">
             <input wire:model.debounce.300ms="search" type="text"
@@ -29,7 +31,7 @@
         </div>
 
         <div class="w-1/3 relative mx-1">
-             <select wire:model="specialty"
+            <select wire:model="specialty"
                      class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                      id="grid-state">
                  <option value="">Filter By Profession</option>

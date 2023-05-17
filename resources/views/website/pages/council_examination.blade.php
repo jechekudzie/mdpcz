@@ -31,10 +31,13 @@
                         <!-- List group -->
                         <ul class="list-group">
 
-                            <li class="list-group-item"><a href="{{url('/council_examination')}}">Council Registration Assessment</a></li>
-                            <li class="list-group-item"><a href="{{url('/training_institution')}}">Medical / Dental Training Institutions</a></li>
-                            <li class="list-group-item"><a href="{{url('/internship_institution')}}">Intern / Specialist Teaching Units</a></li>
-                           {{-- <li class="list-group-item"><a href="{{url('/contact_us')}}">Request Log Books</a></li>--}}
+                            <li class="list-group-item"><a href="{{url('/council_examination')}}">Council Registration
+                                    Assessment</a></li>
+                            <li class="list-group-item"><a href="{{url('/training_institution')}}">Medical / Dental
+                                    Training Institutions</a></li>
+                            <li class="list-group-item"><a href="{{url('/internship_institution')}}">Intern / Specialist
+                                    Teaching Units</a></li>
+                            {{-- <li class="list-group-item"><a href="{{url('/contact_us')}}">Request Log Books</a></li>--}}
 
                         </ul>
                     </div>
@@ -62,31 +65,36 @@
                         </div>
 
                         <div class="col-md-6 col-sm-12">
-                            <p style="color: black">Please be advised that Council will be conducting registration examinations for foreign
+                            <p style="color: black">Please be advised that Council will be conducting registration
+                                examinations for foreign
                                 trained medical and dental applicants on the following date and time:</p>
                         </div>
                     </div>
                     <div style="padding-top: 30px">
-                        <p style="color: black">The Council Registration Assessment are scheduled March, June and October of each year.</p>
-                    {{--    <table class="table table-bordered">
+                        <p style="color: black">The Council Registration Assessment are scheduled March, June and
+                            October of each year.
+                            @if($exam_date->is_published == 1)
+                                This next exam is on:</p><br/>
+
+                        <table class="table table-bordered">
                             <tr>
-                                <th>Period</th>
                                 <th>Date</th>
                                 <th>Time</th>
                                 <th>Venue</th>
 
                             </tr>
-                            @foreach($exam_dates as $exam_date)
-                                <tr>
-                                    <td>{{$exam_date->period}}</td>
-                                    <td>{{$exam_date->date}}</td>
-                                    <td>{{$exam_date->time}}</td>
-                                    <td>{{$exam_date->venue}}</td>
-                                </tr>
-                            @endforeach
 
-                        </table>--}}
+                                @if($exam_date->is_published == 1)
+                                    <tr>
+                                        <td>{{$exam_date->date}}</td>
+                                        <td>{{$exam_date->time}}</td>
+                                        <td>{{$exam_date->venue}}</td>
+                                    </tr>
+                                @endif
+
+                        </table>
                     </div>
+                    @endif
                     <div style="padding-top: 30px">
                         @foreach($exams as $exam)
                             <div style="padding-top: 20px">
@@ -126,9 +134,5 @@
             </div>
         </div>
     </div>
-
-
-
-
 
 @endsection

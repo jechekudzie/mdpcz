@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\ExamDate;
+use App\Models\NewsLetter;
 use Illuminate\Http\Request;
 
 class ExamDateController extends Controller
@@ -73,4 +74,22 @@ class ExamDateController extends Controller
 
         return redirect('/admin/exam_date')->with('message', 'exam_date deleted successfully');
     }
+
+    public function published_unpublished(ExamDate $examDate)
+    {
+        //
+
+        if ($examDate->is_published == 0) {
+            $examDate->update([
+                'is_published' => 1
+            ]);
+        } else {
+            $examDate->update([
+                'is_published' => 0
+            ]);
+        }
+
+        return redirect('/admin/exam')->with('message',  'Exam has been updated successfully');
+    }
+
 }

@@ -58,33 +58,18 @@
                 </div>
                 <div class="col-md-9 col-sm-12">
                     <figure class="about-img">
-                        <img src="{{asset('images/mdpcz_structure.jpg')}}" alt="about photo">
+                       {{-- <img src="{{asset('images/mdpcz_structure.jpg')}}" alt="about photo">--}}
+                        <img src="{{asset($council_structure->file)}}" alt="about photo">
                     </figure>
+                    <hr/>
                     <div class="about-text">
+                        @foreach($committees as $committee)
                         <h4>
-                            PCC:  <span class="thm-color">Practice Control Committee </span>
+                             <span class="thm-color">{{$committee->name}} </span>
                         </h4>
                         <br>
-                        <h4>
-                            PIC:  <span class="thm-color">Preliminary Inquiries Committee </span>
-                        </h4>
-                        <br>
-                        <h4>
-                            HEALTH:  <span class="thm-color">Health Committee </span>
-                        </h4>
-                        <br>
-                        <h4>
-                            ELC:  <span class="thm-color">Education and Liaison Committee </span>
-                        </h4>
-                        <br>
-                        <h4>
-                            B & F: <span class="thm-color">Business and Finance </span>
-                        </h4>
-                        <br>
-                        <h4>
-                            AUDIT:  <span class="thm-color">Audit Committee </span>
-                        </h4>
-                        <br>
+                        @endforeach
+
 
                     </div>
                 </div>

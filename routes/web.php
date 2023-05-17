@@ -103,6 +103,8 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('/admin/exam', \App\Http\Controllers\ExamController::class);
     Route::resource('/admin/exam_guideline', \App\Http\Controllers\ExamGuidelineController::class);
     Route::resource('/admin/exam_date', \App\Http\Controllers\ExamDateController::class);
+    Route::get('/admin/exam_date/{examDate}/published_unpublished', [\App\Http\Controllers\ExamDateController::class, 'published_unpublished']);
+
 
     Route::resource('/admin/faq_category', \App\Http\Controllers\FaqCategoryController::class);
     Route::get('/admin/faq/{faqCategory}/index', [\App\Http\Controllers\FaqController::class, 'index']);

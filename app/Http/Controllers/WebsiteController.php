@@ -9,6 +9,7 @@ use App\Models\BankingDetail;
 use App\Models\Committee;
 use App\Models\Complaint;
 use App\Models\CouncilMember;
+use App\Models\CouncilStructure;
 use App\Models\DesignatedInstitution;
 use App\Models\Exam;
 use App\Models\ExamDate;
@@ -66,7 +67,9 @@ class WebsiteController extends Controller
     public function councilStructure()
     {
         $quick_links = ImportantLink::all();
-        return view('website.pages.council_structure', compact('quick_links'));
+        $council_structure = CouncilStructure::find(1);
+        $committees = Committee::all();
+        return view('website.pages.council_structure', compact('quick_links','council_structure','committees'));
     }
 
     public function councilMembers()
@@ -117,10 +120,11 @@ class WebsiteController extends Controller
     public function councilExamination()
     {
         $exams = Exam::all();
+        $exam = Exam::find(1);
         $exam_guidelines = ExamGuideline::all();
-        $exam_dates = ExamDate::all();
+        $exam_date = ExamDate::find(1);
         $quick_links = ImportantLink::all();
-        return view('website.pages.council_examination', compact('exams', 'exam_guidelines', 'quick_links', 'exam_dates'));
+        return view('website.pages.council_examination', compact('exam','exams', 'exam_guidelines', 'quick_links', 'exam_date'));
     }
 
     public function fitnessToPractice()
@@ -168,7 +172,7 @@ class WebsiteController extends Controller
 
     public function external_policy()
     {
-        $external_policies = ExternalPolicy::all()->sortBy('id');
+        $external_policies = ExternalPolicy::all()->sortBy('order');
         $quick_links = ImportantLink::all();
 
         return view('website.pages.external_policies', compact('external_policies','quick_links'));
