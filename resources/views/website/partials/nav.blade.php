@@ -27,7 +27,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-3 col-md-2 col-sm-12 col-xs-12">
-                <div style="padding-top:55px;" class="logo">
+                <div style="padding-top:40px;" class="logo">
                     <a href="{{url('/')}}">
                         <img src="{{asset('images/mdpcz.png')}}" alt="Logo" width="800">
                     </a>
@@ -42,9 +42,8 @@
                             </div>--}}
                             <div class="text-holder">
                                 <h6>8 Harvey Brown</h6>
-                                <p>Milton Park </p><br/>
-                                <p>Harare, Zimbabwe </p> <br>
-                                <p>Land: 263-242-790144, 263-242-793707</p>
+                                <p>Milton Park, Harare, Zimbabwe </p><br/>
+                                <p>Telephone: 263-242-790144, 263-242-793707</p>
                             </div>
                         </li>
                         <li>
@@ -53,10 +52,8 @@
                             </div>--}}
                             <div class="text-holder">
                                 <h6>No 2 Robertson Street</h6>
-                                <p>Parkview</p> <br>
-                                <p>Bulawayo, Zimbabwe <br>
-                                </p><br/>
-                                <p>Land: 263 9 72237/38 </p>
+                                <p>Parkview, Bulawayo, Zimbabwe</p><br>
+                                <p>Telephone: 263 9 72237/38 </p>
                             </div>
                         </li>
                         <li>
@@ -65,9 +62,9 @@
                             </div>--}}
                             <div class="text-holder mail-holder">
                                 <h6>Contact Us</h6>
-                                <p>mdpcz@mdpcz.co.zw</p><br/>
-                                <p>WhatsApp: 263 712544066</p><br/>
-                                <p style="margin-top:2px;">
+                                <p>mdpcz@mdpcz.co.zw</p>
+                                <p style="margin-top:4px;">WhatsApp: 263 712544066</p>
+                                <p style="margin-top:4px;">
                                     <a href="https://www.facebook.com/mdpcz2019" target="_blank">Facebook: <i
                                             class="fa fa-facebook"></i></a> &nbsp;&nbsp;&nbsp;
                                     <a href="https://twitter.com/MDPCZ2" target="_blank">Twitter <i

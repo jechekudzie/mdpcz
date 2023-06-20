@@ -52,7 +52,7 @@
     @yield('site_content')
 
     <footer>
-        <div class="footer-main sec-padd2">
+        {{--<div class="footer-main sec-padd2">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
@@ -79,7 +79,7 @@
                                     <p>Milton Park<br>
                                         Harare, Zimbabwe<br>
                                         Whatsapp: 263 71 254 4066<br>
-                                        Land: 2263-242-790144, 263-242-793707<br>
+                                        Telephone: 2263-242-790144, 263-242-793707<br>
                                         E-mail:mdpcz@mdpcz.co.zw<br></p>
                                 </div>
                             </div>
@@ -94,7 +94,7 @@
                                     <p>Parkview <br>
                                         Bulawayo, Zimbabwe<br>
                                         Whatsapp: 263 71 254 4066<br>
-                                        Land: 263 9 72237/38<br>
+                                        Telephone: 263 9 72237/38<br>
                                         E-mail:mdpcz@mdpcz.co.zw<br></p>
                                 </div>
                             </div>
@@ -103,7 +103,7 @@
 
                 </div>
             </div>
-        </div>
+        </div>--}}
         <div class="footer-bottom">
             <div class="container">
                 <div class="row">

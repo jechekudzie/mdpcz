@@ -223,7 +223,7 @@ class WebsiteController extends Controller
 
 
         // Send the email using the user's email as the "from" address
-        Mail::to('nigel@leadingdigital.africa')->send(new ContactFormMail($validatedData));
+        Mail::to('mdpcz@mdpcz.co.zw')->send(new ContactFormMail($validatedData));
 
         // Redirect back to the contact form with a success message
         return redirect()->back()->with('message', 'Your message has been sent successfully!');
@@ -243,7 +243,7 @@ class WebsiteController extends Controller
         Complaint::create($validatedData);
 
         // Send the email using the user's email as the "from" address
-        Mail::to('nigel@leadingdigital.africa')->send(new ComplaintFormMail($validatedData));
+        Mail::to('compliants@mdpcz.co.zw')->send(new ComplaintFormMail($validatedData));
 
         // Redirect back to the contact form with a success message
         return redirect()->back()->with('message', 'Your message has been sent successfully!');

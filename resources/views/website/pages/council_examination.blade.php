@@ -73,28 +73,27 @@
                     <div style="padding-top: 30px">
                         <p style="color: black">The Council Registration Assessment are scheduled March, June and
                             October of each year.
-                            @if($exam_date->is_published == 1)
+                            @if($exam_date)
                                 This next exam is on:</p><br/>
 
-                        <table class="table table-bordered">
+                                 <table class="table table-bordered">
                             <tr>
                                 <th>Date</th>
                                 <th>Time</th>
                                 <th>Venue</th>
-
                             </tr>
-
-                                @if($exam_date->is_published == 1)
-                                    <tr>
-                                        <td>{{$exam_date->date}}</td>
-                                        <td>{{$exam_date->time}}</td>
-                                        <td>{{$exam_date->venue}}</td>
-                                    </tr>
-                                @endif
+                            @if($exam_date->is_published == 1)
+                                <tr>
+                                    <td>{{$exam_date->date}}</td>
+                                    <td>{{$exam_date->time}}</td>
+                                    <td>{{$exam_date->venue}}</td>
+                                </tr>
+                            @endif
 
                         </table>
+                        @endif
                     </div>
-                    @endif
+
                     <div style="padding-top: 30px">
                         @foreach($exams as $exam)
                             <div style="padding-top: 20px">

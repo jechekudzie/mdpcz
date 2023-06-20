@@ -16,11 +16,11 @@
     <div id="hero-area" class="hero-area section">
         <!-- Hero Slider -->
         <div id="hero-slider" class="nivoSlider">
-            <img src="{{asset('img/hero/Veezhen-01.png')}}" alt=""
+            <img src="{{asset('img/hero/Vision-01.jpg')}}" alt=""
                  title="#herocaption-1"/>
-            <img src="{{asset('img/hero/mission-01.png')}}" alt="" title="#herocaption-2"/>
+            <img src="{{asset('img/hero/Mission-01-01.jpg')}}" alt="" title="#herocaption-2"/>
 
-            <img src="{{asset('img/hero/coreValues.png')}}" alt="" title="#herocaption-3"/>
+            <img src="{{asset('img/hero/MDPCZ-Core Values-01.jpg')}}" alt="" title="#herocaption-3"/>
         </div>
         <!-- Hero Slider Caption -->
         <div id="herocaption-1" class="nivo-html-caption">

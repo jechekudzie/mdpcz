@@ -135,9 +135,9 @@ function accordion() {
             }else{
                 $(this).addClass('active');
                 $('.accordion .accord-content').slideUp(500);
-                $(this).next('.accord-content').slideDown(500);	
+                $(this).next('.accord-content').slideDown(500);
             }
-        });	
+        });
     }
 }
 
@@ -148,7 +148,7 @@ function prealoader() {
         $('.prealoader').delay(2000).fadeOut(500);
     }
 }
- 
+
 
 //=== Thm scroll anim===
 function thmScrollAnim() {
@@ -380,13 +380,13 @@ if ($(".team-carousel").length) {
 
    // 31. Tabs Box
     if($('.tabs-box').length){
-        
+
         //Tabs
         $('.tabs-box .tab-buttons .tab-btn').on('click',function(e) {
-            
+
             e.preventDefault();
             var target = $($(this).attr('data-tab'));
-            
+
             target.parents('.tabs-box').find('.tab-buttons').find('.tab-btn').removeClass('active-btn');
             $(this).addClass('active-btn');
             target.parents('.tabs-box').find('.tabs-content').find('.tab').fadeOut(0);
@@ -394,7 +394,7 @@ if ($(".team-carousel").length) {
             $(target).fadeIn(300);
             $(target).addClass('active-tab');
         });
-        
+
     }
 
 // Dom Ready Function
@@ -411,14 +411,14 @@ jQuery(document).on('ready',function () {
         teamCarosule();
         projectcarousel();
         imgpopup();
- 
+
 	})(jQuery);
 });
 // Scroll Function
 jQuery(window).on('scroll',function(){
 	(function ($) {
 	stickyHeader()
-    
+
 	})(jQuery);
 });
 //=== Prealoder===
@@ -432,7 +432,7 @@ $('#hero-slider').nivoSlider({
     nextText: '<span>N</span><i class="zmdi zmdi-long-arrow-right"></i>',
     controlNav: false,
     effect: 'boxRainGrow',
-    pauseTime: 5000,
+    pauseTime: 15000,
 });
 /* meanmenu */
  $('#mobile-nav').meanmenu({
